@@ -8,6 +8,7 @@ import { useSpring, animated } from '@react-spring/web'
 import { pinchAction, createUseGesture } from '@use-gesture/react'
 import AboutWrapper from "./components/AboutWrapper";
 import Panels from "./components/Panels";
+import Ocean from "./components/Ocean";
 
 const useGesture = createUseGesture([pinchAction])
 
@@ -18,7 +19,7 @@ export default function App(){
     const wheelOffset = useRef(1)
 
     const [date, setDate] = useState(new Date());
-    const [percent, setPercent] = useState(1);
+    const [oceanColor, setOceanColor] = useState('bg-blue-200');
     
     useEffect(() => {
         var timer = setInterval(()=>setDate(new Date()), 100000 )
@@ -33,14 +34,14 @@ export default function App(){
     useEffect(() => {
 
         if(currentHour < 6 || currentHour > 18){
-            setPercent(.8)
+            setOceanColor('bg-blue-900')
         }else if(currentHour == 6 || currentHour == 18){
-            setPercent(.9)
+            setOceanColor('bg-blue-800')
         } else {
-            setPercent(1)
+            setOceanColor('bg-blue-700')
         }
 
-        console.log(percent)
+        console.log(oceanColor)
 
     }, [currentHour])
 
@@ -103,7 +104,7 @@ export default function App(){
     
 
 
-    return <div id="wrapper" className="flex justify-center items-end overflow-hidden w-screen h-screen" >
+    return <div id="wrapper" className={`flex justify-center items-end overflow-hidden w-screen h-screen relative`} >
         <GoogleReCaptchaProvider reCaptchaKey={import.meta.env.VITE_API_RECAPTCHA_SITE_KEY}>
             <AboutWrapper />
 
@@ -119,7 +120,8 @@ export default function App(){
             <Panels />
             
             <Nav />
-            
+            <Ocean />
         </GoogleReCaptchaProvider>
+        
     </div>
 }

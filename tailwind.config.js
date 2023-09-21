@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors : {
-        gold: "#FFBD33"
+        gold: "#FFBD33",
+        oceanDark: "#2C6491"
       } 
     },
     
