@@ -3,9 +3,9 @@ import request from 'graphql-request'
 import { useMutation } from '@tanstack/react-query' 
 import toast from 'react-hot-toast';
 
-const endpoint = import.meta.env.VITE_API_ENDPOINT
+const endpoint = process.env.VITE_API_ENDPOINT
 const headers = {
-    authorization: import.meta.env.VITE_API_AUTH,
+    authorization: process.env.VITE_API_AUTH,
 }
 export default function CreateEntry(input) {
 

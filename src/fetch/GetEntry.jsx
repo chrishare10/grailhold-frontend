@@ -39,9 +39,9 @@ const GET_ENTRY = gql`
     }
 `
 
-const endpoint = import.meta.env.VITE_API_ENDPOINT
+const endpoint = process.env.VITE_API_ENDPOINT
 const headers = {
-    authorization: import.meta.env.VITE_API_AUTH,
+    authorization: process.env.VITE_API_AUTH,
 }
 export default function GetEntry(entryId) {
  
