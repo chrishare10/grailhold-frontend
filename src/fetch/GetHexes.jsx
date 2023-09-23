@@ -19,7 +19,7 @@ const endpoint = process.env.VITE_API_ENDPOINT
 const headers = {
     authorization: process.env.VITE_API_AUTH
 }
-
+console.log(endpoint)
 export default function GetHexes() {
 
   
