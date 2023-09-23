@@ -29,7 +29,7 @@ export default function GetCurrentUser(jwt) {
 
     
 
-    const endpoint = process.env.VITE_API_ENDPOINT
+    const endpoint = import.meta.env.VITE_API_ENDPOINT
     const headers = {
         authorization: "jwt " + jwt
     }

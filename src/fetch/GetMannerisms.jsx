@@ -11,9 +11,9 @@ const GET_MANNERISMS = gql`
     }
 `
 
-const endpoint = process.env.VITE_API_ENDPOINT
+const endpoint = import.meta.env.VITE_API_ENDPOINT
 const headers = {
-    authorization: process.env.VITE_API_AUTH,
+    authorization: import.meta.env.VITE_API_AUTH,
 }
 export default function GetMannerisms() {
 
