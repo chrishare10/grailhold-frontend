@@ -9,6 +9,12 @@ export default {
       colors : {
         gold: "#FFBD33",
         oceanDark: "#2C6491"
+      },
+      minHeight: {
+        'screenh': '100svh',
+      },
+      spacing: {
+        'screenh': '100svh',
       } 
     },
     
