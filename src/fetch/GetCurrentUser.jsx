@@ -21,17 +21,13 @@ const GET_CURRENT_USER = gql`
 
 `
 
-
-
-
-
 export default function GetCurrentUser(jwt) {
 
     
 
     const endpoint = import.meta.env.VITE_API_ENDPOINT
     const headers = {
-        authorization: "jwt " + jwt
+        authorization: "JWT " + jwt
     }
 
     const { isLoading, isError, isSuccess, data } = useQuery({
@@ -49,7 +45,5 @@ export default function GetCurrentUser(jwt) {
     return console.log("could not sign in")
     }
 
-    
-   
     return data
 }
