@@ -6,7 +6,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function ModeledMap(props) {
-  const { nodes, materials } = useGLTF("/assets/static/Grailhold-map-hexcutout-02.glb");
+  const { nodes, materials } = useGLTF("/assets/static/Grailhold-map-hexcutout-03.glb");
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -14,7 +14,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane001.geometry}
         material={nodes.Plane001.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -22,7 +23,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane002.geometry}
         material={nodes.Plane002.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -30,7 +32,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane003.geometry}
         material={nodes.Plane003.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -38,7 +41,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane004.geometry}
         material={nodes.Plane004.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -46,7 +50,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane005.geometry}
         material={nodes.Plane005.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -54,7 +59,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane006.geometry}
         material={nodes.Plane006.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -62,7 +68,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane007.geometry}
         material={nodes.Plane007.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -70,7 +77,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane008.geometry}
         material={nodes.Plane008.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -78,7 +86,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane009.geometry}
         material={nodes.Plane009.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -86,7 +95,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane010.geometry}
         material={nodes.Plane010.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -94,7 +104,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane011.geometry}
         material={nodes.Plane011.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -102,7 +113,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane012.geometry}
         material={nodes.Plane012.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -110,7 +122,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane013.geometry}
         material={nodes.Plane013.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -118,7 +131,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane014.geometry}
         material={nodes.Plane014.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -126,7 +140,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane015.geometry}
         material={nodes.Plane015.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -134,7 +149,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane016.geometry}
         material={nodes.Plane016.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -142,7 +158,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane017.geometry}
         material={nodes.Plane017.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -150,7 +167,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane018.geometry}
         material={nodes.Plane018.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -158,7 +176,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane019.geometry}
         material={nodes.Plane019.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -166,7 +185,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane020.geometry}
         material={nodes.Plane020.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -174,7 +194,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane021.geometry}
         material={nodes.Plane021.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -182,7 +203,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane022.geometry}
         material={nodes.Plane022.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -190,7 +212,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane023.geometry}
         material={nodes.Plane023.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -198,7 +221,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane024.geometry}
         material={nodes.Plane024.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -206,7 +230,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane025.geometry}
         material={nodes.Plane025.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -214,7 +239,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane026.geometry}
         material={nodes.Plane026.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -222,7 +248,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane027.geometry}
         material={nodes.Plane027.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -230,7 +257,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane028.geometry}
         material={nodes.Plane028.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -238,7 +266,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane029.geometry}
         material={nodes.Plane029.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -246,7 +275,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane030.geometry}
         material={nodes.Plane030.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -254,7 +284,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane031.geometry}
         material={nodes.Plane031.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -262,7 +293,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane032.geometry}
         material={nodes.Plane032.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -270,7 +302,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane033.geometry}
         material={nodes.Plane033.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -278,7 +311,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane034.geometry}
         material={nodes.Plane034.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -286,7 +320,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane035.geometry}
         material={nodes.Plane035.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -294,7 +329,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane036.geometry}
         material={nodes.Plane036.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -302,7 +338,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane037.geometry}
         material={nodes.Plane037.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -310,7 +347,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane038.geometry}
         material={nodes.Plane038.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -318,7 +356,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane039.geometry}
         material={nodes.Plane039.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -326,7 +365,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane040.geometry}
         material={nodes.Plane040.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -334,7 +374,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane041.geometry}
         material={nodes.Plane041.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -342,7 +383,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane042.geometry}
         material={nodes.Plane042.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -350,7 +392,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane043.geometry}
         material={nodes.Plane043.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -358,7 +401,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane044.geometry}
         material={nodes.Plane044.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -366,7 +410,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane045.geometry}
         material={nodes.Plane045.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -374,7 +419,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane046.geometry}
         material={nodes.Plane046.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -382,7 +428,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane047.geometry}
         material={nodes.Plane047.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -390,7 +437,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane048.geometry}
         material={nodes.Plane048.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -398,7 +446,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane049.geometry}
         material={nodes.Plane049.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -406,7 +455,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane050.geometry}
         material={nodes.Plane050.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -414,7 +464,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane051.geometry}
         material={nodes.Plane051.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -422,7 +473,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane052.geometry}
         material={nodes.Plane052.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -430,7 +482,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane053.geometry}
         material={nodes.Plane053.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -438,7 +491,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane054.geometry}
         material={nodes.Plane054.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -446,7 +500,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane055.geometry}
         material={nodes.Plane055.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -454,7 +509,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane056.geometry}
         material={nodes.Plane056.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -462,7 +518,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane057.geometry}
         material={nodes.Plane057.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -470,7 +527,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane058.geometry}
         material={nodes.Plane058.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -478,7 +536,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane059.geometry}
         material={nodes.Plane059.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -486,7 +545,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane060.geometry}
         material={nodes.Plane060.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -494,7 +554,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane061.geometry}
         material={nodes.Plane061.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -502,7 +563,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane062.geometry}
         material={nodes.Plane062.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -510,7 +572,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane063.geometry}
         material={nodes.Plane063.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -518,7 +581,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane064.geometry}
         material={nodes.Plane064.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -526,7 +590,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane065.geometry}
         material={nodes.Plane065.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -534,7 +599,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane066.geometry}
         material={nodes.Plane066.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -542,7 +608,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane067.geometry}
         material={nodes.Plane067.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -550,7 +617,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane068.geometry}
         material={nodes.Plane068.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -558,7 +626,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane069.geometry}
         material={nodes.Plane069.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -566,7 +635,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane070.geometry}
         material={nodes.Plane070.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -574,7 +644,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane071.geometry}
         material={nodes.Plane071.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -582,7 +653,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane072.geometry}
         material={nodes.Plane072.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -590,7 +662,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane073.geometry}
         material={nodes.Plane073.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -598,7 +671,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane074.geometry}
         material={nodes.Plane074.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -606,7 +680,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane075.geometry}
         material={nodes.Plane075.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -614,7 +689,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane076.geometry}
         material={nodes.Plane076.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -622,7 +698,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane077.geometry}
         material={nodes.Plane077.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -630,7 +707,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane078.geometry}
         material={nodes.Plane078.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -638,7 +716,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane079.geometry}
         material={nodes.Plane079.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -646,7 +725,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane080.geometry}
         material={nodes.Plane080.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -654,7 +734,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane081.geometry}
         material={nodes.Plane081.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -662,7 +743,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane082.geometry}
         material={nodes.Plane082.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -670,7 +752,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane083.geometry}
         material={nodes.Plane083.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -678,7 +761,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane084.geometry}
         material={nodes.Plane084.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -686,7 +770,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane085.geometry}
         material={nodes.Plane085.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -694,7 +779,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane086.geometry}
         material={nodes.Plane086.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -702,7 +788,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane087.geometry}
         material={nodes.Plane087.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -710,7 +797,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane088.geometry}
         material={nodes.Plane088.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -718,7 +806,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane089.geometry}
         material={nodes.Plane089.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -726,7 +815,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane090.geometry}
         material={nodes.Plane090.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -734,7 +824,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane091.geometry}
         material={nodes.Plane091.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -742,7 +833,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane092.geometry}
         material={nodes.Plane092.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -750,7 +842,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane093.geometry}
         material={nodes.Plane093.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -758,7 +851,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane094.geometry}
         material={nodes.Plane094.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -766,7 +860,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane095.geometry}
         material={nodes.Plane095.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -774,7 +869,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane096.geometry}
         material={nodes.Plane096.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -782,7 +878,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane097.geometry}
         material={nodes.Plane097.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -790,7 +887,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane098.geometry}
         material={nodes.Plane098.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -798,7 +896,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane099.geometry}
         material={nodes.Plane099.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -806,7 +905,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane100.geometry}
         material={nodes.Plane100.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -814,7 +914,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane101.geometry}
         material={nodes.Plane101.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -822,7 +923,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane102.geometry}
         material={nodes.Plane102.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -830,7 +932,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane103.geometry}
         material={nodes.Plane103.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -838,7 +941,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane104.geometry}
         material={nodes.Plane104.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -846,7 +950,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane105.geometry}
         material={nodes.Plane105.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -854,7 +959,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane106.geometry}
         material={nodes.Plane106.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -862,7 +968,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane107.geometry}
         material={nodes.Plane107.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -870,7 +977,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane108.geometry}
         material={nodes.Plane108.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -878,7 +986,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane109.geometry}
         material={nodes.Plane109.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -886,7 +995,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane110.geometry}
         material={nodes.Plane110.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -894,7 +1004,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane111.geometry}
         material={nodes.Plane111.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -902,7 +1013,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane112.geometry}
         material={nodes.Plane112.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -910,7 +1022,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane113.geometry}
         material={nodes.Plane113.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -918,7 +1031,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane114.geometry}
         material={nodes.Plane114.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -926,7 +1040,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane115.geometry}
         material={nodes.Plane115.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -934,7 +1049,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane116.geometry}
         material={nodes.Plane116.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -942,7 +1058,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane117.geometry}
         material={nodes.Plane117.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -950,7 +1067,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane118.geometry}
         material={nodes.Plane118.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -958,7 +1076,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane119.geometry}
         material={nodes.Plane119.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -966,7 +1085,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane120.geometry}
         material={nodes.Plane120.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -974,7 +1094,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane121.geometry}
         material={nodes.Plane121.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -982,7 +1103,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane122.geometry}
         material={nodes.Plane122.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -990,7 +1112,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane123.geometry}
         material={nodes.Plane123.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -998,7 +1121,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane124.geometry}
         material={nodes.Plane124.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1006,7 +1130,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane125.geometry}
         material={nodes.Plane125.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1014,7 +1139,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane126.geometry}
         material={nodes.Plane126.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1022,7 +1148,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane127.geometry}
         material={nodes.Plane127.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1030,7 +1157,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane128.geometry}
         material={nodes.Plane128.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1038,7 +1166,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane129.geometry}
         material={nodes.Plane129.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1046,7 +1175,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane130.geometry}
         material={nodes.Plane130.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1054,7 +1184,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane131.geometry}
         material={nodes.Plane131.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1062,7 +1193,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane132.geometry}
         material={nodes.Plane132.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1070,7 +1202,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane133.geometry}
         material={nodes.Plane133.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1078,7 +1211,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane134.geometry}
         material={nodes.Plane134.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1086,7 +1220,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane135.geometry}
         material={nodes.Plane135.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1094,7 +1229,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane136.geometry}
         material={nodes.Plane136.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1102,7 +1238,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane137.geometry}
         material={nodes.Plane137.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1110,7 +1247,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane138.geometry}
         material={nodes.Plane138.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1118,7 +1256,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane139.geometry}
         material={nodes.Plane139.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1126,7 +1265,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane140.geometry}
         material={nodes.Plane140.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1134,7 +1274,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane141.geometry}
         material={nodes.Plane141.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1142,7 +1283,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane142.geometry}
         material={nodes.Plane142.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1150,7 +1292,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane143.geometry}
         material={nodes.Plane143.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1158,7 +1301,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane144.geometry}
         material={nodes.Plane144.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1166,7 +1310,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane145.geometry}
         material={nodes.Plane145.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1174,7 +1319,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane146.geometry}
         material={nodes.Plane146.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1182,7 +1328,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane147.geometry}
         material={nodes.Plane147.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1190,7 +1337,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane148.geometry}
         material={nodes.Plane148.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1198,7 +1346,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane149.geometry}
         material={nodes.Plane149.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1206,7 +1355,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane150.geometry}
         material={nodes.Plane150.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1214,7 +1364,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane151.geometry}
         material={nodes.Plane151.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1222,7 +1373,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane152.geometry}
         material={nodes.Plane152.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1230,7 +1382,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane153.geometry}
         material={nodes.Plane153.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1238,7 +1391,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane154.geometry}
         material={nodes.Plane154.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1246,7 +1400,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane155.geometry}
         material={nodes.Plane155.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1254,7 +1409,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane156.geometry}
         material={nodes.Plane156.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1262,7 +1418,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane157.geometry}
         material={nodes.Plane157.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1270,7 +1427,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane158.geometry}
         material={nodes.Plane158.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1278,7 +1436,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane159.geometry}
         material={nodes.Plane159.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1286,7 +1445,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane160.geometry}
         material={nodes.Plane160.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1294,7 +1454,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane161.geometry}
         material={nodes.Plane161.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1302,7 +1463,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane162.geometry}
         material={nodes.Plane162.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1310,7 +1472,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane163.geometry}
         material={nodes.Plane163.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1318,7 +1481,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane164.geometry}
         material={nodes.Plane164.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1326,7 +1490,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane165.geometry}
         material={nodes.Plane165.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1334,7 +1499,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane166.geometry}
         material={nodes.Plane166.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1342,7 +1508,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane167.geometry}
         material={nodes.Plane167.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1350,7 +1517,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane168.geometry}
         material={nodes.Plane168.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1358,7 +1526,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane169.geometry}
         material={nodes.Plane169.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1366,7 +1535,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane170.geometry}
         material={nodes.Plane170.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1374,7 +1544,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane171.geometry}
         material={nodes.Plane171.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1382,7 +1553,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane172.geometry}
         material={nodes.Plane172.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1390,7 +1562,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane173.geometry}
         material={nodes.Plane173.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1398,7 +1571,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane174.geometry}
         material={nodes.Plane174.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1406,7 +1580,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane175.geometry}
         material={nodes.Plane175.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1414,7 +1589,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane176.geometry}
         material={nodes.Plane176.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1422,7 +1598,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane177.geometry}
         material={nodes.Plane177.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1430,7 +1607,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane178.geometry}
         material={nodes.Plane178.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1438,7 +1616,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane179.geometry}
         material={nodes.Plane179.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1446,7 +1625,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane180.geometry}
         material={nodes.Plane180.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1454,7 +1634,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane181.geometry}
         material={nodes.Plane181.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1462,7 +1643,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane182.geometry}
         material={nodes.Plane182.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1470,7 +1652,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane183.geometry}
         material={nodes.Plane183.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1478,7 +1661,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane184.geometry}
         material={nodes.Plane184.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1486,7 +1670,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane185.geometry}
         material={nodes.Plane185.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1494,7 +1679,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane186.geometry}
         material={nodes.Plane186.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1502,7 +1688,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane187.geometry}
         material={nodes.Plane187.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1510,7 +1697,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane188.geometry}
         material={nodes.Plane188.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1518,7 +1706,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane189.geometry}
         material={nodes.Plane189.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1526,7 +1715,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane190.geometry}
         material={nodes.Plane190.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1534,7 +1724,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane191.geometry}
         material={nodes.Plane191.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1542,7 +1733,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane192.geometry}
         material={nodes.Plane192.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1550,7 +1742,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane193.geometry}
         material={nodes.Plane193.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1558,7 +1751,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane194.geometry}
         material={nodes.Plane194.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1566,7 +1760,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane195.geometry}
         material={nodes.Plane195.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1574,7 +1769,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane196.geometry}
         material={nodes.Plane196.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1582,7 +1778,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane197.geometry}
         material={nodes.Plane197.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1590,7 +1787,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane198.geometry}
         material={nodes.Plane198.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1598,7 +1796,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane199.geometry}
         material={nodes.Plane199.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1606,7 +1805,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane200.geometry}
         material={nodes.Plane200.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1614,7 +1814,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane201.geometry}
         material={nodes.Plane201.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1622,7 +1823,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane202.geometry}
         material={nodes.Plane202.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1630,7 +1832,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane203.geometry}
         material={nodes.Plane203.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1638,7 +1841,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane204.geometry}
         material={nodes.Plane204.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1646,7 +1850,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane205.geometry}
         material={nodes.Plane205.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1654,7 +1859,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane206.geometry}
         material={nodes.Plane206.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1662,7 +1868,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane207.geometry}
         material={nodes.Plane207.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1670,7 +1877,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane208.geometry}
         material={nodes.Plane208.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1678,7 +1886,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane209.geometry}
         material={nodes.Plane209.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1686,7 +1895,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane210.geometry}
         material={nodes.Plane210.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1694,7 +1904,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane211.geometry}
         material={nodes.Plane211.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1702,7 +1913,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane212.geometry}
         material={nodes.Plane212.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1710,7 +1922,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane213.geometry}
         material={nodes.Plane213.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1718,7 +1931,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane214.geometry}
         material={nodes.Plane214.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1726,7 +1940,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane215.geometry}
         material={nodes.Plane215.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1734,7 +1949,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane216.geometry}
         material={nodes.Plane216.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1742,7 +1958,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane217.geometry}
         material={nodes.Plane217.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1750,7 +1967,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane218.geometry}
         material={nodes.Plane218.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1758,7 +1976,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane219.geometry}
         material={nodes.Plane219.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1766,7 +1985,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane220.geometry}
         material={nodes.Plane220.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1774,7 +1994,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane221.geometry}
         material={nodes.Plane221.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1782,7 +2003,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane222.geometry}
         material={nodes.Plane222.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1790,7 +2012,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane223.geometry}
         material={nodes.Plane223.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1798,7 +2021,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane224.geometry}
         material={nodes.Plane224.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1806,7 +2030,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane225.geometry}
         material={nodes.Plane225.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1814,7 +2039,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane226.geometry}
         material={nodes.Plane226.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1822,7 +2048,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane227.geometry}
         material={nodes.Plane227.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1830,7 +2057,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane228.geometry}
         material={nodes.Plane228.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1838,7 +2066,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane229.geometry}
         material={nodes.Plane229.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1846,7 +2075,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane230.geometry}
         material={nodes.Plane230.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1854,7 +2084,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane231.geometry}
         material={nodes.Plane231.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1862,7 +2093,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane232.geometry}
         material={nodes.Plane232.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1870,7 +2102,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane233.geometry}
         material={nodes.Plane233.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1878,7 +2111,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane234.geometry}
         material={nodes.Plane234.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1886,7 +2120,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane235.geometry}
         material={nodes.Plane235.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1894,7 +2129,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane236.geometry}
         material={nodes.Plane236.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1902,7 +2138,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane237.geometry}
         material={nodes.Plane237.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1910,7 +2147,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane238.geometry}
         material={nodes.Plane238.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1918,7 +2156,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane239.geometry}
         material={nodes.Plane239.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1926,7 +2165,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane240.geometry}
         material={nodes.Plane240.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1934,7 +2174,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane241.geometry}
         material={nodes.Plane241.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1942,7 +2183,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane242.geometry}
         material={nodes.Plane242.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1950,7 +2192,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane243.geometry}
         material={nodes.Plane243.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1958,7 +2201,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane244.geometry}
         material={nodes.Plane244.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1966,7 +2210,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane245.geometry}
         material={nodes.Plane245.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1974,7 +2219,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane246.geometry}
         material={nodes.Plane246.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1982,7 +2228,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane247.geometry}
         material={nodes.Plane247.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1990,7 +2237,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane248.geometry}
         material={nodes.Plane248.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -1998,7 +2246,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane249.geometry}
         material={nodes.Plane249.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2006,7 +2255,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane250.geometry}
         material={nodes.Plane250.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2014,7 +2264,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane251.geometry}
         material={nodes.Plane251.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2022,7 +2273,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane252.geometry}
         material={nodes.Plane252.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2030,7 +2282,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane253.geometry}
         material={nodes.Plane253.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2038,7 +2291,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane254.geometry}
         material={nodes.Plane254.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2046,7 +2300,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane255.geometry}
         material={nodes.Plane255.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2054,7 +2309,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane256.geometry}
         material={nodes.Plane256.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2062,7 +2318,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane257.geometry}
         material={nodes.Plane257.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2070,7 +2327,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane258.geometry}
         material={nodes.Plane258.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2078,7 +2336,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane259.geometry}
         material={nodes.Plane259.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2086,7 +2345,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane260.geometry}
         material={nodes.Plane260.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2094,7 +2354,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane261.geometry}
         material={nodes.Plane261.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2102,7 +2363,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane262.geometry}
         material={nodes.Plane262.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2110,7 +2372,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane263.geometry}
         material={nodes.Plane263.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2118,7 +2381,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane264.geometry}
         material={nodes.Plane264.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2126,7 +2390,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane265.geometry}
         material={nodes.Plane265.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2134,7 +2399,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane266.geometry}
         material={nodes.Plane266.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2142,7 +2408,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane267.geometry}
         material={nodes.Plane267.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2150,7 +2417,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane268.geometry}
         material={nodes.Plane268.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2158,7 +2426,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane269.geometry}
         material={nodes.Plane269.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2166,7 +2435,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane270.geometry}
         material={nodes.Plane270.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2174,7 +2444,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane271.geometry}
         material={nodes.Plane271.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2182,7 +2453,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane272.geometry}
         material={nodes.Plane272.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2190,7 +2462,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane273.geometry}
         material={nodes.Plane273.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2198,7 +2471,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane274.geometry}
         material={nodes.Plane274.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2206,7 +2480,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane275.geometry}
         material={nodes.Plane275.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2214,7 +2489,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane276.geometry}
         material={nodes.Plane276.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2222,7 +2498,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane277.geometry}
         material={nodes.Plane277.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2230,7 +2507,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane278.geometry}
         material={nodes.Plane278.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2238,7 +2516,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane279.geometry}
         material={nodes.Plane279.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2246,7 +2525,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane280.geometry}
         material={nodes.Plane280.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2254,7 +2534,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane281.geometry}
         material={nodes.Plane281.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2262,7 +2543,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane282.geometry}
         material={nodes.Plane282.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2270,7 +2552,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane283.geometry}
         material={nodes.Plane283.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2278,7 +2561,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane284.geometry}
         material={nodes.Plane284.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2286,7 +2570,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane285.geometry}
         material={nodes.Plane285.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2294,7 +2579,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane286.geometry}
         material={nodes.Plane286.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2302,7 +2588,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane287.geometry}
         material={nodes.Plane287.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2310,7 +2597,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane288.geometry}
         material={nodes.Plane288.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2318,7 +2606,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane289.geometry}
         material={nodes.Plane289.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2326,7 +2615,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane290.geometry}
         material={nodes.Plane290.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2334,7 +2624,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane291.geometry}
         material={nodes.Plane291.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2342,7 +2633,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane292.geometry}
         material={nodes.Plane292.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2350,7 +2642,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane293.geometry}
         material={nodes.Plane293.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2358,7 +2651,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane294.geometry}
         material={nodes.Plane294.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2366,7 +2660,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane295.geometry}
         material={nodes.Plane295.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2374,7 +2669,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane296.geometry}
         material={nodes.Plane296.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2382,7 +2678,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane297.geometry}
         material={nodes.Plane297.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2390,7 +2687,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane298.geometry}
         material={nodes.Plane298.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2398,7 +2696,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane299.geometry}
         material={nodes.Plane299.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2406,7 +2705,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane300.geometry}
         material={nodes.Plane300.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2414,7 +2714,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane301.geometry}
         material={nodes.Plane301.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2422,7 +2723,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane302.geometry}
         material={nodes.Plane302.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2430,7 +2732,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane303.geometry}
         material={nodes.Plane303.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2438,7 +2741,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane304.geometry}
         material={nodes.Plane304.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2446,7 +2750,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane305.geometry}
         material={nodes.Plane305.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2454,7 +2759,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane306.geometry}
         material={nodes.Plane306.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2462,7 +2768,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane307.geometry}
         material={nodes.Plane307.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2470,7 +2777,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane308.geometry}
         material={nodes.Plane308.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2478,7 +2786,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane309.geometry}
         material={nodes.Plane309.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2486,7 +2795,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane310.geometry}
         material={nodes.Plane310.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2494,7 +2804,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane311.geometry}
         material={nodes.Plane311.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2502,7 +2813,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane312.geometry}
         material={nodes.Plane312.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2510,7 +2822,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane313.geometry}
         material={nodes.Plane313.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2518,7 +2831,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane314.geometry}
         material={nodes.Plane314.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2526,7 +2840,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane315.geometry}
         material={nodes.Plane315.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2534,7 +2849,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane316.geometry}
         material={nodes.Plane316.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2542,7 +2858,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane317.geometry}
         material={nodes.Plane317.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2550,7 +2867,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane318.geometry}
         material={nodes.Plane318.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2558,7 +2876,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane319.geometry}
         material={nodes.Plane319.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2566,7 +2885,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane320.geometry}
         material={nodes.Plane320.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2574,7 +2894,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane321.geometry}
         material={nodes.Plane321.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2582,7 +2903,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane322.geometry}
         material={nodes.Plane322.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2590,7 +2912,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane323.geometry}
         material={nodes.Plane323.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2598,7 +2921,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane324.geometry}
         material={nodes.Plane324.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2606,7 +2930,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane325.geometry}
         material={nodes.Plane325.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2614,7 +2939,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane326.geometry}
         material={nodes.Plane326.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2622,7 +2948,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane327.geometry}
         material={nodes.Plane327.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2630,7 +2957,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane328.geometry}
         material={nodes.Plane328.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2638,7 +2966,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane329.geometry}
         material={nodes.Plane329.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2646,7 +2975,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane330.geometry}
         material={nodes.Plane330.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2654,7 +2984,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane331.geometry}
         material={nodes.Plane331.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2662,7 +2993,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane332.geometry}
         material={nodes.Plane332.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2670,7 +3002,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane333.geometry}
         material={nodes.Plane333.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2678,7 +3011,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane334.geometry}
         material={nodes.Plane334.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2686,7 +3020,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane335.geometry}
         material={nodes.Plane335.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2694,7 +3029,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane336.geometry}
         material={nodes.Plane336.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2702,7 +3038,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane337.geometry}
         material={nodes.Plane337.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2710,7 +3047,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane338.geometry}
         material={nodes.Plane338.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2718,7 +3056,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane339.geometry}
         material={nodes.Plane339.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2726,7 +3065,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane340.geometry}
         material={nodes.Plane340.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2734,7 +3074,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane341.geometry}
         material={nodes.Plane341.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2742,7 +3083,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane342.geometry}
         material={nodes.Plane342.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2750,7 +3092,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane343.geometry}
         material={nodes.Plane343.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2758,7 +3101,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane344.geometry}
         material={nodes.Plane344.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2766,7 +3110,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane345.geometry}
         material={nodes.Plane345.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2774,7 +3119,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane346.geometry}
         material={nodes.Plane346.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2782,7 +3128,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane347.geometry}
         material={nodes.Plane347.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2790,7 +3137,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane348.geometry}
         material={nodes.Plane348.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2798,7 +3146,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane349.geometry}
         material={nodes.Plane349.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2806,7 +3155,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane350.geometry}
         material={nodes.Plane350.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2814,7 +3164,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane351.geometry}
         material={nodes.Plane351.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2822,7 +3173,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane352.geometry}
         material={nodes.Plane352.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2830,7 +3182,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane353.geometry}
         material={nodes.Plane353.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2838,7 +3191,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane354.geometry}
         material={nodes.Plane354.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2846,7 +3200,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane355.geometry}
         material={nodes.Plane355.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2854,7 +3209,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane356.geometry}
         material={nodes.Plane356.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2862,7 +3218,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane357.geometry}
         material={nodes.Plane357.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2870,7 +3227,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane358.geometry}
         material={nodes.Plane358.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2878,7 +3236,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane359.geometry}
         material={nodes.Plane359.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2886,7 +3245,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane360.geometry}
         material={nodes.Plane360.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2894,7 +3254,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane361.geometry}
         material={nodes.Plane361.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2902,7 +3263,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane362.geometry}
         material={nodes.Plane362.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2910,7 +3272,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane363.geometry}
         material={nodes.Plane363.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2918,7 +3281,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane364.geometry}
         material={nodes.Plane364.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2926,7 +3290,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane365.geometry}
         material={nodes.Plane365.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2934,7 +3299,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane366.geometry}
         material={nodes.Plane366.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2942,7 +3308,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane367.geometry}
         material={nodes.Plane367.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2950,7 +3317,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane368.geometry}
         material={nodes.Plane368.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2958,7 +3326,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane369.geometry}
         material={nodes.Plane369.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2966,7 +3335,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane370.geometry}
         material={nodes.Plane370.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2974,7 +3344,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane371.geometry}
         material={nodes.Plane371.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2982,7 +3353,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane372.geometry}
         material={nodes.Plane372.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2990,7 +3362,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane373.geometry}
         material={nodes.Plane373.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -2998,7 +3371,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane374.geometry}
         material={nodes.Plane374.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3006,7 +3380,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane375.geometry}
         material={nodes.Plane375.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3014,7 +3389,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane376.geometry}
         material={nodes.Plane376.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3022,7 +3398,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane377.geometry}
         material={nodes.Plane377.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3030,7 +3407,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane378.geometry}
         material={nodes.Plane378.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3038,7 +3416,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane379.geometry}
         material={nodes.Plane379.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3046,7 +3425,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane380.geometry}
         material={nodes.Plane380.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3054,7 +3434,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane381.geometry}
         material={nodes.Plane381.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3062,7 +3443,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane382.geometry}
         material={nodes.Plane382.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3070,7 +3452,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane383.geometry}
         material={nodes.Plane383.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3078,7 +3461,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane384.geometry}
         material={nodes.Plane384.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3086,7 +3470,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane385.geometry}
         material={nodes.Plane385.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3094,7 +3479,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane386.geometry}
         material={nodes.Plane386.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3102,7 +3488,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane387.geometry}
         material={nodes.Plane387.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3110,7 +3497,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane388.geometry}
         material={nodes.Plane388.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3118,7 +3506,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane389.geometry}
         material={nodes.Plane389.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3126,7 +3515,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane390.geometry}
         material={nodes.Plane390.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3134,7 +3524,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane391.geometry}
         material={nodes.Plane391.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3142,7 +3533,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane392.geometry}
         material={nodes.Plane392.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3150,7 +3542,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane393.geometry}
         material={nodes.Plane393.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3158,7 +3551,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane394.geometry}
         material={nodes.Plane394.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3166,7 +3560,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane395.geometry}
         material={nodes.Plane395.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3174,7 +3569,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane396.geometry}
         material={nodes.Plane396.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3182,7 +3578,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane397.geometry}
         material={nodes.Plane397.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3190,7 +3587,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane398.geometry}
         material={nodes.Plane398.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3198,7 +3596,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane399.geometry}
         material={nodes.Plane399.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3206,7 +3605,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane400.geometry}
         material={nodes.Plane400.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3214,7 +3614,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane401.geometry}
         material={nodes.Plane401.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3222,7 +3623,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane402.geometry}
         material={nodes.Plane402.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3230,7 +3632,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane403.geometry}
         material={nodes.Plane403.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3238,7 +3641,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane404.geometry}
         material={nodes.Plane404.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3246,7 +3650,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane405.geometry}
         material={nodes.Plane405.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3254,7 +3659,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane406.geometry}
         material={nodes.Plane406.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3262,7 +3668,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane407.geometry}
         material={nodes.Plane407.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3270,7 +3677,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane408.geometry}
         material={nodes.Plane408.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3278,7 +3686,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane409.geometry}
         material={nodes.Plane409.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3286,7 +3695,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane410.geometry}
         material={nodes.Plane410.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3294,7 +3704,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane411.geometry}
         material={nodes.Plane411.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3302,7 +3713,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane412.geometry}
         material={nodes.Plane412.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3310,7 +3722,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane413.geometry}
         material={nodes.Plane413.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3318,7 +3731,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane414.geometry}
         material={nodes.Plane414.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3326,7 +3740,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane415.geometry}
         material={nodes.Plane415.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3334,7 +3749,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane416.geometry}
         material={nodes.Plane416.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3342,7 +3758,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane417.geometry}
         material={nodes.Plane417.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3350,7 +3767,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane418.geometry}
         material={nodes.Plane418.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3358,7 +3776,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane419.geometry}
         material={nodes.Plane419.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3366,7 +3785,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane420.geometry}
         material={nodes.Plane420.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3374,7 +3794,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane421.geometry}
         material={nodes.Plane421.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3382,7 +3803,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane422.geometry}
         material={nodes.Plane422.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3390,7 +3812,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane423.geometry}
         material={nodes.Plane423.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3398,7 +3821,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane424.geometry}
         material={nodes.Plane424.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3406,7 +3830,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane425.geometry}
         material={nodes.Plane425.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3414,7 +3839,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane426.geometry}
         material={nodes.Plane426.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3422,7 +3848,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane427.geometry}
         material={nodes.Plane427.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3430,7 +3857,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane428.geometry}
         material={nodes.Plane428.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3438,7 +3866,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane429.geometry}
         material={nodes.Plane429.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3446,7 +3875,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane430.geometry}
         material={nodes.Plane430.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3454,7 +3884,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane431.geometry}
         material={nodes.Plane431.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3462,7 +3893,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane432.geometry}
         material={nodes.Plane432.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3470,7 +3902,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane433.geometry}
         material={nodes.Plane433.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3478,7 +3911,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane434.geometry}
         material={nodes.Plane434.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3486,7 +3920,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane435.geometry}
         material={nodes.Plane435.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3494,7 +3929,8 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane436.geometry}
         material={nodes.Plane436.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
       <mesh
@@ -3502,12 +3938,15 @@ export function ModeledMap(props) {
         receiveShadow
         geometry={nodes.Plane437.geometry}
         material={nodes.Plane437.material}
-        position={[-10.005, -0.515, 14.49]}
+        position={[-14.919, -0.085, -8.964]}
+        rotation={[0, -1.571, 0]}
         scale={0.346}
       />
     </group>
   );
 }
 
-useGLTF.preload("/assets/static/Grailhold-map-hexcutout-02.glb");
+
+
+useGLTF.preload("/assets/static/Grailhold-map-hexcutout-03.glb");
 
