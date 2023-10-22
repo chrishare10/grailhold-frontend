@@ -24,10 +24,10 @@ const GET_CURRENT_USER = gql`
 export default function GetCurrentUser(jwt) {
 
     
-
+console.log(jwt)
     const endpoint = import.meta.env.VITE_API_ENDPOINT
     const headers = {
-        authorization: "JWT " + jwt
+        authorization: `JWT ${jwt}`
     }
 
     const { isLoading, isError, isSuccess, data } = useQuery({
