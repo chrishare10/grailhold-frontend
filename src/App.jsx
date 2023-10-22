@@ -8,7 +8,7 @@ import { useSpring, animated } from '@react-spring/web'
 import { pinchAction, createUseGesture } from '@use-gesture/react'
 import AboutWrapper from "./components/AboutWrapper";
 import Panels from "./components/Panels";
-import Ocean from "./components/Ocean";
+import FullCanvas from "./components/FullCanvas";
 
 const useGesture = createUseGesture([pinchAction])
 
@@ -109,18 +109,18 @@ export default function App(){
             <AboutWrapper />
 
             <NavButton/>
-            <div id="page-wrapper" ref={pageWrapper} className="overflow-scroll w-full h-full xl:flex items-center">
+            {/* <div id="page-wrapper" ref={pageWrapper} className="overflow-scroll w-full h-full xl:flex items-center">
                 <div id="frame" ref={mapWrapper} className="mx-auto" >
                     <animated.div ref={mapContainer} className="main mx-auto h-full" >
                         <Map />
                     </animated.div>
                 </div>
-            </div>
+            </div> */}
             
             <Panels />
             
             <Nav />
-            <Ocean />
+            <FullCanvas />
         </GoogleReCaptchaProvider>
         
     </div>
