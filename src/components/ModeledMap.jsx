@@ -9,41 +9,28 @@ export function ModeledMap(props) {
 
   let hexIndex
   let meshes = []
-  // for (let i = 1; i < 437; i++) {
-  //   hexIndex = key.geometry
-  //   meshes.push(
-  //   <mesh
-  //     key={i}
-  //     castShadow
-  //     receiveShadow
-  //     geometry={hexIndex}
-  //     material={materials.Material}
-  //     position={[-14.919, -0.085, -8.964]}
-  //     rotation={[0, -1.571, 0]}
-  //     scale={0.346}
-  //   />)
-  // }
-
+  let hexName
   for (const [key, value] of Object.entries(nodes)) {
     const ref = useRef()
     const [hovered, setHovered] = useState(false)
     const [clicked, setClicked] = useState(false)
     useCursor(hovered)
+
     meshes.push(
       <mesh
         key={key}
         ref={ref}
+        name={key}
         castShadow
         receiveShadow
         geometry={value.geometry}
-        
         position={[-14.919, -0.085, -8.964]}
         rotation={[0, -1.571, 0]}
         scale={0.346}
-        onClick={(e) => (e.stopPropagation(), setClicked(!clicked))}
+        onClick={(e) => (e.stopPropagation(), setClicked(!clicked), logClick(parseInt(e.object.name.slice(5))))}
         onPointerOver={(e) => (e.stopPropagation(), setHovered(true))}
         onPointerOut={(e) => setHovered(false)}>
-          <meshStandardMaterial roughness={1} transparent opacity={0.6} color={clicked ? 'orange' : hovered ? 'aquamarine' : 'white'} />
+          <meshStandardMaterial roughness={1} transparent  color={clicked ? 'orange' : hovered ? 'aquamarine' : 'white'} />
         </mesh>
       )
   }
@@ -54,6 +41,10 @@ export function ModeledMap(props) {
       {meshes ? meshes : null}
     </group>
   </>
+}
+
+function logClick(clicked){
+  console.log(clicked)
 }
 
 
