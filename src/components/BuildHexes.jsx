@@ -14,7 +14,7 @@ export default function BuildHexes() {
 
     const hexData = GetHexes()
     let fullHexes = []
-    const exploredHexRefs = useRef(new Array())
+    const exploredHexRefs = useRef(new Array()) 
 
     const handleClick = (e) => {
         selectedHex = e.target

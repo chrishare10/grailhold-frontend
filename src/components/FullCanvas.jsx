@@ -5,6 +5,9 @@ import { CameraControls, Sky } from '@react-three/drei'
 import { useControls, button, buttonGroup, folder } from 'leva'
 import { Water } from 'three-stdlib'
 import { ModeledMap } from './ModeledMap'
+import GetHexes from '../fetch/GetHexes'
+import { useGLTF } from "@react-three/drei";
+import { Perf } from 'r3f-perf'
 
 extend({ Water })
 
@@ -15,7 +18,7 @@ function Waves() {
   const gl = useThree((state) => state.gl)
   const waterNormals = useLoader(THREE.TextureLoader, '/assets/static/waternormal.jpg')
   waterNormals.wrapS = waterNormals.wrapT = THREE.RepeatWrapping
-  const geom = useMemo(() => new THREE.PlaneGeometry(100, 100), [])
+  const geom = useMemo(() => new THREE.PlaneGeometry(300, 300), [])
   const config = useMemo(
     () => ({
       textureWidth: 512,
@@ -61,17 +64,47 @@ export default function FullCanvas() {
 
 function Scene() {
   const cameraControlsRef = useRef()
-
+  const { nodes, materials } = useGLTF("/assets/static/Grailhold-map-hexcutout-04.glb");
   const { camera } = useThree()
+  
+  const hexData = GetHexes()
+  let fullHexes = []
+  const exploredHexRefs = useRef(new Array())
+
+
+  const exploredHexes = []
+  const exploredHexIds = []
+  const entryIds = []
+  if(hexData) {
+
+    for (let i = 0; i < hexData.length; i++) {
+      const el = hexData[i];
+      exploredHexIds.push(String(el.hexId))
+      exploredHexes.push({entry: el.id, hexId: String(el.hexId)})
+      
+    }
+    let exploredCount = 0
+    
+  }
+    
 
   return <>
+    <Perf position="top-left" />
     <Suspense fallback={null}>
-        <ModeledMap />
-        <Waves />
-      
-      </Suspense>
-      <KeyLight brightness={400} color={"#ffffff"} />
+        {exploredHexes ? <ModeledMap exploredHexes={exploredHexes} exploredHexIds={exploredHexIds} nodes={nodes} hexData={hexData}/> : null }
+        {/* <Waves /> */}
+        <mesh rotation-x={Math.PI * -0.5} position={[0,.2,0]}>
+          <planeGeometry args={[200, 200]} />
+          <meshStandardMaterial color={"#FDB9FF"} metalness={.6}/>
+        </mesh>
+      {/* <KeyLight brightness={20} color={"#ffffff"} /> */}
+      <directionalLight intensity={5} position={[100, 100, -200]} />
+      <ambientLight intensity={.3} />
       <Sky scale={1000} sunPosition={[100, 100, -200]} azimuth={0.3} turbidity={0.4} />
       <CameraControls ref={cameraControlsRef} />
+    </Suspense>
   </>
 }
+
+
+useGLTF.preload("/assets/static/Grailhold-map-hexcutout-04.glb");

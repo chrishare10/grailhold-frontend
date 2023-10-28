@@ -47,7 +47,7 @@ export default function RulesPanel(){
         updateRulesPanelState(false)
     }
 
-    return <div id="rules-panel-wrapper" ref={rulesPanel} className={`absolute right-0 top-0 h-full bg-white flex flex-col items-center ${rulesPanelState ? "panel-active" : ""}`}>
+    return <div id="rules-panel-wrapper" ref={rulesPanel} className={`absolute right-0 top-0 z-20 h-full bg-white flex flex-col items-center ${rulesPanelState ? "panel-active" : ""}`}>
         <div className="flex flex-row gap-3 md:gap-5 px-5 md:px-10 justify-between w-full bg-gray-200 items-center ">
             <div className="flex flex-row gap-3 md:gap-5">
                 <button id="rules-btn" className={`text-xl font-bold p-3 md:p-5 ${rulesState ? "bg-white" : ""}`} onClick={handleClick}>Rules</button>

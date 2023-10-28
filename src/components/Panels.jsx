@@ -108,7 +108,7 @@ export default function Panels(){
         characterSelection = currentCharacter.entries[0]
     }
 
-    return<>
+    return<> 
     <DetailsPanel characters={characters} userId={userId} userGrails={userGrails} email={email} username={username}/>
     <RulesPanel />
     <ProfilePanel userId={userId} email={email} loginData={loginData} currentUser={currentUser} username={username} name={name} characters={characters} userGrails={userGrails} characterSelection={characterSelection} character={character} />

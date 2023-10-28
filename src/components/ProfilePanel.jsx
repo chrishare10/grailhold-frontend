@@ -46,7 +46,7 @@ export default function ProfilePanel({userId, loginData, currentUser, username, 
     }
    
 
-    return <div id="profile-panel-wrapper" ref={profilePanel} className={`absolute left-0 top-0 h-full w-96 gap-10 bg-white px-10 py-10 flex flex-col overflow-y-scroll ${profileState ? "panel-active" : ""}`}>
+    return <div id="profile-panel-wrapper" ref={profilePanel} className={`absolute left-0 top-0 z-20 h-full w-96 gap-10 bg-white px-10 py-10 flex flex-col overflow-y-scroll ${profileState ? "panel-active" : ""}`}>
         <div className="flex justify-end">
             <CloseBtn onClick={handleClose} color="text-black" id="profile-close" />
         </div>

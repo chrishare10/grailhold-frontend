@@ -2,6 +2,7 @@ import { create } from 'zustand'
 
 export const useHexStore = create((set, get) => ({
     hex: {id: null, entry: null},
+    hexHover: null,
     oldHex: null,
     detailState: false,
     detailsPanelState: false,
@@ -17,6 +18,9 @@ export const useHexStore = create((set, get) => ({
         
         const updateDetails = get().updateDetailsState
         updateDetails()
+    },
+    updateHexHover: (e) => {
+        set({ hexHover: e })
     },
     updateDetailsState: (e) => {
         const detailState = get().detailState
