@@ -96,7 +96,7 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData}) {
     }
   }
   return <>
-  <CycleRaycast onChanged={(objects, cycle) => set({ objects, cycle })} />
+  {/* <CycleRaycast onChanged={(objects, cycle) => set({ objects, cycle })} /> */}
   
     <group dispose={null}>
       {meshes ? meshes : null}
