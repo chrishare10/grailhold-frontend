@@ -89,7 +89,7 @@ function Scene() {
     
 
   return <>
-    <Perf position="top-left" />
+    {/* <Perf position="top-left" /> */}
     <Suspense fallback={null}>
         {exploredHexes ? <ModeledMap exploredHexes={exploredHexes} exploredHexIds={exploredHexIds} nodes={nodes} hexData={hexData}/> : null }
         {/* <Waves /> */}
