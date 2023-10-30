@@ -25,7 +25,8 @@ export default function GetCurrentUser(jwt) {
 
     const endpoint = import.meta.env.VITE_API_ENDPOINT
     const headers = {
-        authorization: `JWT ${jwt}`
+        Authorization: `JWT ${jwt}`,
+        authorization: import.meta.env.VITE_API_AUTH
     }
 
     const { isLoading, isError, isSuccess, data } = useQuery({
