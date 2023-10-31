@@ -9,48 +9,48 @@ import GetHexes from '../fetch/GetHexes'
 import { useGLTF } from "@react-three/drei";
 import { Perf } from 'r3f-perf'
 
-extend({ Water })
+// extend({ Water })
 
 
 
-function Waves() {
-  const ref = useRef()
-  const gl = useThree((state) => state.gl)
-  const waterNormals = useLoader(THREE.TextureLoader, '/assets/static/waternormal.jpg')
-  waterNormals.wrapS = waterNormals.wrapT = THREE.RepeatWrapping
-  const geom = useMemo(() => new THREE.PlaneGeometry(300, 300), [])
-  const config = useMemo(
-    () => ({
-      textureWidth: 512,
-      textureHeight: 512,
-      waterNormals,
-      sunDirection: new THREE.Vector3(),
-      sunColor: 0xffffff,
-      waterColor: 0x001e0f,
-      distortionScale: .5,
-      fog: false,
-      format: gl.encoding
-    }),
-    [waterNormals]
-  )
-  useFrame((state, delta) => (ref.current.material.uniforms.time.value += delta))
-  return <water ref={ref} args={[geom, config]} rotation-x={-Math.PI / 2} />
-}
+// function Waves() {
+//   const ref = useRef()
+//   const gl = useThree((state) => state.gl)
+//   const waterNormals = useLoader(THREE.TextureLoader, '/assets/static/waternormal.jpg')
+//   waterNormals.wrapS = waterNormals.wrapT = THREE.RepeatWrapping
+//   const geom = useMemo(() => new THREE.PlaneGeometry(300, 300), [])
+//   const config = useMemo(
+//     () => ({
+//       textureWidth: 512,
+//       textureHeight: 512,
+//       waterNormals,
+//       sunDirection: new THREE.Vector3(),
+//       sunColor: 0xffffff,
+//       waterColor: 0x001e0f,
+//       distortionScale: .5,
+//       fog: false,
+//       format: gl.encoding
+//     }),
+//     [waterNormals]
+//   )
+//   useFrame((state, delta) => (ref.current.material.uniforms.time.value += delta))
+//   return <water ref={ref} args={[geom, config]} rotation-x={-Math.PI / 2} />
+// }
 
-function KeyLight({ brightness, color }) {
-  return (
-    <rectAreaLight
-      width={3}
-      height={3}
-      color={color}
-      intensity={brightness}
-      position={[0, 20, 10]}
-      lookAt={[0, 0, 0]}
-      penumbra={1}
-      castShadow
-    />
-  );
-}
+// function KeyLight({ brightness, color }) {
+//   return (
+//     <rectAreaLight
+//       width={3}
+//       height={3}
+//       color={color}
+//       intensity={brightness}
+//       position={[0, 20, 10]}
+//       lookAt={[0, 0, 0]}
+//       penumbra={1}
+//       castShadow
+//     />
+//   );
+// }
 
 export default function FullCanvas() {
   
@@ -86,6 +86,13 @@ function Scene() {
     let exploredCount = 0
     
   }
+
+  const bb = new THREE.Box3(
+		new THREE.Vector3( -20.0, -20.0, -20.0 ),
+		new THREE.Vector3( 20.0, 20.0, 20.0 )
+	);
+
+  cameraControlsRef.current?.setBoundary(bb)
     
 
   return <>
@@ -101,7 +108,7 @@ function Scene() {
       <directionalLight intensity={5} position={[100, 100, -200]} />
       <ambientLight intensity={.3} />
       <Sky scale={1000} sunPosition={[100, 100, -200]} azimuth={0.3} turbidity={0.4} />
-      <CameraControls ref={cameraControlsRef} />
+      <CameraControls ref={cameraControlsRef} minDistance={5} maxDistance={30} maxPolarAngle={1.3}/>
     </Suspense>
   </>
 }

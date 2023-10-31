@@ -45,7 +45,7 @@ export default function Panels(){
         sessionStorage.setItem("jwtToken", loginData.authenticate.jwt);
         sessionStorage.setItem("refreshToken", loginData.authenticate.refreshToken);
 
-        console.log(loginData.authenticate.jwt)
+        
     
         username = loginData.authenticate.user.username
         email = loginData.authenticate.user.email
