@@ -7,8 +7,13 @@ export default {
   theme: {
     extend: {
       colors : {
-        gold: "#FFBD33",
-        oceanDark: "#2C6491"
+        gold: "#F2AE30",
+        blue: "#024959",
+        brown: {
+          DEFAULT: "#6F4F73",
+          light: "#A64F03"
+        },
+        purple: "#6F4F73"
       },
       minHeight: {
         'screenh': '100svh',

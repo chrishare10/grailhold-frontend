@@ -66,7 +66,7 @@ export default function LoginForm(){
         {errors.password && <span className="text-red-300">This field is required</span>}
       </div>
       <input  type="text" className="hidden" tabIndex="-1" autoComplete="off" {...register("b_password")} />
-      <input className="bg-blue-300 cursor-pointer hover:bg-blue-400 font-bold py-2 w-60 mx-auto" type="submit" value="Login" />
+      <input className="bg-blue cursor-pointer  hover:bg-purple text-white py-2 w-60 mx-auto" type="submit" value="Login" />
     </form>
   );
 };

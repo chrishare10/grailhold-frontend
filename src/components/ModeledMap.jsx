@@ -70,7 +70,7 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData}) {
             onPointerOver={(e) => (e.stopPropagation(), setHexHover(value.name.slice(5)))}
             onPointerOut={(e) => setHexHover(false)}
             >
-              <meshStandardMaterial roughness={1} transparent  color={hex.id == value.name.slice(5) ? 'orange' : hexHover == value.name.slice(5) ? 'aquamarine' : 'green'} />
+              <meshStandardMaterial roughness={1} metalness={.5} color={hex.id == value.name.slice(5) ? '#593E25' : hexHover == value.name.slice(5) ? '#6F4F73' : '#A64F03'} />
             </mesh>
           )
       } else {
@@ -89,7 +89,7 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData}) {
             onPointerOver={(e) => (e.stopPropagation(), setHexHover(value.name.slice(5)))}
             onPointerOut={(e) => setHexHover(false)}
             >
-              <meshStandardMaterial roughness={1} transparent  color={hex.id == value.name.slice(5) ? 'orange' : hexHover == value.name.slice(5) ? 'aquamarine' : 'white'} />
+              <meshStandardMaterial roughness={1} color={hex.id == value.name.slice(5) ? '#593E25' : hexHover == value.name.slice(5) ? '#6F4F73' : '#F2AE30'} />
             </mesh>
           )
       }

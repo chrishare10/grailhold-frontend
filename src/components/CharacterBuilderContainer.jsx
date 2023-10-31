@@ -396,7 +396,7 @@ export default function CharacterBuilderContainer({ userId }) {
             <FormerProfessionsContainer register={register} formerProfessionsEntries={formerProfessionsEntries}/>
             <ClassesContainer register={register} watch={watch} classEntries={classEntries} subClassEntries={subClassEntries} classPicker={classPicker} setClassPicker={setClassPicker} /> 
             <AttributesBuilderContainer  limit={limit} register={register} control={control} majorAtt={majorAtt} minorAtt={minorAtt} currentAttributeCount={sum}/> 
-            <input type="submit" className="bg-blue-300 cursor-pointer hover:bg-blue-400 font-bold py-2 w-60 mx-auto" />
+            <input type="submit" className="bg-blue hover:bg-purple text-white cursor-pointer py-2 w-60 mx-auto" />
         </form>
         
     </div>

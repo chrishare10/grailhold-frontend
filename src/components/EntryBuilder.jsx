@@ -138,7 +138,7 @@ export default function EntryBuilder({buildId, hexState, characters}) {
         
         </div>
         <div>
-            <input type="submit" className="bg-blue-300 cursor-pointer hover:bg-blue-400 font-bold py-2 w-60 mx-auto" />
+            <input type="submit" className="bg-blue cursor-pointer hover:bg-blue-400 font-bold py-2 w-60 mx-auto" />
         </div>
     </form>
 

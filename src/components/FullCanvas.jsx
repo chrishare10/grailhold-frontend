@@ -101,8 +101,8 @@ function Scene() {
         {exploredHexes ? <ModeledMap exploredHexes={exploredHexes} exploredHexIds={exploredHexIds} nodes={nodes} hexData={hexData}/> : null }
         {/* <Waves /> */}
         <mesh rotation-x={Math.PI * -0.5} position={[0,.2,0]}>
-          <planeGeometry args={[200, 200]} />
-          <meshStandardMaterial color={"#FDB9FF"} metalness={.6}/>
+          <planeGeometry args={[300, 300]} />
+          <meshStandardMaterial color={"#024959"} metalness={1}/>
         </mesh>
       {/* <KeyLight brightness={20} color={"#ffffff"} /> */}
       <directionalLight intensity={5} position={[100, 100, -200]} />
