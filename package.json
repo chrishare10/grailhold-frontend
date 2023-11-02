@@ -33,6 +33,7 @@
     "graphql-request": "^5.2.0",
     "graphql-tag": "^2.12.6",
     "html-react-parser": "^3.0.16",
+    "lamina": "^1.1.23",
     "leva": "^0.9.35",
     "r3f-perf": "^7.1.2",
     "react": "18.2",

@@ -3,7 +3,7 @@ import { CycleRaycast, useCursor } from '@react-three/drei'
 import { useHexStore, useProfileStore, useRulesStore, useNavStore } from "../stores/MainStore"
 
 let selectedHex
-export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData}) {
+export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData, initAnimation}) {
   const updateHex = useHexStore(state => state.updateHex)
   const hex = useHexStore(state => state.hex)
   const updateHexHover = useHexStore(state => state.updateHexHover)
@@ -39,10 +39,9 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData}) {
     updateDetailsPage(1)
   }
 
- let entryId
+  let entryId
+  let hexLength = Object.entries(nodes).length
   if(hexData){
-
-   
     for (const [key, value] of Object.entries(nodes)) {
     
       if(exploredHexIds.includes(key.slice(5))){
@@ -70,10 +69,11 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData}) {
             onPointerOver={(e) => (e.stopPropagation(), setHexHover(value.name.slice(5)))}
             onPointerOut={(e) => setHexHover(false)}
             >
-              <meshStandardMaterial roughness={1} metalness={.5} color={hex.id == value.name.slice(5) ? '#593E25' : hexHover == value.name.slice(5) ? '#6F4F73' : '#A64F03'} />
+              <meshStandardMaterial roughness={1} metalness={.5} color={hex.id == value.name.slice(5) ? '#8C4A62' : hexHover == value.name.slice(5) ? '#F2B807' : '#F0433A'} />
             </mesh>
           )
       } else {
+        
         meshes.push(
           <mesh
             key={key}
@@ -89,9 +89,13 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData}) {
             onPointerOver={(e) => (e.stopPropagation(), setHexHover(value.name.slice(5)))}
             onPointerOut={(e) => setHexHover(false)}
             >
-              <meshStandardMaterial roughness={1} color={hex.id == value.name.slice(5) ? '#593E25' : hexHover == value.name.slice(5) ? '#6F4F73' : '#F2AE30'} />
+              <meshStandardMaterial roughness={1} color={hex.id == value.name.slice(5) ? '#8C4A62' : hexHover == value.name.slice(5) ? '#F2B807' : '#D6D58E'} />
             </mesh>
           )
+      }
+      
+      if(parseInt(key.slice(5)) + 1 == hexLength) {
+        initAnimation()
       }
     }
   }

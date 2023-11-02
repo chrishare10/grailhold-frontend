@@ -38,14 +38,14 @@ export default function DiceRollerPanel() {
 
     return <div className="py-20 flex flex-col gap-5 w-full px-10 overflow-y-scroll">
     
-    <button id="dice-roll-btn" onClick={handleDiceClick} className="bg-blue text-white py-2 px-3">
+    <button id="dice-roll-btn" onClick={handleDiceClick} className="bg-gColorOne text-white py-2 px-3">
         Roll Dice
     </button>
     <div className="w-full grid grid-cols-2 gap-5">
-        <button id="add-dice-btn" onClick={handleDiceClick} className="bg-blue text-white py-2 px-3">
+        <button id="add-dice-btn" onClick={handleDiceClick} className="bg-gColorOne text-white py-2 px-3">
             Add Dice
         </button>
-        <button id="remove-dice-btn" onClick={handleDiceClick} className="bg-blue text-white py-2 px-3">
+        <button id="remove-dice-btn" onClick={handleDiceClick} className="bg-gColorOne text-white py-2 px-3">
             Remove Dice
         </button>
     </div>
@@ -57,7 +57,7 @@ export default function DiceRollerPanel() {
         {diceFormatted}
     </div>
     
-    <button id="clear-dice-btn" onClick={handleDiceClick} className="bg-blue text-white py-2 px-3">Clear Dice</button>
+    <button id="clear-dice-btn" onClick={handleDiceClick} className="bg-gColorOne text-white py-2 px-3">Clear Dice</button>
     </div>
 
 }

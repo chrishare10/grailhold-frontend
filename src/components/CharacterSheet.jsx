@@ -289,7 +289,7 @@ export default function CharacterSheet({character}) {
             <HarmContainer register={register}/>
             <EquipmentContainer control={control} />
 
-            {isDirty ? <input type="submit" value="Save" className="bg-blue cursor-pointer hover:bg-purple text-white py-2 w-60 mx-auto" /> : null}
+            {isDirty ? <input type="submit" value="Save" className="bg-gColorOne cursor-pointer hover:bg-gColorTwo text-white py-2 w-60 mx-auto" /> : null}
         </form>
         <div>
         <button onClick={deleteCharacter} className="text-red-500 cursor-pointer underline">Delete Character</button>

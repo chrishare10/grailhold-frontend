@@ -79,7 +79,7 @@ export default function CommentsBuilder({entryId, userId, username, email}) {
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
         <textarea id="comment" className="p-3" rows="2" cols="50" placeholder="leave a comment" {...register('comment')}></textarea>
         <div>
-            <input type="submit" className="bg-blue cursor-pointer hover:bg-blue-400 font-bold py-2 w-60 mx-auto" />
+            <input type="submit" className="bg-gColorOne cursor-pointer hover:bg-gColorOne-400 font-bold py-2 w-60 mx-auto" />
         </div>
     </form>
 </div>

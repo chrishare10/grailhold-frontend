@@ -83,9 +83,9 @@ export default function DetailsPanelInner({hexData, setBuildId, userId, userGrai
         draftEntryList = draftFableList
         entryListWrapperClasses = 'flex flex-col gap-3 overflow-y-scroll hide-scrollbar h-full p-5'
         if(userId){
-            addBtn = <button onClick={handleClick} id="add-fable" className="text-blue-500 py-2">Add Fable</button>
+            addBtn = <button onClick={handleClick} id="add-fable" className="text-gColorOne-500 py-2">Add Fable</button>
         }else {
-            addBtn = <button onClick={handleClick} id="login-btn" className="text-blue-500 py-2">Login to add Fable</button>
+            addBtn = <button onClick={handleClick} id="login-btn" className="text-gColorOne-500 py-2">Login to add Fable</button>
         }
         
     }else if(entriesContainerState === 1) {
@@ -137,16 +137,16 @@ export default function DetailsPanelInner({hexData, setBuildId, userId, userGrai
     return <div className="w-full flex flex-col w-full">
     <div className="flex justify-between">
         <div className="flex gap-1">
-            <button id="section-1" title="fixtures-tab" className="py-2 px-3  bg-blue rounded-t-md text-white" onClick={handleTabClick}>Fixtures ({fixtureList.length})</button>
-            <button id="section-12" title="fables-tab" className="py-2 px-3 bg-brown-light rounded-t-md text-white" onClick={handleTabClick}>Fables ({approvedFableList.length})</button>
-            <button id="section-11" title="fabrications-tab" className="py-2 px-3 bg-purple rounded-t-md text-white" onClick={handleTabClick}>Fabrications ({approvedFabricationList.length})</button>
+            <button id="section-1" title="fixtures-tab" className="py-2 px-3  bg-gColorOne rounded-t-md text-white" onClick={handleTabClick}>Fixtures ({fixtureList.length})</button>
+            <button id="section-12" title="fables-tab" className="py-2 px-3 bg-gColorThree rounded-t-md text-white" onClick={handleTabClick}>Fables ({approvedFableList.length})</button>
+            <button id="section-11" title="fabrications-tab" className="py-2 px-3 bg-gColorTwo rounded-t-md text-white" onClick={handleTabClick}>Fabrications ({approvedFabricationList.length})</button>
         </div>
         <div className="hidden md:block">
             { addBtn }
         </div>
         
     </div>
-    <div  className={`${entriesContainerState === 12 ? "bg-brown-light" : entriesContainerState === 1 ? "bg-blue" : entriesContainerState === 11 ? "bg-purple" : "bg-gray-200"  } flex-1 h-full`}>
+    <div  className={`${entriesContainerState === 12 ? "bg-gColorThree" : entriesContainerState === 1 ? "bg-gColorOne" : entriesContainerState === 11 ? "bg-gColorTwo" : "bg-gray-200"  } flex-1 h-full`}>
         <div id="details-entry-wrapper" className={entryListWrapperClasses}>
             {draftEntryList && draftEntryList.length ? <div><p className="text-white text-sm">Awaiting approval:</p><div className={`opacity-50 ${entryListWrapperClasses}`}>{draftEntryList}</div></div> : null}
             {entryList}

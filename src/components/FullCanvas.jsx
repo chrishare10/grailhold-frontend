@@ -1,61 +1,22 @@
 import * as THREE from 'three'
-import React, { Suspense, useRef, useMemo } from 'react'
+import React, { Suspense, useRef, useEffect } from 'react'
 import { Canvas, extend, useThree, useLoader, useFrame } from '@react-three/fiber'
-import { CameraControls, Sky } from '@react-three/drei'
+import { CameraControls, Sky, Environment } from '@react-three/drei'
 import { useControls, button, buttonGroup, folder } from 'leva'
 import { Water } from 'three-stdlib'
 import { ModeledMap } from './ModeledMap'
 import GetHexes from '../fetch/GetHexes'
 import { useGLTF } from "@react-three/drei";
 import { Perf } from 'r3f-perf'
+import { LayerMaterial, Depth, Noise } from 'lamina'
 
-// extend({ Water })
-
-
-
-// function Waves() {
-//   const ref = useRef()
-//   const gl = useThree((state) => state.gl)
-//   const waterNormals = useLoader(THREE.TextureLoader, '/assets/static/waternormal.jpg')
-//   waterNormals.wrapS = waterNormals.wrapT = THREE.RepeatWrapping
-//   const geom = useMemo(() => new THREE.PlaneGeometry(300, 300), [])
-//   const config = useMemo(
-//     () => ({
-//       textureWidth: 512,
-//       textureHeight: 512,
-//       waterNormals,
-//       sunDirection: new THREE.Vector3(),
-//       sunColor: 0xffffff,
-//       waterColor: 0x001e0f,
-//       distortionScale: .5,
-//       fog: false,
-//       format: gl.encoding
-//     }),
-//     [waterNormals]
-//   )
-//   useFrame((state, delta) => (ref.current.material.uniforms.time.value += delta))
-//   return <water ref={ref} args={[geom, config]} rotation-x={-Math.PI / 2} />
-// }
-
-// function KeyLight({ brightness, color }) {
-//   return (
-//     <rectAreaLight
-//       width={3}
-//       height={3}
-//       color={color}
-//       intensity={brightness}
-//       position={[0, 20, 10]}
-//       lookAt={[0, 0, 0]}
-//       penumbra={1}
-//       castShadow
-//     />
-//   );
-// }
 
 export default function FullCanvas() {
+
+  
   
   return (
-    <Canvas id="ocean-canvas" camera={{ position: [0, 15, 0], fov: 55, near: 1, far: 200 }}>
+    <Canvas id="ocean-canvas" camera={{ position: [0, 20, 20], fov: 55, near: 1, far: 200 }}>
       <Scene />
     </Canvas>
   )
@@ -70,6 +31,16 @@ function Scene() {
   const hexData = GetHexes()
   let fullHexes = []
   const exploredHexRefs = useRef(new Array())
+
+  
+  let animationComplete = false
+  const initAnimation = (e) => {
+    if(!animationComplete){
+      cameraControlsRef.current?.setLookAt(0, 5, 12, 0, 0, 0, true)
+      animationComplete = true
+      console.log("animated")
+    }
+  }
 
 
   const exploredHexes = []
@@ -94,24 +65,44 @@ function Scene() {
 
   cameraControlsRef.current?.setBoundary(bb)
     
-
+  const props = { base: '#ff4eb8', colorA: '#00ffff', colorB: '#ff00e3' }
   return <>
     {/* <Perf position="top-left" /> */}
     <Suspense fallback={null}>
-        {exploredHexes ? <ModeledMap exploredHexes={exploredHexes} exploredHexIds={exploredHexIds} nodes={nodes} hexData={hexData}/> : null }
-        {/* <Waves /> */}
+        {exploredHexes ? <ModeledMap exploredHexes={exploredHexes} exploredHexIds={exploredHexIds} nodes={nodes} hexData={hexData} initAnimation={initAnimation}/> : null }
         <mesh rotation-x={Math.PI * -0.5} position={[0,.2,0]}>
           <planeGeometry args={[300, 300]} />
-          <meshStandardMaterial color={"#024959"} metalness={1}/>
+          <meshStandardMaterial color={"#005C53"} metalness={.3} />
         </mesh>
       {/* <KeyLight brightness={20} color={"#ffffff"} /> */}
-      <directionalLight intensity={5} position={[100, 100, -200]} />
-      <ambientLight intensity={.3} />
-      <Sky scale={1000} sunPosition={[100, 100, -200]} azimuth={0.3} turbidity={0.4} />
+      <directionalLight intensity={5} color={"#F0433A"} position={[100, 100, -200]} />
+      <ambientLight intensity={.7} color={"#3FCEF6"} />
+      
+      {/* <Sky scale={1000} sunPosition={[100, 100, -200]}  turbidity={0.4} /> */}
+      {/* <directionalLight intensity={2} castShadow shadow-mapSize-height={1024} shadow-mapSize-width={1024} /> */}
+        {/* <ambientLight intensity={0.4} /> */}
+      <Bg {...props} />
       <CameraControls ref={cameraControlsRef} minDistance={5} maxDistance={30} maxPolarAngle={1.3}/>
     </Suspense>
   </>
 }
+
+function Bg() {
+  const mesh = useRef()
+  // useFrame((state, delta) => {
+  //   mesh.current.rotation.x = mesh.current.rotation.y = mesh.current.rotation.z += delta
+  // })
+  return (
+    <mesh ref={mesh} scale={100} >
+      <sphereGeometry args={[1, 64, 64]} />
+      <LayerMaterial color="#ffffff" attach="material" side={THREE.BackSide}>
+        <Depth colorA="#F0433A" colorB="#540032" alpha={1} mode="multiply" near={0} far={600} origin={[100, -200, -200]} />
+      </LayerMaterial>
+    </mesh>
+  )
+}
+
+
 
 
 useGLTF.preload("/assets/static/Grailhold-map-hexcutout-04.glb");

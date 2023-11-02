@@ -13,7 +13,10 @@ export default {
           DEFAULT: "#6F4F73",
           light: "#A64F03"
         },
-        purple: "#6F4F73"
+        purple: "#540032",
+        gColorOne: "#F0433A",
+        gColorTwo: "#8C4A62",
+        gColorThree: "#005C53"
       },
       minHeight: {
         'screenh': '100svh',

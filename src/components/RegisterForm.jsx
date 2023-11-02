@@ -75,7 +75,7 @@ export default function RegisterForm(){
       
       <input  type="text" className="hidden" tabIndex="-1" autoComplete="off" {...register("a_password")} />
 
-      <input className="bg-blue cursor-pointer hover:bg-purple text-white py-2 w-60 mx-auto" type="submit" value="Create Account" />
+      <input className="bg-gColorOne cursor-pointer hover:bg-gColorTwo text-white py-2 w-60 mx-auto" type="submit" value="Create Account" />
     </form>
   );
 };
