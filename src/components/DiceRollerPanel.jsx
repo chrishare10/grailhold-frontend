@@ -16,6 +16,7 @@ export default function DiceRollerPanel() {
     function handleDiceClick(e) {
         if(e.target.id === "dice-roll-btn"){
             fresh = DiceRoller(numberOfDice)
+
             updateResult(fresh)
             updateDiceState(true)
         } else if(e.target.id === "add-dice-btn") {
@@ -32,8 +33,12 @@ export default function DiceRollerPanel() {
     } 
 
     for (let i = 0; i < result.length; i++) {
-        const dice = result[i];
-        diceFormatted.push(<div className={`w-20 h-20 flex justify-center items-center ${ dice === 6 ? "bg-gold" : dice <= 3 ? "bg-gray-600 text-white" : "bg-gray-200" }`} key={i}>{dice}</div>)
+        const dice = {
+            diceResult: result[i],
+            key: i
+        };
+
+        diceFormatted.push(diceRender(dice))
     }
 
     return <div className="py-20 flex flex-col gap-5 w-full px-10 overflow-y-scroll">
@@ -58,6 +63,97 @@ export default function DiceRollerPanel() {
     </div>
     
     <button id="clear-dice-btn" onClick={handleDiceClick} className="bg-gColorOne text-white py-2 px-3">Clear Dice</button>
+
+        
     </div>
 
+}
+
+
+
+const diceRender = (result) => {
+    let dice
+    if(result.diceResult === 1 ) {
+        dice = <div key={result.key} className={`dice-1 shrink-0 w-20 h-20 inline-flex justify-center items-center bg-gray-200 }`} >
+                    <div className="flex flex-col gap-2 justify-around w-full h-full p-3">
+                        <div className="flex justify-around gap-5 h-full items-center">
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                        </div>
+                    </div>
+                </div>
+    }else if(result.diceResult === 2){
+        dice = <div key={result.key} className={`dice-2 shrink-0 w-20 h-20 inline-flex justify-center items-center bg-gray-200 }`} >
+                    <div className="flex flex-col gap-2 justify-around w-full h-full p-3">
+                        <div className="flex justify-end gap-5 h-full items-center">
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                        </div>
+                        <div className="flex justify-start gap-5 h-full items-center">
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                        </div>
+                    </div>
+                </div>
+    }else if(result.diceResult === 3){
+        dice = <div key={result.key} className={`dice-3 shrink-0 w-20 h-20 inline-flex justify-center items-center bg-gray-200 }`} >
+                    <div className="flex flex-col gap-2 justify-around w-full h-full p-3">
+                        <div className="flex justify-end gap-5 h-full items-center">
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                        </div>
+                        <div className="flex justify-around gap-5 h-full items-center">
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                        </div>
+                        <div className="flex justify-start gap-5 h-full items-center">
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                        </div>
+                    </div>
+                </div>
+    }else if(result.diceResult === 4){
+        dice = <div key={result.key} className={`dice-4 shrink-0 w-20 h-20 inline-flex justify-center items-center bg-gray-200 }`} >
+                    <div className="flex flex-col gap-2 justify-around w-full h-full p-3">
+                        <div className="flex justify-around gap-5 h-full items-center">
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                        </div>
+                        <div className="flex justify-around gap-5 h-full items-center">
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                        </div>
+                    </div>
+                </div>
+    }else if(result.diceResult === 5){
+        dice = <div key={result.key} className={`dice-5 shrink-0 w-20 h-20 inline-flex justify-center items-center bg-gray-200 }`} >
+                    <div className="flex flex-col gap-2 justify-around w-full h-full p-3">
+                        <div className="flex justify-around gap-5 h-full items-center">
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                        </div>
+                        <div className="flex justify-around gap-5 h-full items-center">
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                        </div>
+                        <div className="flex justify-around gap-5 h-full items-center">
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                        </div>
+                    </div>
+                </div>
+    }else if(result.diceResult === 6){
+        dice = <div key={result.key} className={`dice-6 shrink-0 w-20 h-20 inline-flex justify-center items-center bg-gray-200 }`} >
+                    <div className="flex flex-col gap-2 justify-around w-full h-full p-3">
+                        <div className="flex justify-around gap-5 h-full items-center">
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                        </div>
+                        <div className="flex justify-around gap-5 h-full items-center">
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                        </div>
+                        <div className="flex justify-around gap-5 h-full items-center">
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                            <div className="bg-gColorTwo shrink-0 w-3 h-3 rounded-full justify-center items-center"></div>
+                        </div>
+                    </div>
+                </div>
+    }
+
+    return dice
+    
 }

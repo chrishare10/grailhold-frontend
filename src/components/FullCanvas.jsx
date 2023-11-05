@@ -13,10 +13,14 @@ import { LayerMaterial, Depth, Noise } from 'lamina'
 
 export default function FullCanvas() {
 
-  
+  let introAnimationComplete = sessionStorage.getItem("introAnimationComplete");
+  let cameraPosition = [0, 20, 20]
+  if(introAnimationComplete){
+    cameraPosition = [0, 5, 12]
+  }
   
   return (
-    <Canvas id="ocean-canvas" camera={{ position: [0, 20, 20], fov: 55, near: 1, far: 200 }}>
+    <Canvas id="ocean-canvas" camera={{ position: cameraPosition, fov: 55, near: 1, far: 200 }}>
       <Scene />
     </Canvas>
   )
@@ -35,9 +39,10 @@ function Scene() {
   
   let animationComplete = false
   const initAnimation = (e) => {
-    if(!animationComplete){
+    let introAnimationComplete = sessionStorage.getItem("introAnimationComplete");
+    if(!introAnimationComplete){
       cameraControlsRef.current?.setLookAt(0, 5, 12, 0, 0, 0, true)
-      animationComplete = true
+      sessionStorage.setItem("introAnimationComplete", true);
       console.log("animated")
     }
   }

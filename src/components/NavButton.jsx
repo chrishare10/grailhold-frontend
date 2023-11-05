@@ -10,7 +10,9 @@ export default function NavButton() {
         updateNavState()
     }
 
-    return <div className="absolute z-10">
-        <button onClick={handleClick} className="rounded-full bg-white overflow-hidden w-10 h-10 m-6 border-2 border-gray-300"></button>
+    return <div className="absolute z-10 bottom-5">
+        <button onClick={handleClick} className="rounded-full overflow-hidden w-10 h-10 border-4 border-gColorOne group">
+            <div className="rounded-full w-full h-full bg-gColorOne transform translate-y-4 group-hover:translate-y-0 transition-all duration-500"></div>
+        </button>
     </div>
 }
