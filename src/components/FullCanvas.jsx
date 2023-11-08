@@ -9,7 +9,7 @@ import GetHexes from '../fetch/GetHexes'
 import { useGLTF } from "@react-three/drei";
 import { Perf } from 'r3f-perf'
 import { LayerMaterial, Depth, Noise } from 'lamina'
-
+import { A11yAnnouncer } from '@react-three/a11y';
 
 export default function FullCanvas() {
 
@@ -19,11 +19,12 @@ export default function FullCanvas() {
     cameraPosition = [0, 5, 12]
   }
   
-  return (
+  return <>
     <Canvas id="ocean-canvas" camera={{ position: cameraPosition, fov: 55, near: 1, far: 200 }}>
       <Scene />
     </Canvas>
-  )
+    <A11yAnnouncer />
+  </>
 }
 
 

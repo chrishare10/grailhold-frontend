@@ -21,7 +21,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                 <div>
                     <p>Athletics</p>
                 </div>
-                <div className="p-1">
+                <div className="p-1 grow">
                     <Controller
                     control={control}
                     name="athletics"
@@ -44,7 +44,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                 <div>
                     <p>Stealth</p>
                 </div>
-                <div className="p-1">
+                <div className="grow p-1">
                     <Controller
                     control={control}
                     name="stealth"
@@ -66,7 +66,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                 <div>
                     <p>Aiming</p>
                 </div>
-                <div className="p-1">
+                <div className="grow p-1">
                     <Controller
                     control={control}
                     name="aiming"
@@ -88,7 +88,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                 <div>
                     <p>Striking</p>
                 </div>
-                <div className="p-1">
+                <div className="grow p-1">
                     <Controller
                     control={control}
                     name="striking"
@@ -113,7 +113,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                 <div>
                     <p>Lore</p>
                 </div>
-                <div className="p-1">
+                <div className="grow p-1">
                     <Controller
                     control={control}
                     name="lore"
@@ -135,7 +135,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                 <div>
                     <p>Tinker</p>
                 </div>
-                <div className="p-1">
+                <div className="grow p-1">
                     <Controller
                     control={control}
                     name="tinker"
@@ -157,7 +157,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                 <div>
                     <p>Nature</p>
                 </div>
-                <div className="p-1">
+                <div className="grow p-1">
                     <Controller
                     control={control}
                     name="nature"
@@ -179,7 +179,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                 <div>
                     <p>Healing</p>
                 </div>
-                <div className="p-1">
+                <div className="grow p-1">
                     <Controller
                     control={control}
                     name="healing"
@@ -204,7 +204,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                 <div>
                     <p>Insight</p>
                 </div>
-                <div className="p-1">
+                <div className="grow p-1">
                     <Controller
                     control={control}
                     name="insight"
@@ -226,7 +226,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                 <div>
                     <p>Perception</p>
                 </div>
-                <div className="p-1">
+                <div className="grow p-1">
                     <Controller
                     control={control}
                     name="perception"
@@ -248,7 +248,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                 <div>
                     <p>Communication</p>
                 </div>
-                <div className="p-1">
+                <div className="grow p-1">
                     <Controller
                     control={control}
                     name="communication"
@@ -270,7 +270,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                 <div>
                     <p>Performance</p>
                 </div>
-                <div className="p-1">
+                <div className="grow p-1">
                     <Controller
                     control={control}
                     name="performance"

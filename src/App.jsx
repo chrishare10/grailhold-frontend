@@ -49,22 +49,11 @@ export default function App(){
 
     return <div id="wrapper" className={`flex justify-center items-end overflow-hidden w-screen h-screenh relative`} >
         <GoogleReCaptchaProvider reCaptchaKey={import.meta.env.VITE_API_RECAPTCHA_SITE_KEY}>
-            <AboutWrapper />
-
-            <NavButton/>
-            {/* <div id="page-wrapper" ref={pageWrapper} className="overflow-scroll w-full h-full xl:flex items-center">
-                <div id="frame" ref={mapWrapper} className="mx-auto" >
-                    <animated.div ref={mapContainer} className="main mx-auto h-full" >
-                        <Map />
-                    </animated.div>
-                </div>
-            </div> */}
-            
-            <Panels />
-            
             <Nav />
             <FullCanvas />
+            <AboutWrapper />
+            <NavButton/>
+            <Panels />    
         </GoogleReCaptchaProvider>
-        
     </div>
 }

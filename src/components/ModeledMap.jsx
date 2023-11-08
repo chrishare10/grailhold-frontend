@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 import { CycleRaycast, useCursor } from '@react-three/drei'
 import { useHexStore, useProfileStore, useRulesStore, useNavStore } from "../stores/MainStore"
+import { A11y } from '@react-three/a11y'
+import MapMeshExplored from "./MapMeshExplored";
+import MapMeshUnexplored from "./MapMeshUnexplored";
 
 let selectedHex
 export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData, initAnimation}) {
@@ -54,43 +57,16 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData, initA
         }
         
         meshes.push(
-          <mesh
-            key={key}
-            name={key}
-            ref={(element) => exploredHexRefs.current.push(element)}
-            entry={entryId ? entryId : null}
-            castShadow
-            receiveShadow
-            geometry={value.geometry}
-            position={[-14.919, -0.085, -8.964]}
-            rotation={[0, -1.571, 0]}
-            scale={0.346}
-            onClick={(e) => (e.stopPropagation(), handleClick(e.object))}
-            onPointerOver={(e) => (e.stopPropagation(), setHexHover(value.name.slice(5)))}
-            onPointerOut={(e) => setHexHover(false)}
-            >
-              <meshStandardMaterial roughness={1} metalness={.5} color={hex.id == value.name.slice(5) ? '#8C4A62' : hexHover == value.name.slice(5) ? '#F2B807' : '#F0433A'} />
-            </mesh>
+          <A11y key={key} role="button" focusCall={()=> console.log(`Hex ${key.slice(5)} in focus`)}>
+            <MapMeshExplored key={key} exploredHexRefs={exploredHexRefs} entryId={entryId} value={value} handleClick={handleClick} setHexHover={setHexHover} hex={hex} hexHover={hexHover} />
+          </A11y>
           )
       } else {
         
         meshes.push(
-          <mesh
-            key={key}
-            name={key}
-            entry={null}
-            castShadow
-            receiveShadow
-            geometry={value.geometry}
-            position={[-14.919, -0.085, -8.964]}
-            rotation={[0, -1.571, 0]}
-            scale={0.346}
-            onClick={(e) => (e.stopPropagation(), handleClick(e.object))}
-            onPointerOver={(e) => (e.stopPropagation(), setHexHover(value.name.slice(5)))}
-            onPointerOut={(e) => setHexHover(false)}
-            >
-              <meshStandardMaterial roughness={1} color={hex.id == value.name.slice(5) ? '#8C4A62' : hexHover == value.name.slice(5) ? '#F2B807' : '#D6D58E'} />
-            </mesh>
+        
+            <MapMeshUnexplored key={key} exploredHexRefs={exploredHexRefs} entryId={entryId} value={value} handleClick={handleClick} setHexHover={setHexHover} hex={hex} hexHover={hexHover} />
+          
           )
       }
       

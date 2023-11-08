@@ -22,14 +22,15 @@ export default function SliderComponent({ axis, xmax, xmin, xstep, onChange, val
           styles={{
             track: {
               backgroundColor: 'rgba(0,0,0,.1)',
-              height: "2px"
+              height: "2px",
+              width: "100%"
             },
             active: {
               backgroundColor: 'none'
             },
             thumb: {
-              width: 10,
-              height: 10,
+              width: 12,
+              height: 12,
               backgroundColor: 'black',
               borderRadius: "none",
               transform: "rotate(45deg)"
