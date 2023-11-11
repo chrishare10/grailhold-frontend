@@ -26,7 +26,8 @@ let jwtToken = false
 if(sessionStorage.getItem("jwtToken")) {
     jwtToken = sessionStorage.getItem("jwtToken");
     headers = {
-        authorization: `JWT ${jwtToken}`
+        Authorization: `JWT ${jwtToken}`,
+        authorization: import.meta.env.VITE_API_AUTH
     }
 }
 

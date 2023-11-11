@@ -4,7 +4,7 @@ import { useRegisterStore, useLoginStore } from "../stores/MainStore"
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 
-export default function RegisterForm(){
+export default function RegisterForm({registerData}){
 
   const { executeRecaptcha } = useGoogleReCaptcha();
   
@@ -29,11 +29,8 @@ export default function RegisterForm(){
       if(data.a_password){
         console.log("you're a bot")
       }else {
-        console.log(data)
         updateRegisterState(data)
         updateRegisterAttempt()
-        updateLoginPanelState(true)
-        updateRegisterPanelState(false) 
       }
       
       
@@ -75,7 +72,7 @@ export default function RegisterForm(){
       
       <input  type="text" className="hidden" tabIndex="-1" autoComplete="off" {...register("a_password")} />
 
-      <input className="bg-gColorOne cursor-pointer hover:bg-gColorTwo text-white py-2 w-60 mx-auto" type="submit" value="Create Account" />
+      <input className={`${registerData.isFetching ? "bg-gColorThree" : "bg-gColorOne hover:bg-gColorTwo cursor-pointer"} text-white py-2 w-60 mx-auto`} type="submit" value={registerData.isFetching ? "loading..." : "Create Account"} disabled={registerData.isFetching} />
     </form>
   );
 };

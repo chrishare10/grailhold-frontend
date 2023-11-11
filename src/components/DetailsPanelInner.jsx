@@ -19,7 +19,7 @@ export default function DetailsPanelInner({hexData, setBuildId, userId, userGrai
     let entryList
     let draftEntryList
     let addBtn
-
+    
     let fixtureList = []
     if(hexData[1].data){
         
@@ -77,15 +77,17 @@ export default function DetailsPanelInner({hexData, setBuildId, userId, userGrai
         }
     }
 
+    
+
     let entryListWrapperClasses
     if(entriesContainerState === 12){
         entryList = approvedFableList
         draftEntryList = draftFableList
         entryListWrapperClasses = 'flex flex-col gap-3 overflow-y-scroll hide-scrollbar h-full p-5'
         if(userId){
-            addBtn = <button onClick={handleClick} id="add-fable" className="text-gColorOne-500 py-2">Add Fable</button>
+            addBtn = <button onClick={handleClick} id="add-fable" className="text-gColorThree py-2">Add Fable</button>
         }else {
-            addBtn = <button onClick={handleClick} id="login-btn" className="text-gColorOne-500 py-2">Login to add Fable</button>
+            addBtn = <button onClick={handleClick} id="login-btn" className="text-gColorThree py-2">Login to add Fable</button>
         }
         
     }else if(entriesContainerState === 1) {
@@ -97,9 +99,9 @@ export default function DetailsPanelInner({hexData, setBuildId, userId, userGrai
         draftEntryList = draftFabricationList
         entryListWrapperClasses = 'flex flex-col gap-3 overflow-y-scroll hide-scrollbar h-full p-5'
         if(userId){
-            addBtn = <button onClick={handleClick} id="add-fabrication" className="text-red-500 py-2">Build Fabrication (costs 1 grail)</button>
+            addBtn = <button onClick={handleClick} id="add-fabrication" className="text-gColorTwo py-2 " disabled={!userGrails.length}>Build Fabrication (costs 1 grail)</button>
         }else {
-            addBtn = <button onClick={handleClick} id="login-btn" className="text-red-500 py-2">Login to add Fabrication</button>
+            addBtn = <button onClick={handleClick} id="login-btn" className="text-gColorTwo py-2">Login to add Fabrication</button>
         }
     }
 

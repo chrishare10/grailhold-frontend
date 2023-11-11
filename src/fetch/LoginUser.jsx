@@ -2,6 +2,7 @@
 import { useQuery } from '@tanstack/react-query';
 import request from 'graphql-request'
 import gql from 'graphql-tag'
+import toast from 'react-hot-toast';  
 
 const GET_USER = gql`
     mutation Authenticate($email: String!, $password: String!) {
@@ -36,7 +37,7 @@ const headers = {
 export default function LoginUser(loginState) {
 
  
-  const { isLoading, isError, data } = useQuery({
+  const loginQuery = useQuery({
     queryKey: ['loginUser', loginState],
     queryFn: async () =>
       request({
@@ -48,8 +49,5 @@ export default function LoginUser(loginState) {
     enabled: !!loginState
     })
 
-    if (isError) {
-    console.log("could not login user")
-    }
-    return data
+    return loginQuery
 }

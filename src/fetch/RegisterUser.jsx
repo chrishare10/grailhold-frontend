@@ -34,7 +34,7 @@ export default function RegisterUser(loginState) {
 
 
  
-  const { isLoading, isError, data } = useQuery({
+  const registerQuery = useQuery({ 
     queryKey: ['registerUser'],
     queryFn: async () =>
       request({
@@ -55,5 +55,5 @@ export default function RegisterUser(loginState) {
     enabled: !!loginState
     })
    
-    return data
+    return registerQuery
 }

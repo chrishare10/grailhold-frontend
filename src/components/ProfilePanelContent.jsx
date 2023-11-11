@@ -1,9 +1,10 @@
 import LoginForm from "./LoginForm"
 import RegisterForm from "./RegisterForm"
+import FormNotif from "./FormNotif"
 import UserInfo from "./UserInfo"
 import { useProfileStore, useRegisterStore, useLoginStore, useUserStore } from "../stores/MainStore"
 
-export default function ProfilePanelContent() {
+export default function ProfilePanelContent({loginError, loginFetching, registerData}) {
 
     
     const loginPanelState = useLoginStore(state => state.loginPanelState)
@@ -25,6 +26,12 @@ export default function ProfilePanelContent() {
             updateLogoutState(false)
         }
     }
+
+    let registerSection
+
+    // if(registerData.isError){
+    //     registerSection = <div><RegisterForm /><p>{registerData.error.response.errors[0].message}</p><button id="login-btn" className=" underline text-sm" onClick={handleClick}>Login to account</button></div>
+    // }else if()
     return <div className="h-full">
         
         <div className="h-full w-full flex flex-col justify-center">
@@ -32,11 +39,13 @@ export default function ProfilePanelContent() {
             <div className="flex flex-col items-center justify-center">
                 
                 <div className={`${loginPanelState ? "block" : "hidden"} flex flex-col gap-5 w-full`}>
-                    <LoginForm />
+                    <LoginForm loginFetching={loginFetching}/>
                     <button id="register-btn" className="underline text-sm" onClick={handleClick}>Create an account</button>
+                    {loginError ? <FormNotif loginError={loginError}/> : null}
                 </div>
                 <div className={`${registerPanelState ? "block" : "hidden"} flex flex-col gap-5 w-full`}>
-                    <RegisterForm />
+                    <RegisterForm registerData={registerData}/>
+                    {registerData.isError ? <p className="text-gColorOne">{registerData.error.response.errors[0].message}</p> : null}
                     <button id="login-btn" className=" underline text-sm" onClick={handleClick}>Login to account</button>
                 </div>
 

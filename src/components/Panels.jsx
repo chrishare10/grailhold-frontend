@@ -5,7 +5,7 @@ import GetCurrentUser from "../fetch/GetCurrentUser"
 import GetCharacters from "../fetch/GetCharacters";
 import GetCharacter from "../fetch/GetCharacter";
 import { useEffect } from "react"
-import { useRegisterStore, useLoginStore, useUserStore, useCharacterStore} from "../stores/MainStore";
+import { useRegisterStore, useLoginStore, useUserStore, useCharacterStore } from "../stores/MainStore";
 import ProfilePanel from "./ProfilePanel";
 import RulesPanel from "./RulesPanel";
 import DetailsPanel from "./DetailsPanel";
@@ -17,6 +17,7 @@ export default function Panels(){
     const reloadState = useUserStore(state => state.reloadState)
     const updateLogoutState = useUserStore(state => state.updateLogoutState)
     const loginState = useLoginStore(state => state.loginState)
+    const updateLoginState = useLoginStore(state => state.updateLoginState)
     const registerState = useRegisterStore(state => state.registerState)
     const character = useCharacterStore(state => state)
     const queryClient = useQueryClient()
@@ -40,30 +41,24 @@ export default function Panels(){
     let characterSelection = {}
 
     let loginData = LoginUser(loginState)
- 
-    if(loginData){
-        sessionStorage.setItem("jwtToken", loginData.authenticate.jwt);
-        sessionStorage.setItem("refreshToken", loginData.authenticate.refreshToken);
 
-        
     
-        username = loginData.authenticate.user.username
-        email = loginData.authenticate.user.email
-        name = loginData.authenticate.user.name
-        userId = loginData.authenticate.user.id
-        userGM = loginData.authenticate.user.gameMasterSwitch
-        userGrails = loginData.authenticate.user.grailsPicker
+    if(loginData.data){
+        sessionStorage.setItem("jwtToken", loginData.data.authenticate.jwt);
+        sessionStorage.setItem("refreshToken", loginData.data.authenticate.refreshToken);
+    
+        username = loginData.data.authenticate.user.username
+        email = loginData.data.authenticate.user.email
+        name = loginData.data.authenticate.user.name
+        userId = loginData.data.authenticate.user.id
+        userGM = loginData.data.authenticate.user.gameMasterSwitch
+        userGrails = loginData.data.authenticate.user.grailsPicker
         queryKey = "loginUser"
-        jwtToken = loginData.authenticate.jwt
+        jwtToken = loginData.data.authenticate.jwt
     }
 
     
     let registerData = RegisterUser(registerState)
-    if(registerData){
-        // dont set until fable is validated
-        // sessionStorage.setItem("jwtToken", registerData.register.jwt);
-        // updateUserState(true)
-    }   
 
     let currentUser = GetCurrentUser(jwtToken)
     if(currentUser) {
@@ -111,6 +106,6 @@ export default function Panels(){
     return<> 
     <DetailsPanel characters={characters} userId={userId} userGrails={userGrails} email={email} username={username}/>
     <RulesPanel />
-    <ProfilePanel userId={userId} email={email} loginData={loginData} currentUser={currentUser} username={username} name={name} characters={characters} userGrails={userGrails} characterSelection={characterSelection} character={character} />
+    <ProfilePanel userId={userId} email={email} registerData={registerData} loginError={loginData.error} loginFetching={loginData.isFetching} loginData={loginData.data} currentUser={currentUser} username={username} name={name} characters={characters} userGrails={userGrails} characterSelection={characterSelection} character={character} />
     </>
 }

@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useLoginStore, useUserStore } from "../stores/MainStore"
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
-export default function LoginForm(){
+export default function LoginForm({loginFetching}){
   
   const { executeRecaptcha } = useGoogleReCaptcha();
 
@@ -66,7 +66,7 @@ export default function LoginForm(){
         {errors.password && <span className="text-red-300">This field is required</span>}
       </div>
       <input  type="text" className="hidden" tabIndex="-1" autoComplete="off" {...register("b_password")} />
-      <input className="bg-gColorOne cursor-pointer  hover:bg-gColorTwo text-white py-2 w-60 mx-auto" type="submit" value="Login" />
+      <input className={`${loginFetching ? "bg-gColorThree" : "bg-gColorOne hover:bg-gColorTwo cursor-pointer"} text-white py-2 w-60 mx-auto`} type="submit" value={loginFetching ? "loading..." : "Login"} disabled={loginFetching}/>
     </form>
   );
 };

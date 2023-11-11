@@ -18,7 +18,8 @@ let GET_COMMENTS = gql`
     }
 }
 `
-const endpoint = import.meta.env.VITE_API_ENDPOINT
+    
+    const endpoint = import.meta.env.VITE_API_ENDPOINT
     let headers = {
         authorization: import.meta.env.VITE_API_AUTH,
     }
@@ -27,7 +28,8 @@ const endpoint = import.meta.env.VITE_API_ENDPOINT
     if(sessionStorage.getItem("jwtToken")) {
         jwtToken = sessionStorage.getItem("jwtToken");
         headers = {
-            authorization: `JWT ${jwtToken}`
+            Authorization: `JWT ${jwtToken}`,
+            authorization: import.meta.env.VITE_API_AUTH
         }
     }
 

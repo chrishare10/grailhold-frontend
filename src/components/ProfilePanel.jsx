@@ -14,7 +14,7 @@ import GrailListContainer from "./GrailListContainer";
 //     return () => setValue(value => value + 1); 
 // }
 
-export default function ProfilePanel({userId, loginData, currentUser, username, name, characters, characterSelection, character, userGrails}){
+export default function ProfilePanel({userId, registerData, loginError, loginFetching, loginData, currentUser, username, name, characters, characterSelection, character, userGrails}){
 
     const updateProfileState = useProfileStore(state => state.updateProfileState)
     const profileState = useProfileStore(state => state.profileState) 
@@ -53,7 +53,7 @@ export default function ProfilePanel({userId, loginData, currentUser, username, 
         <div className={`${profPage === 1 ? "" : "hidden"} flex flex-col`}>
             <div className="flex flex-col gap-10">
             {loginData || currentUser && !character.id && !logoutState ? <UserInfo username={username} name={name} /> : null }
-            {!loginData && !currentUser && !character.id || logoutState ? <ProfilePanelContent /> : null }
+            {!loginData && !currentUser && !character.id || logoutState ? <ProfilePanelContent registerData={registerData} loginError={loginError} loginFetching={loginFetching} /> : null }
             {loginData || currentUser && !character.id && !logoutState ? <CharactersListContainer characters={characters} /> : null }
             {loginData || currentUser && !character.id && !logoutState ? <GrailListContainer userGrails={userGrails} /> : null }
             { loginData || currentUser ? <div className="flex justify-center w-full "><button id="logoutBtn" onClick={handleClick} className="text-sm">logout</button></div> : null}
