@@ -4,16 +4,23 @@ import { useMutation } from '@tanstack/react-query'
 import { useForm } from 'react-hook-form';
 import { useHexStore } from "../stores/MainStore"
 import { useEffect, useState } from "react";
+import EntryCharacterPickerField from "./EntryCharacterPickerField";
 import toast from 'react-hot-toast';
 
 let COMMENT = gql`
-    mutation NewComment($newParentId: ID, $ownerId: ID, $name: String, $email: String, $comment: String, $enabled: Boolean) {
-    saveComment(newParentId: $newParentId, ownerId: $ownerId, name: $name, email: $email, comment: $comment, enabled: $enabled) {
+    mutation NewComment($newParentId: ID, $ownerId: ID, $name: String, $email: String, $comment: String, $enabled: Boolean, $characterPicker: [Int]) {
+    saveComment(newParentId: $newParentId, ownerId: $ownerId, name: $name, email: $email, comment: $comment, enabled: $enabled, characterPicker: $characterPicker) {
         id
         ownerId
         name
         email
         comment
+        ... on Comment {
+            characterPicker {
+                id
+                title
+            }
+        }
     }
 }
 `
@@ -31,15 +38,15 @@ if(sessionStorage.getItem("jwtToken")) {
     }
 }
 
-export default function CommentsBuilder({entryId, userId, username, email}) {
+export default function CommentsBuilder({entryId, userId, username, email, characters}) {
 
     const updateCommentState = useHexStore(state => state.updateCommentState)
-    const [commentsState, setCommentsState] = useState()
+    const reloadEntryIncrement = useHexStore(state => state.reloadEntryIncrement)
 
-    let testing = null
+   
 
     const { register, handleSubmit, watch, control, setValue } = useForm();
-
+    const textAreaDirty = watch("comment", false)
 
     // mutation
     let saveComment = useMutation({
@@ -54,7 +61,8 @@ export default function CommentsBuilder({entryId, userId, username, email}) {
                 "name": username,
                 "email": email,
                 "enabled": true,
-                "comment": variables.comment
+                "comment": variables.comment,
+                "characterPicker": parseInt(variables.characterPicker)
             }
         }),
         onError: (error) => {
@@ -62,13 +70,10 @@ export default function CommentsBuilder({entryId, userId, username, email}) {
         },
         onSuccess: () => {
           toast.success(`Comment added`, {position: 'top-center',})
+          updateCommentState()
         }
     })
     
-
-    useEffect(() => {
-        updateCommentState(testing)
-    }, [testing])
     
     const onSubmit = (variables) => {
         saveComment.mutate(variables)
@@ -79,9 +84,8 @@ export default function CommentsBuilder({entryId, userId, username, email}) {
     return <div>
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
         <textarea id="comment" className="p-3" rows="2" cols="50" placeholder="leave a comment" {...register('comment')}></textarea>
-        <div>
-            <input type="submit" className="bg-gColorOne cursor-pointer hover:bg-gColorOne-400 font-bold py-2 w-60 mx-auto" />
-        </div>
+        {textAreaDirty ? <EntryCharacterPickerField characters={characters} register={register}/> : null }
+        {textAreaDirty ? <div><input type="submit" className="bg-gColorOne cursor-pointer hover:bg-gColorTwo text-white py-2 w-60 mx-auto" /></div> : null }
     </form>
 </div>
 }

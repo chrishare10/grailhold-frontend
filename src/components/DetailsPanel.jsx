@@ -54,10 +54,10 @@ export default function DetailsPanel({characters, userId, email, username, userG
                 
             </div>
             <div className={`${detailsPage === 1 ? "" : "hidden"} flex flex-col lg:flex-row gap-5 lg:gap-5`}>                
-                <DetailsPanelInner hexData={hexData} setBuildId={setBuildId} userId={userId} userGrails={userGrails}/>
+                <DetailsPanelInner hexData={hexData} setBuildId={setBuildId} userId={userId} userGrails={userGrails} />
             </div>
             <div className={`${detailsPage === 2 ? "" : "hidden"} flex flex-col lg:flex-row gap-5 lg:gap-5`}>
-                { entrySelection ? <EntryContainer entry={entrySelection} userId={userId} username={username} email={email} /> : null }
+                { entrySelection ? <EntryContainer entry={entrySelection} userId={userId} username={username} email={email} characters={characters} /> : null }
             </div>
             <div className={`${detailsPage === 3 ? "" : "hidden"} flex flex-col lg:flex-row gap-5 lg:gap-5`}>
                 <EntryBuilder buildId={buildId} hexState={hexState} characters={characters}/>

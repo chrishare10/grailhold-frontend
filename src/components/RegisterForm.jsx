@@ -47,7 +47,7 @@ export default function RegisterForm({registerData}){
         {/* register your input into the hook by invoking the "register" function */}
         <input className="bg-gray-300 p-2" placeholder="email" {...register("email", { required: "email is required" })} />
         {/* errors will return when field validation fails  */}
-        {errors.email && <span className="text-red-300">This field is required</span>}
+        {errors.email && <span className="text-gColorOne">This field is required</span>}
       </div>
 
       <div className="flex flex-col gap-1">
@@ -60,14 +60,14 @@ export default function RegisterForm({registerData}){
           }
           })} />
         {/* errors will return when field validation fails  */}
-        {errors.password?.message ? <p className="text-red-300">{errors.password?.message}</p> : errors.password && <p className="text-red-300">This field is required</p>}
+        {errors.password?.message ? <p className="text-gColorOne">{errors.password?.message}</p> : errors.password && <p className="text-gColorOne">This field is required</p>}
       </div>
 
       <div className="flex flex-col gap-1">
         {/* include validation with required or other standard HTML validation rules */}
         <input className="bg-gray-300 p-2" placeholder="name" {...register("name", { required: true })} />
         {/* errors will return when field validation fails  */}
-        {errors.name && <span className="text-red-300">This field is required</span>}
+        {errors.name && <span className="text-gColorOne">This field is required</span>}
       </div>
       
       <input  type="text" className="hidden" tabIndex="-1" autoComplete="off" {...register("a_password")} />

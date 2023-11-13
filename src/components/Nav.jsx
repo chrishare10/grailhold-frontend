@@ -31,7 +31,7 @@ export default function Nav() {
         updateNavState(false)
     }
 
-    return <div id="nav-wrapper" ref={nav} className={`absolute left-0 bottom-0 z-20 w-full h-20 ${navState ? "panel-active" : ""}`}>
+    return <div id="nav-wrapper" ref={nav} className={`absolute left-0 bottom-0 z-30 w-full h-20 ${navState ? "panel-active" : ""}`}>
         <div className="bg-white flex flex-row justify-center h-full relative">
             <div className={`text-right absolute transition-all duration-500 ${navState ? "-top-10" : "top-0"}`}>
                 

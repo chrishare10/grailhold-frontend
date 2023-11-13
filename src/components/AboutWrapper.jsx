@@ -23,7 +23,7 @@ export default function AboutWrapper() {
       <>
         <div className="fixed z-50 z-20 pointer-events-none">
         
-            <div id="about-container" className="hide-scrollbar max-h-screen p-10 overflow-y-scroll pointer-events-auto">
+            <div id="about-container" className="hide-scrollbar max-h-screenh p-10 overflow-y-scroll pointer-events-auto">
                 <div className="rounded-3xl bg-white p-5 md:p-10 xl:p-20 flex flex-col gap-4">
                     <div className="flex justify-end pb-5">
                       <CloseBtn onClick={() => { updateAboutState(false)}} color="text-black" id="close-btn" />

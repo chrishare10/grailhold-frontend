@@ -57,7 +57,7 @@ export default function TableOfContents({rulesParsed, setAnchorChoose, rulesStat
                 </svg>
             </button>
         </div>
-        <div className="flex flex-col gap-2 toc-inner overflow-y-scroll p-10 h-full">
+        <div className="flex flex-col gap-2 toc-inner overflow-y-scroll hide-scrollbar p-10 h-full">
             {tableOfContents}
         </div>
     </div>

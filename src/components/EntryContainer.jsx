@@ -5,6 +5,7 @@ import EntryEditor from "./EntryEditor"
 import gql from "graphql-tag"
 import request from 'graphql-request'
 import { useQuery } from '@tanstack/react-query'
+import parse from "html-react-parser"
 
 
 let GET_COMMENTS = gql`
@@ -15,6 +16,13 @@ let GET_COMMENTS = gql`
         email
         comment
         id
+        userId
+        ... on Comment {
+            characterPicker {
+                id
+                title
+            }
+        }
     }
 }
 `
@@ -34,7 +42,7 @@ let GET_COMMENTS = gql`
     }
 
 
-export default function EntryContainer({entry, userId, email, username}) {
+export default function EntryContainer({entry, userId, email, username, characters}) {
    
     const updateDetailsPage = useHexStore(state => state.updateDetailsPage)
     const commentState = useHexStore(state => state.commentState)
@@ -45,6 +53,16 @@ export default function EntryContainer({entry, userId, email, username}) {
 
     let entryTitle = entry[0].title
     let entryId = entry[0].id
+    let entryThumbnailUrl
+    let entryThumbnailAlt
+    if(entry[0].image01 && entry[0].image01.length){
+        entryThumbnailUrl = entry[0].image01[0].url
+        if(entry[0].image01[0].url){
+            entryThumbnailAlt = entry[0].image01[0].alt
+        }
+
+    }
+    
 
     if(entry[0].charactersPicker){
         
@@ -110,19 +128,33 @@ export default function EntryContainer({entry, userId, email, username}) {
             comments = data.comments
         }
 
-        let entryDetails = entry[0].textArea01
+        let entryDetails = null
+        if(entry[0].textArea01){
+            entryDetails = parse(entry[0].textArea01)
+        }
+        
+
 
     return <div className="flex flex-col gap-5 w-full">
         <div className="flex gap-5">
             <button id="back-to-overview" onClick={handleClick} className="underline">Back</button>
         </div>
-        <h1 className="font-base text-4xl">{entryTitle}</h1>
-
-        {characterSection}
+        <div className="flex flex-row justify-between items-center gap-10">
+            <div className="flex flex-col gap-3">
+                <h1 className="font-base text-4xl">{entryTitle}</h1>
+                {characterSection}
+                {entryDetails}
+            </div>
+            {entryThumbnailUrl ? <div><img className="entry-thumbnail" src={entryThumbnailUrl} alt={entryThumbnailAlt ? entryThumbnailAlt : "a thumbnail image for the current entry" } /></div> : null}
+        </div>
+        
     
-        <EntryEditor entry={entry} entryDetails={entryDetails}/>
 
-        <CommentsContainer entryId={entryId} comments={comments} userId={userId} username={username} email={email} />
+
+    
+        {/* <EntryEditor entry={entry} entryDetails={entryDetails}/> */}
+
+        <CommentsContainer entryId={entryId} comments={comments} userId={userId} username={username} email={email} characters={characters} />
 
     </div>
 }

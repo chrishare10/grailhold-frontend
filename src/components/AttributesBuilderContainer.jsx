@@ -24,7 +24,7 @@ export default function AttributesBuilderContainer({register, control, limit, ge
                 <div>
                     <p>Athletics</p>
                 </div>
-                <div className="p-1">
+                <div className="p-1 grow">
                     <Controller
                     control={control}
                     name="attributes.athletics"
@@ -47,7 +47,7 @@ export default function AttributesBuilderContainer({register, control, limit, ge
                 <div>
                     <p>Stealth</p>
                 </div>
-                <div className="p-1">
+                <div className="p-1 grow">
                     <Controller
                     control={control}
                     name="attributes.stealth"
@@ -69,7 +69,7 @@ export default function AttributesBuilderContainer({register, control, limit, ge
                 <div>
                     <p>Aiming</p>
                 </div>
-                <div className="p-1">
+                <div className="p-1 grow">
                     <Controller
                     control={control}
                     name="attributes.aiming"
@@ -91,7 +91,7 @@ export default function AttributesBuilderContainer({register, control, limit, ge
                 <div>
                     <p>Striking</p>
                 </div>
-                <div className="p-1">
+                <div className="p-1 grow">
                     <Controller
                     control={control}
                     name="attributes.striking"
@@ -116,7 +116,7 @@ export default function AttributesBuilderContainer({register, control, limit, ge
                 <div>
                     <p>Lore</p>
                 </div>
-                <div className="p-1">
+                <div className="p-1 grow">
                     <Controller
                     control={control}
                     name="attributes.lore"
@@ -138,7 +138,7 @@ export default function AttributesBuilderContainer({register, control, limit, ge
                 <div>
                     <p>Tinker</p>
                 </div>
-                <div className="p-1">
+                <div className="p-1 grow">
                     <Controller
                     control={control}
                     name="attributes.tinker"
@@ -160,7 +160,7 @@ export default function AttributesBuilderContainer({register, control, limit, ge
                 <div>
                     <p>Nature</p>
                 </div>
-                <div className="p-1">
+                <div className="p-1 grow">
                     <Controller
                     control={control}
                     name="attributes.nature"
@@ -182,7 +182,7 @@ export default function AttributesBuilderContainer({register, control, limit, ge
                 <div>
                     <p>Healing</p>
                 </div>
-                <div className="p-1">
+                <div className="p-1 grow">
                     <Controller
                     control={control}
                     name="attributes.healing"
@@ -207,7 +207,7 @@ export default function AttributesBuilderContainer({register, control, limit, ge
                 <div>
                     <p>Insight</p>
                 </div>
-                <div className="p-1">
+                <div className="p-1 grow">
                     <Controller
                     control={control}
                     name="attributes.insight"
@@ -229,7 +229,7 @@ export default function AttributesBuilderContainer({register, control, limit, ge
                 <div>
                     <p>Perception</p>
                 </div>
-                <div className="p-1">
+                <div className="p-1 grow">
                     <Controller
                     control={control}
                     name="attributes.perception"
@@ -251,7 +251,7 @@ export default function AttributesBuilderContainer({register, control, limit, ge
                 <div>
                     <p>Communication</p>
                 </div>
-                <div className="p-1">
+                <div className="p-1 grow">
                     <Controller
                     control={control}
                     name="attributes.communication"
@@ -273,7 +273,7 @@ export default function AttributesBuilderContainer({register, control, limit, ge
                 <div>
                     <p>Performance</p>
                 </div>
-                <div className="p-1">
+                <div className="p-1 grow">
                     <Controller
                     control={control}
                     name="attributes.performance"

@@ -25,7 +25,7 @@ export default function CharacterListContainer({characters}) {
     
     return <div className="flex flex-col gap-2">
     <h2 className="font-bold">Characters</h2>
-    <div className="p-5 bg-gray-200 flex flex-col gap-2 max-h-60 overflow-y-scroll">
+    <div className="p-5 bg-gray-200 flex flex-col gap-2 max-h-60 overflow-y-scroll hide-scrollbar">
         {characters.length ? charactersList : <p>No characters built</p>} 
     </div>
     {characters.length <= 3 ? newCharacterBtn : null}

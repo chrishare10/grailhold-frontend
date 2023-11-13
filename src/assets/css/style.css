@@ -311,3 +311,7 @@ scrollbar-width: none;  /* Firefox */
     max-height: 300px;
     
 }
+
+.entry-thumbnail {
+    min-width: 500px;
+}

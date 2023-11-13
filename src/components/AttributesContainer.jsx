@@ -32,7 +32,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                         xmax={limitReached ? value : 4}
                         xmin={name === minorAtt ? 1 : name === majorAtt ? 2 : 0}
                         xstep={1}
-                        onChange={onChange}
+                        onChange={onChange} 
                         value={value}
                         />
                     )}

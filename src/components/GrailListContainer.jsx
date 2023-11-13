@@ -16,7 +16,7 @@ export default function GrailListContainer({userGrails}) {
         <h2 className="font-bold">Grails</h2>
         <p>count: {userGrails.length}</p>
     </div>
-    <div className="p-5 bg-gray-200 flex flex-wrap gap-2 max-h-60 overflow-y-scroll text-left">
+    <div className="p-5 bg-gray-200 flex flex-wrap gap-2 max-h-60 overflow-y-scroll hide-scrollbar text-left">
         {userGrails.length ? grailList : <p>No grails recovered</p>}  
     </div>
     </div>

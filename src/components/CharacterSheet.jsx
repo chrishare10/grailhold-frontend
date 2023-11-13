@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import gql from "graphql-tag"
 import request from 'graphql-request'
-import { useState} from 'react'
+import { useEffect, useState} from 'react'
 import { useMutation } from '@tanstack/react-query'
 import AttributesContainer from "./AttributesContainer";
 import ClassContainer from './ClassContainer';
@@ -167,34 +167,42 @@ export default function CharacterSheet({character}) {
     const incrimentReloadState = useUserStore(state => state.incrimentReloadState)
     
     let limit = 7    
-    
-    let mutation = useMutation({
-        mutationFn: async (variables) =>
-          request({
-            url: endpoint,
-            document: MUTATE_CHARACTER,
-            requestHeaders: headers,
-            variables,
-        }),
-        onError: (error) => {
-          toast.error(`Could not update character`, {position: 'top-center',})
-        },
-        onSuccess: () => {
-          toast.success(`Character updated`, {position: 'top-center',})
-        }
-        })
-        
-
     let values = character
-      
+    
+    
+
+    
+    const { register, handleSubmit, resetField, watch, control, setValue, reset, formState: { isDirty, dirtyFields } } = useForm({
+      values
+    },{ 
+      keepDirtyValues: true 
+    });
     if(values.attributesLimit){
       limit = values.attributesLimit
     }
 
+    let mutation = useMutation({
+      mutationFn: async (variables) =>
+        request({
+          url: endpoint,
+          document: MUTATE_CHARACTER,
+          requestHeaders: headers,
+          variables,
+      }),
+      onError: (error) => {
+        toast.error(`Could not update character`, {position: 'top-center',})
+      },
+      onSuccess: () => {
+        toast.success(`Character updated`, {position: 'top-center',})
 
-    const { register, handleSubmit, resetField, watch, control, setValue, formState: { isDirty, dirtyFields } } = useForm({
-      values
-    });
+        
+
+        
+      }
+    })
+    
+  
+    
     const onSubmit = (data) => {
 
         let newClassPicker = []
@@ -229,7 +237,7 @@ export default function CharacterSheet({character}) {
         } else {
           data.mannerismPicker = parseInt(data.mannerismPicker)
         }
-        console.log(data)
+
         mutation.mutate(data)
         
     };
@@ -259,8 +267,6 @@ export default function CharacterSheet({character}) {
         }
     })
     
-          
-    
     function deleteCharacter(){
       setVerifyDeleteActive(true)
     }
@@ -289,10 +295,10 @@ export default function CharacterSheet({character}) {
             <HarmContainer register={register}/>
             <EquipmentContainer control={control} />
 
-            {isDirty ? <input type="submit" value="Save" className="bg-gColorOne cursor-pointer hover:bg-gColorTwo text-white py-2 w-60 mx-auto" /> : null}
+            {isDirty ? <input type="submit" value="Save" className="bg-gColorOne cursor-pointer hover:bg-gColorTwo text-white py-2 w-60 mx-auto sticky bottom-0" /> : null}
         </form>
         <div>
-        <button onClick={deleteCharacter} className="text-red-500 cursor-pointer underline">Delete Character</button>
+        <button onClick={deleteCharacter} className="text-gColorOne cursor-pointer underline">Delete Character</button>
         </div>
         
         {verifyDeleteActive ? <DeleteEntryVerifyBox verifyDelete={verifyDelete} /> : null}

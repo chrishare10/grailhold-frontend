@@ -101,7 +101,7 @@ export default function StressContainer({register, control, setValue, mannerisms
             </div>
             <div className="bg-gray-200 p-3 flex flex-col gap-3">
                 <div className="flex flex-wrap gap-3">
-                {mannerismList}
+                {mannerismList.length ? mannerismList : "none"}
                 </div>
                 {newMannerism ? mannerismSelect : null}
             </div>

@@ -8,7 +8,9 @@ export const useHexStore = create((set, get) => ({
     detailsPanelState: false,
     detailsPage: 1,
     entriesContainerState: 1,
-    commentState: null,
+    commentState: 0,
+    reloadHexState: 0,
+    reloadEntryState: 0,
 
     updateHex: (e) => {
         let oldHex = get().oldHex
@@ -37,9 +39,10 @@ export const useHexStore = create((set, get) => ({
     updateDetailsPage: (e) => {
         set({ detailsPage: e })
     },
-    updateCommentState: (e) => {
-        set({ commentState: e })
-    },
+    updateCommentState: () => set((state) => ({ commentState: state.commentState + 1 })),
+    reloadEntryIncrement: () => set((state) => ({ reloadEntryState: state.reloadEntryState + 1 })),
+    reloadHexIncrement: () => set((state) => ({ reloadHexState: state.reloadHexState + 1 }))
+
 }))
 
 export const useNavStore = create((set, get) => ({
@@ -55,7 +58,6 @@ export const useAboutStore = create((set, get) => ({
     updateAboutState: (e) => {
         const aboutState = get().aboutState
         if( e === false){set({aboutState: false})}else if(aboutState === false ){set({ aboutState: true })}else{set({aboutState: false})}
-        console.log("clicked")
     }
 }))
 

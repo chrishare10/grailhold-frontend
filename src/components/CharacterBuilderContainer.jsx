@@ -206,7 +206,6 @@ export default function CharacterBuilderContainer({ userId }) {
         data.userPicker = parseInt(userId)
         data.authorId = parseInt(userId)
 
-        console.log(data)
         mutation.mutate(data)
         
     };

@@ -1,6 +1,7 @@
 import gql from "graphql-tag"
 import request from 'graphql-request'
 import { useQueries } from '@tanstack/react-query'
+import { useHexStore } from "../stores/MainStore"
 
 const GET_HEX = gql`
     query ($entryId: [QueryArgument]){
@@ -72,10 +73,12 @@ const headers = {
 
 export default function GetHex(hex) {
 
+    const reloadHexState = useHexStore(state => state.reloadHexState)
+
     const hexQuery = useQueries({
         queries: [
             {
-                queryKey: ['hex', hex.entry],
+                queryKey: ['hex', hex.entry, reloadHexState],
                 queryFn: async () =>
                     request({
                         url: endpoint,
@@ -89,7 +92,7 @@ export default function GetHex(hex) {
                 enabled: !!hex.entry
             },
             {
-                queryKey: ['related-fixtures', hex.entry],
+                queryKey: ['related-fixtures', hex.entry, reloadHexState],
                 queryFn: async () =>
                     request({
                         url: endpoint,
@@ -103,7 +106,7 @@ export default function GetHex(hex) {
                 enabled: !!hex.entry
             },
             {
-                queryKey: ['related-fabrications', hex.entry],
+                queryKey: ['related-fabrications', hex.entry, reloadHexState],
                 queryFn: async () =>
                     request({
                         url: endpoint,
@@ -117,7 +120,7 @@ export default function GetHex(hex) {
                 enabled: !!hex.entry
             },
             {
-                queryKey: ['related-fables', hex.entry],
+                queryKey: ['related-fables', hex.entry, reloadHexState],
                 queryFn: async () =>
                     request({
                         url: endpoint,

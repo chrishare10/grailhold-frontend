@@ -88,7 +88,7 @@ export default function RulesPanel(){
             <TableOfContents rulesParsed={rulesParsedState} setAnchorChoose={setAnchorChoose} rulesState={rulesState}/>
         </div>
         
-        <div id="rules-panel" ref={rulesPanelInner} className={`overflow-y-scroll w-full ${rulesState ? "block" : "hidden"}`}>
+        <div id="rules-panel" ref={rulesPanelInner} className={`overflow-y-scroll hide-scrollbar w-full ${rulesState ? "block" : "hidden"}`}>
             <div className="relative">  
                 
                 <div className="px-10 py-20 flex flex-col gap-4">
@@ -97,7 +97,7 @@ export default function RulesPanel(){
            
             </div>
         </div>
-        {userGM ? <div className={`${generatorState ? "block" : "hidden"} w-full overflow-y-scroll`}>
+        {userGM ? <div className={`${generatorState ? "block" : "hidden"} w-full overflow-y-scroll hide-scrollbar`}>
             <div className="px-10 py-20 flex flex-col gap-4"> 
             <GeneratorButtons />
             <GeneratorPanel />

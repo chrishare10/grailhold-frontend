@@ -44,7 +44,6 @@ function Scene() {
     if(!introAnimationComplete){
       cameraControlsRef.current?.setLookAt(0, 5, 12, 0, 0, 0, true)
       sessionStorage.setItem("introAnimationComplete", true);
-      console.log("animated")
     }
   }
 

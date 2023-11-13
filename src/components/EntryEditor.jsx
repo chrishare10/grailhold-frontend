@@ -110,9 +110,13 @@ export default ({entry, entryDetails}) => {
     editor?.commands.setContent(entryDetails)
   }, [editor,entryDetails])
   return (
-    <div>
-      {author ? <EditorMenuBar editor={editor} /> : null}
-      <EditorContent editor={editor} />
+    <div className="w-full flex flex-col gap-1">
+      <div>
+        {author ? <EditorMenuBar editor={editor} /> : null}
+      </div>
+      <div className="bg-gray-100 rounded">
+        <EditorContent editor={editor} />
+      </div>
     </div>
   )
 }

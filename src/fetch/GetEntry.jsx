@@ -1,6 +1,7 @@
 import gql from "graphql-tag"
 import request from 'graphql-request'
 import { useQuery } from '@tanstack/react-query'
+import { useHexStore } from "../stores/MainStore"
 
 const GET_ENTRY = gql`
     query($entryId: [QueryArgument]) {
@@ -27,6 +28,10 @@ const GET_ENTRY = gql`
                     id
                     title
                 }
+                image01 {
+                    url @transform (width: 750)
+                    alt
+                }
             }
             ...on fabrications_default_Entry {
                 textArea01
@@ -44,9 +49,11 @@ const headers = {
     authorization: import.meta.env.VITE_API_AUTH,
 }
 export default function GetEntry(entryId) {
+
+    const reloadEntryState = useHexStore(state => state.reloadEntryState)
  
     const { isLoading, isError, data } = useQuery({
-      queryKey: ['getEntry', entryId],
+      queryKey: ['getEntry', entryId, reloadEntryState],
       queryFn: async () =>
         request({
           url: endpoint,

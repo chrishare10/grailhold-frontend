@@ -99,7 +99,7 @@ export default function DetailsPanelInner({hexData, setBuildId, userId, userGrai
         draftEntryList = draftFabricationList
         entryListWrapperClasses = 'flex flex-col gap-3 overflow-y-scroll hide-scrollbar h-full p-5'
         if(userId){
-            addBtn = <button onClick={handleClick} id="add-fabrication" className="text-gColorTwo py-2 " disabled={!userGrails.length}>Build Fabrication (costs 1 grail)</button>
+            addBtn = <button onClick={handleClick} id="add-fabrication" className={`${userGrails.length ? "text-gColorTwo" : "text-gray-300"} py-2 `} disabled={!userGrails.length}>Build Fabrication {userGrails.length ? "(costs 1 grail)" : "(no grails available)"}</button>
         }else {
             addBtn = <button onClick={handleClick} id="login-btn" className="text-gColorTwo py-2">Login to add Fabrication</button>
         }
@@ -136,6 +136,7 @@ export default function DetailsPanelInner({hexData, setBuildId, userId, userGrai
             updateEntriesContainerState(11)
         }
     }
+
     return <div className="w-full flex flex-col w-full">
     <div className="flex justify-between">
         <div className="flex gap-1">

@@ -26,6 +26,7 @@ const headers = {
 export default function EntryBuilder({buildId, hexState, characters}) {
 
     const updateDetailsPage = useHexStore(state => state.updateDetailsPage)
+    const reloadHexIncrement = useHexStore(state => state.reloadHexIncrement)
     const userId = useUserStore(state => state.userId)
 
    
@@ -45,7 +46,7 @@ export default function EntryBuilder({buildId, hexState, characters}) {
    
 
     const CREATE_ENTRY = gql`
-        mutation($title: String, $authorId: ID, $associatedHex: [Int],  $textArea01: String, $characterPicker: [Int]) {
+        mutation($title: String, $authorId: ID, $associatedHex: [Int],  $textArea01: String, $characterPicker: [Int]) { 
             save_${entryType}_default_Entry(title:$title, authorId: $authorId, entryPicker01: $associatedHex, textArea01: $textArea01, characterPicker: $characterPicker) {
                 authorId
                 enabled
@@ -82,6 +83,8 @@ export default function EntryBuilder({buildId, hexState, characters}) {
         },
         onSuccess: () => {
           toast.success(`Entry created`, {position: 'top-center',})
+          reloadHexIncrement()
+          updateDetailsPage(1)
         }
         
     })
@@ -131,14 +134,16 @@ export default function EntryBuilder({buildId, hexState, characters}) {
         <ErrorMessage errors={errors} name="title" />
         <EntryCharacterPickerField characters={characters} register={register}/>
         <ErrorMessage errors={errors} name="characterPicker" />
-        <div className="p-1 bg-gray-100 w-full">
-            <EditorMenuBar editor={editor} />
-            
-            <EditorContent id="entry-builder-description" editor={editor} />
-        
+        <div className="w-full flex flex-col gap-1">
+            <div>
+                <EditorMenuBar editor={editor} /> 
+            </div>
+            <div className="bg-gray-100 rounded">
+                <EditorContent id="entry-builder-description" editor={editor} />
+            </div>
         </div>
         <div>
-            <input type="submit" className="bg-gColorOne cursor-pointer hover:bg-gColorOne-400 font-bold py-2 w-60 mx-auto" />
+            <input type="submit" className="bg-gColorOne cursor-pointer hover:bg-gColorTwo text-white py-2 w-60 mx-auto" />
         </div>
     </form>
 
