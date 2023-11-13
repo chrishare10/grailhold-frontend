@@ -47,7 +47,7 @@ export default function DetailsPanel({characters, userId, email, username, userG
     return<div id="details-panel-wrapper" ref={detailsPanel} className={`absolute left-0 bottom-0 z-20 w-full px-5 md:px-10 xl:px-20  ${detailsPanelState ? "panel-active" : ""}`}>
         
         
-        <div id="details-container" className="bg-white rounded-t-2xl h-full px-5 md:px-10 xl:px-20 pt-10 pb-10 md:pb-20 flex flex-col gap-3 text-black overflow-y-scroll">
+        <div id="details-container" className="bg-white rounded-t-2xl h-full px-5 md:px-10 xl:px-20 pt-10 pb-10 md:pb-20 flex flex-col gap-3 text-black overflow-y-scroll hide-scrollbar">
             <div className="text-right">
             
                 <CloseBtn onClick={handleClose} color="text-black" id="close-btn" />

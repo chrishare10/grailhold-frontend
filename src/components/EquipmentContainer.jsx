@@ -17,7 +17,7 @@ export default function EquipmentContainer({control, getValues}) {
                 name="loadValue"
                 defaultValue={"standard"}
                 render={({ field: {onChange, name } }) => (
-                  <div onChange={onChange} className="flex flex-wrap gap-5 justify-between">
+                  <div onChange={onChange} className="flex flex-wrap gap-3 md:gap-5 justify-between">
                     <div>
                       <input type="radio" value="light" name={name} /> Light
                     </div>

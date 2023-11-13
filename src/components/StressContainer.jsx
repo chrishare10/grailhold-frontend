@@ -36,7 +36,7 @@ export default function StressContainer({register, control, setValue, mannerisms
     fetchedCurrentMannerisms = GetEntries(mannerismIds)
     let mannerismList = []
     if(fetchedCurrentMannerisms){
-        mannerismList = fetchedCurrentMannerisms.entries.map(el => <button key={el.id} className="bg-white rounded-lg p-3 font-base text-sm text-black text-left" id={el.id}>{el.title}</button>)
+        mannerismList = fetchedCurrentMannerisms.entries.map(el => <div key={el.id} className="bg-white rounded-lg p-3 font-base text-sm text-black text-left" id={el.id}><p>{el.title}</p></div>)
     } 
 
     const onClick = (e) => {

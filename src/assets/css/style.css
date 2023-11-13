@@ -32,31 +32,48 @@ body {
 
 #rules-panel h1,
 #profile-panel-wrapper h1,
-#about-container h1 {
-    font-size: 3rem;
+#about-container h1,
+#details-container h1 {
+    font-size: 2rem;
     font-weight: 700;
+    line-height: 1.1;
 
 }
 #rules-panel h2,
-#about-container h2 {
-    font-size: 2rem;
-    font-weight: 500;
-}
-#rules-panel h3,
-#about-container h3 {
+#profile-panel-wrapper h2,
+#about-container h2,
+#details-container h2 {
     font-size: 1.7rem;
     font-weight: 500;
+    line-height: 1.1;
+}
+#rules-panel h3,
+#profile-panel-wrapper h3,
+#about-container h3,
+#details-container h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.1;
 }
 #rules-panel h4,
-#about-container h4 {
-    font-size: 1.5rem;
+#profile-panel-wrapper h4,
+#about-container h4,
+#details-container h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.1;
 }
 #rules-panel h5,
-#about-container h5 {
+#profile-panel-wrapper h5,
+#about-container h5,
+#details-container h5 {
     font-size: 1.2rem;
+    line-height: 1.1;
 }
 #rules-panel p,
-#about-container p {
+#profile-panel-wrapper p,
+#about-container p,
+#details-container p {
     font-size: 1rem;
 }
 
@@ -79,6 +96,17 @@ body {
     font-size: 1rem;
     list-style-type: disc;
     margin-left: 20px;
+}
+
+#profile-panel-wrapper h2 {
+    font-size: 1.2rem;
+    line-height: 1.1;
+}
+
+#profile-panel-wrapper h3,
+#profile-panel-wrapper h4 {
+    font-size: 1rem;
+    line-height: 1.1;
 }
 
 
@@ -305,13 +333,52 @@ scrollbar-width: none;  /* Firefox */
     padding: 25px;
 }
 
-
-
 .toc-inner {
     max-height: 300px;
-    
 }
 
 .entry-thumbnail {
-    min-width: 500px;
+    min-width: none;
+}
+
+@media (min-width: 768px) {
+    #rules-panel h1,
+    #profile-panel-wrapper h1,
+    #about-container h1,
+    #details-container h1 {
+        font-size: 3rem;
+        font-weight: 700;
+
+    }
+    #rules-panel h2,
+    #profile-panel-wrapper h2,
+    #about-container h2,
+    #details-container h2 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    #rules-panel h3,
+    #profile-panel-wrapper h3,
+    #about-container h3,
+    #details-container h3 {
+        font-size: 1.7rem;
+        font-weight: 500;
+    }
+    #rules-panel h4,
+    #profile-panel-wrapper h4,
+    #about-container h4,
+    #details-container h4 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    #rules-panel h5,
+    #profile-panel-wrapper h5,
+    #about-container h5,
+    #details-container h5 {
+        font-size: 1.2rem;
+    }
+    .entry-thumbnail {
+        min-width: 500px;
+    }
+    
 }

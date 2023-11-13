@@ -139,13 +139,13 @@ export default function EntryContainer({entry, userId, email, username, characte
         <div className="flex gap-5">
             <button id="back-to-overview" onClick={handleClick} className="underline">Back</button>
         </div>
-        <div className="flex flex-row justify-between items-center gap-10">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-10">
             <div className="flex flex-col gap-3">
                 <h1 className="font-base text-4xl">{entryTitle}</h1>
                 {characterSection}
                 {entryDetails}
             </div>
-            {entryThumbnailUrl ? <div><img className="entry-thumbnail" src={entryThumbnailUrl} alt={entryThumbnailAlt ? entryThumbnailAlt : "a thumbnail image for the current entry" } /></div> : null}
+            {entryThumbnailUrl ? <div><img className="entry-thumbnail w-full" src={entryThumbnailUrl} alt={entryThumbnailAlt ? entryThumbnailAlt : "a thumbnail image for the current entry" } /></div> : null}
         </div>
         
     

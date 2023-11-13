@@ -13,7 +13,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
     }
     
     return <>
-    {control ? <div>
+    {control ? <div className="flex flex-col gap-5">
         {availableCount != 0 ? <AttributesAvailableIndicator availableCount={availableCount} /> : null}
         <div id="prowess-row">
             <h2 className="font-bold">Prowess</h2>
