@@ -41,8 +41,7 @@ export default function ProfilePanelContent({loginError, loginFetching, register
                 <div className={`${loginPanelState ? "block" : "hidden"} flex flex-col gap-5 w-full`}>
                     <LoginForm loginFetching={loginFetching}/>
                     <button id="register-btn" className="underline text-sm" onClick={handleClick}>Create an account</button>
-                    <p ><span className="text-sm">This site is protected by reCAPTCHA and the Google<br/>
-                    <a href="https://policies.google.com/privacy" className="underline" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" className="underline" target="_blank">Terms of Service</a> apply.
+                    <p ><span className="text-sm">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" className="underline" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" className="underline" target="_blank">Terms of Service</a> apply.
                     </span></p>
                     {loginError ? <FormNotif loginError={loginError}/> : null}
                 </div>
