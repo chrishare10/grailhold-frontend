@@ -14,7 +14,7 @@ export default function RegisterForm({registerData}){
   const registerAttempt = useRegisterStore(state => state.registerAttempt)
   const updateRegisterAttempt = useRegisterStore(state => state.updateRegisterAttempt)
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   // Create an event handler so you can call the verification on button click event or form submit
   const handleReCaptchaVerify = useCallback(async (data) => {
@@ -31,6 +31,7 @@ export default function RegisterForm({registerData}){
       }else {
         updateRegisterState(data)
         updateRegisterAttempt()
+        reset()
       }
       
       
