@@ -34,6 +34,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                         xstep={1}
                         onChange={onChange} 
                         value={value}
+                        disabled={limitReached}
                         />
                     )}
                     />
@@ -57,6 +58,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                         xstep={1}
                         onChange={onChange}
                         value={value}
+                        disabled={limitReached}
                         />
                     )}
                     />
@@ -79,6 +81,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                         xstep={1}
                         onChange={onChange}
                         value={value}
+                        disabled={limitReached}
                         />
                     )}
                     />
@@ -101,6 +104,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                         xstep={1}
                         onChange={onChange}
                         value={value}
+                        disabled={limitReached}
                         />
                     )}
                     />
@@ -126,6 +130,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                         xstep={1}
                         onChange={onChange}
                         value={value}
+                        disabled={limitReached}
                         />
                     )}
                     />
@@ -148,6 +153,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                         xstep={1}
                         onChange={onChange}
                         value={value}
+                        disabled={limitReached}
                         />
                     )}
                     />
@@ -170,6 +176,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                         xstep={1}
                         onChange={onChange}
                         value={value}
+                        disabled={limitReached}
                         />
                     )}
                     />
@@ -192,6 +199,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                         xstep={1}
                         onChange={onChange}
                         value={value}
+                        disabled={limitReached}
                         />
                     )}
                     />
@@ -217,6 +225,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                         xstep={1}
                         onChange={onChange}
                         value={value}
+                        disabled={limitReached}
                         />
                     )}
                     />
@@ -239,6 +248,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                         xstep={1}
                         onChange={onChange}
                         value={value}
+                        disabled={limitReached}
                         />
                     )}
                     />
@@ -261,6 +271,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                         xstep={1}
                         onChange={onChange}
                         value={value}
+                        disabled={limitReached}
                         />
                     )}
                     />
@@ -283,6 +294,7 @@ export default function AttributesContainer({control, limit, currentAttributeCou
                         xstep={1}
                         onChange={onChange}
                         value={value}
+                        disabled={limitReached}
                         />
                     )}
                     />

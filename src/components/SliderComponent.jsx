@@ -29,8 +29,8 @@ export default function SliderComponent({ axis, xmax, xmin, xstep, onChange, val
               backgroundColor: 'none'
             },
             thumb: {
-              width: 12,
-              height: 12,
+              width: 15,
+              height: 15,
               backgroundColor: 'black',
               borderRadius: "none",
               transform: "rotate(45deg)"
