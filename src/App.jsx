@@ -49,7 +49,7 @@ export default function App(){
 
 
     return <div id="wrapper" className={`flex justify-center items-end overflow-hidden w-screen h-screenh relative`} >
-        <GoogleReCaptchaProvider reCaptchaKey={import.meta.env.VITE_API_RECAPTCHA_SITE_KEY}>
+        <GoogleReCaptchaProvider reCaptchaKey={import.meta.env.VITE_API_RECAPTCHA_SITE_KEY} >
             <FeedbackButton />
             <Nav />
             <FullCanvas />

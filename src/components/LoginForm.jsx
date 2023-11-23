@@ -50,8 +50,8 @@ export default function LoginForm({loginFetching}){
   }, [executeRecaptcha]);
 
 
-  return (
-    <form className="flex flex-col gap-5" onSubmit={handleSubmit(handleReCaptchaVerify)} >
+  return (<>
+  <form className="flex flex-col gap-5" onSubmit={handleSubmit(handleReCaptchaVerify)} >
       <div className="flex flex-col gap-1">
         {/* register your input into the hook by invoking the "register" function */}
         <input className="bg-gray-300 p-2" placeholder="email" {...register("email", { required: true })} />
@@ -68,5 +68,7 @@ export default function LoginForm({loginFetching}){
       <input  type="text" className="hidden" tabIndex="-1" autoComplete="off" {...register("b_password")} />
       <input className={`${loginFetching ? "bg-gColorThree" : "bg-gColorOne hover:bg-gColorTwo cursor-pointer"} text-white py-2 w-60 mx-auto`} type="submit" value={loginFetching ? "loading..." : "Login"} disabled={loginFetching}/>
     </form>
+  </>
+    
   );
 };
