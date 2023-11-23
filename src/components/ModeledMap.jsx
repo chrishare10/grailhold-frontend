@@ -20,7 +20,7 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData, initA
 
   const [hexHover, setHexHover] = useState(false)
 
-//  console.log(hex)
+  //  console.log(hex)
 
   const hexCount = Object.entries(nodes)
   let correctHex
@@ -43,7 +43,7 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData, initA
   }
 
   let entryId
-  let hexLength = Object.entries(nodes).length
+  let hexLength = Object.entries(nodes).length 
   if(hexData){
     for (const [key, value] of Object.entries(nodes)) {
     
@@ -55,7 +55,6 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData, initA
             entryId = element.entry
           }
         }
-        
         meshes.push(
           <A11y key={key} role="button" focusCall={()=> console.log(`Hex ${key.slice(5)} in focus`)}>
             <MapMeshExplored key={key} exploredHexRefs={exploredHexRefs} entryId={entryId} value={value} handleClick={handleClick} setHexHover={setHexHover} hex={hex} hexHover={hexHover} />
@@ -64,9 +63,7 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData, initA
       } else {
         
         meshes.push(
-        
-            <MapMeshUnexplored key={key} exploredHexRefs={exploredHexRefs} entryId={entryId} value={value} handleClick={handleClick} setHexHover={setHexHover} hex={hex} hexHover={hexHover} />
-          
+            <MapMeshUnexplored key={key} exploredHexRefs={exploredHexRefs} entryId={key} value={value} handleClick={handleClick} setHexHover={setHexHover} hex={hex} hexHover={hexHover} />
           )
       }
       

@@ -31,8 +31,6 @@ export default function DetailsPanel({characters, userId, email, username, userG
         updateDetailsPage(1)
     }
 
-
- 
     let entryData = GetEntry(entryState)
 
     useEffect(() => {

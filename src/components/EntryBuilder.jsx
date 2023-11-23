@@ -62,7 +62,7 @@ export default function EntryBuilder({buildId, hexState, characters}) {
     }
 
     
-    const { register, handleSubmit, watch, control, setValue, formState: { errors }, } = useForm();
+    const { register, handleSubmit, reset, watch, control, setValue, formState: { errors }, } = useForm();
 
     let mutation = useMutation({
         mutationFn: async (variables) =>
@@ -85,6 +85,8 @@ export default function EntryBuilder({buildId, hexState, characters}) {
           toast.success(`Entry created`, {position: 'top-center',})
           reloadHexIncrement()
           updateDetailsPage(1)
+          reset()
+          editor.commands.clearContent()
         }
         
     })
@@ -99,7 +101,6 @@ export default function EntryBuilder({buildId, hexState, characters}) {
             variables.enabled = true
             variables.hexState = parsedId
             variables.description = editor.getHTML()
-            console.log(variables)
             mutation.mutate(variables)
         }
     }

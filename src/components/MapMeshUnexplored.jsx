@@ -16,7 +16,7 @@ export default function MapMeshUnexplored({exploredHexRefs, entryId, value, hand
             onPointerOver={(e) => (e.stopPropagation(), setHexHover(value.name.slice(5)))}
             onPointerOut={(e) => setHexHover(false)}
             >
-            <meshStandardMaterial roughness={1} color={hex.id == value.name.slice(5) ? '#8C4A62' : hexHover == value.name.slice(5) ? '#F2B807' : '#D6D58E'} />
+            <meshStandardMaterial roughness={1} color={hex.id == value.name.slice(5) ? '#08da84' : hexHover == value.name.slice(5) ? '#8C4A62' : '#D6D58E'} />
         </mesh>
     )
 }

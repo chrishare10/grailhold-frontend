@@ -154,11 +154,6 @@ const headers = {
     authorization: import.meta.env.VITE_API_AUTH,
 }
 
-
-    
-
-
-
 export default function CharacterSheet({character}) {
 
     const [verifyDeleteActive, setVerifyDeleteActive] = useState(false)

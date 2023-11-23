@@ -1,7 +1,7 @@
 
 
-export default function MapMeshExplored({ exploredHexRefs, entryId, value, handleClick, setHexHover, hex, hexHover}) {
-
+export default function MapMeshExplored({ exploredHexRefs, entryId, value, handleClick, setHexHover, hex, hexHover, hexName}) {
+    
     return(
         <mesh
             name={value.name.slice(5)}
@@ -17,7 +17,7 @@ export default function MapMeshExplored({ exploredHexRefs, entryId, value, handl
             onPointerOver={(e) => (e.stopPropagation(), setHexHover(value.name.slice(5)))}
             onPointerOut={(e) => setHexHover(false)}
             >
-            <meshStandardMaterial roughness={1} metalness={.5} color={hex.id == value.name.slice(5) ? '#8C4A62' : hexHover == value.name.slice(5) ? '#F2B807' : '#F0433A'} />
+            <meshStandardMaterial roughness={1} color={hex.id == value.name.slice(5) ? '#3FCEF6' : hexHover == value.name.slice(5) ? '#8C4A62' : '#F0433A'} />
         </mesh>
     )
 }

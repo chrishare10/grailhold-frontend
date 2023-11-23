@@ -346,7 +346,7 @@ scrollbar-width: none;  /* Firefox */
     #profile-panel-wrapper h1,
     #about-container h1,
     #details-container h1 {
-        font-size: 3rem;
+        font-size: 2.3rem;
         font-weight: 700;
 
     }
@@ -354,28 +354,28 @@ scrollbar-width: none;  /* Firefox */
     #profile-panel-wrapper h2,
     #about-container h2,
     #details-container h2 {
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: 500;
     }
     #rules-panel h3,
     #profile-panel-wrapper h3,
     #about-container h3,
     #details-container h3 {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         font-weight: 500;
     }
     #rules-panel h4,
     #profile-panel-wrapper h4,
     #about-container h4,
     #details-container h4 {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 500;
     }
     #rules-panel h5,
     #profile-panel-wrapper h5,
     #about-container h5,
     #details-container h5 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .entry-thumbnail {
         min-width: 500px;

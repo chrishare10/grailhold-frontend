@@ -9,6 +9,7 @@ import { useRegisterStore, useLoginStore, useUserStore, useCharacterStore } from
 import ProfilePanel from "./ProfilePanel";
 import RulesPanel from "./RulesPanel";
 import DetailsPanel from "./DetailsPanel";
+import GetRefresh from '../fetch/GetRefresh';
 
 
 export default function Panels(){
@@ -20,6 +21,7 @@ export default function Panels(){
     const updateLoginState = useLoginStore(state => state.updateLoginState)
     const registerState = useRegisterStore(state => state.registerState)
     const character = useCharacterStore(state => state)
+    const updateJwt = useUserStore(state => state.updateJwt)
     const queryClient = useQueryClient()
 
     let userId = null
@@ -35,7 +37,11 @@ export default function Panels(){
     let jwtToken = false 
     if(sessionStorage.getItem("jwtToken")) {
         jwtToken = sessionStorage.getItem("jwtToken");
-        
+        updateJwt(jwtToken)
+    }
+    let refreshToken = false 
+    if(sessionStorage.getItem("refreshToken")) {
+        refreshToken = sessionStorage.getItem("refreshToken");
     }
 
     let characterSelection = {}
@@ -55,12 +61,17 @@ export default function Panels(){
         userGrails = loginData.data.authenticate.user.grailsPicker
         queryKey = "loginUser"
         jwtToken = loginData.data.authenticate.jwt
+        updateJwt(jwtToken)
     }
 
     
     let registerData = RegisterUser(registerState)
 
+    
     let currentUser = GetCurrentUser(jwtToken)
+
+    
+    // let tokenRefresh = GetRefresh({jwtToken, refreshToken})
     if(currentUser) {
 
         username = currentUser.viewer.username

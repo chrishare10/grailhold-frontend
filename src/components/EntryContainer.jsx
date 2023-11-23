@@ -1,14 +1,15 @@
 
-import { useHexStore } from "../stores/MainStore"
+import { useHexStore, useEntryStore } from "../stores/MainStore"
 import CommentsContainer from "./CommentsContainer"
 import EntryEditor from "./EntryEditor"
 import gql from "graphql-tag"
 import request from 'graphql-request'
-import { useQuery } from '@tanstack/react-query'
+import { useQuery, useMutation } from '@tanstack/react-query'
 import parse from "html-react-parser"
+import toast from 'react-hot-toast';
 
 
-let GET_COMMENTS = gql`
+const GET_COMMENTS = gql`
    query GetComments($ownerId: [QueryArgument]){
     comments (ownerId: $ownerId, orderBy: "commentDate DESC", limit: 35) {
         commentDate @formatDateTime (format: "M/d/yy h:m")
@@ -25,6 +26,13 @@ let GET_COMMENTS = gql`
         }
     }
 }
+`
+
+const DELETE_ENTRY = gql`
+    mutation DeleteEntry($id: Int!) {
+        deleteEntry(id: $id)
+    }
+
 `
     
     const endpoint = import.meta.env.VITE_API_ENDPOINT
@@ -45,7 +53,9 @@ let GET_COMMENTS = gql`
 export default function EntryContainer({entry, userId, email, username, characters}) {
    
     const updateDetailsPage = useHexStore(state => state.updateDetailsPage)
+    const reloadHexIncrement = useHexStore(state => state.reloadHexIncrement)
     const commentState = useHexStore(state => state.commentState)
+    const updateEntryState = useEntryStore(state => state.updateEntryState)
     
     let crew = []
     let crewParagraph
@@ -134,7 +144,33 @@ export default function EntryContainer({entry, userId, email, username, characte
         }
         
 
+    const deleteEntry = useMutation({
+        mutationFn: async (parsedEntryId) =>
+            request({
+            url: endpoint,
+            document: DELETE_ENTRY,
+            requestHeaders: headers,
+            variables: {
+                "id": parsedEntryId
+            }
+        }),
+        onError: (error) => {
+            toast.error(`Could not delete entry`, {position: 'top-center',})
+        },
+        onSuccess: () => {
+            toast.success(`Entry deleted`, {position: 'top-center',})
+            reloadHexIncrement()
+            updateEntryState(null)
+            updateDetailsPage(1)
+        }
+    })
 
+    function deleteEntryHandler(){
+        let parsedEntryId = parseInt(entry[0].id)
+        deleteEntry.mutate(parsedEntryId)
+    }
+        
+       
     return <div className="flex flex-col gap-5 w-full">
         <div className="flex gap-5">
             <button id="back-to-overview" onClick={handleClick} className="underline">Back</button>
@@ -148,9 +184,7 @@ export default function EntryContainer({entry, userId, email, username, characte
             {entryThumbnailUrl ? <div><img className="entry-thumbnail w-full" src={entryThumbnailUrl} alt={entryThumbnailAlt ? entryThumbnailAlt : "a thumbnail image for the current entry" } /></div> : null}
         </div>
         
-    
-
-
+        {entry[0].authorId === parseInt(userId) ? <div><button  onClick={deleteEntryHandler} className="text-gColorOne cursor-pointer underline">Delete</button></div> : null}
     
         {/* <EntryEditor entry={entry} entryDetails={entryDetails}/> */}
 

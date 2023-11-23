@@ -2,7 +2,7 @@ import gql from "graphql-tag"
 import request from 'graphql-request'
 import { useMutation } from '@tanstack/react-query'
 import { useForm } from 'react-hook-form';
-import { useHexStore } from "../stores/MainStore"
+import { useHexStore, useUserStore } from "../stores/MainStore"
 import { useEffect, useState } from "react";
 import EntryCharacterPickerField from "./EntryCharacterPickerField";
 import toast from 'react-hot-toast';
@@ -24,29 +24,24 @@ let COMMENT = gql`
     }
 }
 `
-const endpoint = import.meta.env.VITE_API_ENDPOINT
-let headers = {
-    authorization: import.meta.env.VITE_API_AUTH,
-}
 
-let jwtToken = false 
-if(sessionStorage.getItem("jwtToken")) {
-    jwtToken = sessionStorage.getItem("jwtToken");
-    headers = {
-        Authorization: `JWT ${jwtToken}`,
+export default function CommentsBuilder({ entryId, userId, username, email, characters}) {
+
+    const jwt = useUserStore(state => state.jwt)
+
+    const endpoint = import.meta.env.VITE_API_ENDPOINT
+    const headers = {
+        Authorization: `JWT ${jwt}`,
         authorization: import.meta.env.VITE_API_AUTH
     }
-}
-
-export default function CommentsBuilder({entryId, userId, username, email, characters}) {
-
+   
     const updateCommentState = useHexStore(state => state.updateCommentState)
     const reloadEntryIncrement = useHexStore(state => state.reloadEntryIncrement)
 
    
 
-    const { register, handleSubmit, watch, control, setValue } = useForm();
-    const textAreaDirty = watch("comment", false)
+    const { register, handleSubmit, reset, formState: { isDirty, dirtyFields }, control, setValue } = useForm();
+    const textAreaDirty = isDirty
 
     // mutation
     let saveComment = useMutation({
@@ -71,6 +66,7 @@ export default function CommentsBuilder({entryId, userId, username, email, chara
         onSuccess: () => {
           toast.success(`Comment added`, {position: 'top-center',})
           updateCommentState()
+          reset()
         }
     })
     

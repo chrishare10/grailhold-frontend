@@ -1,13 +1,10 @@
 import { useState } from "react";
 import SubClassDescriptionContainer from "./SubClassDescriptionContainer";
 
-export default function ClassesContainer({register, watch, classEntries, subClassEntries, classPicker, setClassPicker }) {
+export default function ClassesContainer({register, watch, classEntries, subClassEntries, classPicker, setClassPicker, subclassDescription, setSubClassDescription, subclassPickerState, setSubClassPickerState }) {
 
     const [classPickerState, setClassPickerState ] = useState(false)
-    const [subclassPickerState, setSubClassPickerState ] = useState(false)
-    const [subclassDescription, setSubClassDescription ] = useState('')
-   
-
+    
     let classOptions = []
     classOptions.push(<option value="" key="emptyClass">Choose One</option>)
     for (let i = 0; i < classEntries.length; i++) {

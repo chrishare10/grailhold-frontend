@@ -70,7 +70,6 @@ function Scene() {
 
   cameraControlsRef.current?.setBoundary(bb)
     
-  const props = { base: '#ff4eb8', colorA: '#00ffff', colorB: '#ff00e3' }
   return <>
     {/* <Perf position="top-left" /> */}
     <Suspense fallback={null}>
@@ -86,7 +85,7 @@ function Scene() {
       {/* <Sky scale={1000} sunPosition={[100, 100, -200]}  turbidity={0.4} /> */}
       {/* <directionalLight intensity={2} castShadow shadow-mapSize-height={1024} shadow-mapSize-width={1024} /> */}
         {/* <ambientLight intensity={0.4} /> */}
-      <Bg {...props} />
+      <Bg />
       <CameraControls ref={cameraControlsRef} minDistance={5} maxDistance={30} maxPolarAngle={1.3}/>
     </Suspense>
   </>

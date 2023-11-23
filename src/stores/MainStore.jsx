@@ -98,6 +98,9 @@ export const useUserStore = create((set, get) => ({
     reloadCharacters: (e) => {
         set({ reloadState: get().reloadState + 1 })
     },
+    updateJwt(e) {
+        set({ jwt: e })
+    },
     updateLogoutState: (e) => {
         sessionStorage.removeItem("jwtToken");
         sessionStorage.removeItem("refreshToken");

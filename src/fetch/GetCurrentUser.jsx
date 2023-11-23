@@ -29,7 +29,7 @@ export default function GetCurrentUser(jwt) {
         authorization: import.meta.env.VITE_API_AUTH
     }
 
-    const { isLoading, isError, isSuccess, data } = useQuery({
+    const { isLoading, isError, error, isSuccess, data } = useQuery({
         queryKey: ['currentUser', jwt],
         queryFn: async () =>
           request({
@@ -41,7 +41,7 @@ export default function GetCurrentUser(jwt) {
     })
 
     if (isError) {
-    return console.log("could not sign in")
+    return console.log(error)
     }
 
     return data

@@ -105,10 +105,12 @@ export default function CharacterBuilderContainer({ userId }) {
   const incrimentReloadState = useUserStore(state => state.incrimentReloadState)
 
   const [classPicker, setClassPicker ] = useState(362)
-  
-
+  const [subclassDescription, setSubClassDescription ] = useState('')
+  const [subclassPickerState, setSubClassPickerState ] = useState(false)
  
-    
+    const { register, handleSubmit, watch, control, setValue, reset } = useForm();
+
+
     let mutation = useMutation({
         mutationFn: async (variables) =>
           request({
@@ -124,13 +126,28 @@ export default function CharacterBuilderContainer({ userId }) {
           toast.success(`Character created!`, {position: 'top-center',})
           incrimentReloadState()
           updateProfPage(1)
+          reset()
+          setSubClassDescription('')
+          setSubClassPickerState(false)
+
+          let attributesObject = {
+            aiming: 0,
+            athletics: 0,
+            communication: 0,
+            healing: 0,
+            insight: 0,
+            lore: 0,
+            nature: 0,
+            perception: 0,
+            performance: 0,
+            stealth: 0,
+            striking: 0,
+            tinker: 0
+        }
         }
         
         })
         
-
-
-    const { register, handleSubmit, watch, control, setValue } = useForm();
 
     let classEntries = []
     let subClassEntries = []
@@ -261,7 +278,6 @@ export default function CharacterBuilderContainer({ userId }) {
         }
       }
       setValue("attributes", attributesObject)
-
     }, [classPicker])
    
    
@@ -393,7 +409,7 @@ export default function CharacterBuilderContainer({ userId }) {
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
             <CharacterName register={register}/>
             <FormerProfessionsContainer register={register} formerProfessionsEntries={formerProfessionsEntries}/>
-            <ClassesContainer register={register} watch={watch} classEntries={classEntries} subClassEntries={subClassEntries} classPicker={classPicker} setClassPicker={setClassPicker} /> 
+            <ClassesContainer register={register} watch={watch} subclassDescription={subclassDescription} setSubClassDescription={setSubClassDescription} subclassPickerState={subclassPickerState} setSubClassPickerState={setSubClassPickerState} classEntries={classEntries} subClassEntries={subClassEntries} classPicker={classPicker} setClassPicker={setClassPicker} /> 
             <AttributesBuilderContainer  limit={limit} register={register} control={control} majorAtt={majorAtt} minorAtt={minorAtt} currentAttributeCount={sum}/> 
             <input type="submit" className="bg-gColorOne hover:bg-gColorTwo text-white cursor-pointer py-2 w-60 mx-auto" />
         </form>
