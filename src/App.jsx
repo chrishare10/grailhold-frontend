@@ -8,6 +8,7 @@ import AboutWrapper from "./components/AboutWrapper";
 import Panels from "./components/Panels";
 import FullCanvas from "./components/FullCanvas";
 import FeedbackButton from "./components/FeedbackButton";
+import WelcomeModal from "./components/WelcomeModal";
 
 const useGesture = createUseGesture([pinchAction])
 
@@ -54,6 +55,7 @@ export default function App(){
             <Nav />
             <FullCanvas />
             <AboutWrapper />
+            <WelcomeModal />
             <NavButton/>
             <Panels />    
         </GoogleReCaptchaProvider>

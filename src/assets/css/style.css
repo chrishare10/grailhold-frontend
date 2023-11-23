@@ -33,7 +33,8 @@ body {
 #rules-panel h1,
 #profile-panel-wrapper h1,
 #about-container h1,
-#details-container h1 {
+#details-container h1,
+#welcome-modal-container h1 {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.1;
@@ -42,7 +43,8 @@ body {
 #rules-panel h2,
 #profile-panel-wrapper h2,
 #about-container h2,
-#details-container h2 {
+#details-container h2,
+#welcome-modal-container h2 {
     font-size: 1.7rem;
     font-weight: 500;
     line-height: 1.1;
@@ -50,7 +52,8 @@ body {
 #rules-panel h3,
 #profile-panel-wrapper h3,
 #about-container h3,
-#details-container h3{
+#details-container h3,
+#welcome-modal-container h3 {
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.1;
@@ -58,7 +61,8 @@ body {
 #rules-panel h4,
 #profile-panel-wrapper h4,
 #about-container h4,
-#details-container h4 {
+#details-container h4,
+#welcome-modal-container h4 {
     font-size: 1.2rem;
     font-weight: 500;
     line-height: 1.1;
@@ -66,14 +70,16 @@ body {
 #rules-panel h5,
 #profile-panel-wrapper h5,
 #about-container h5,
-#details-container h5 {
+#details-container h5,
+#welcome-modal-container h5 {
     font-size: 1.2rem;
     line-height: 1.1;
 }
 #rules-panel p,
 #profile-panel-wrapper p,
 #about-container p,
-#details-container p {
+#details-container p,
+#welcome-modal-container p {
     font-size: 1rem;
 }
 
@@ -221,6 +227,21 @@ body {
 }
 
 .about-active {
+    display:flex!important;
+}
+
+#welcome-modal-wrapper {
+    display:none;
+    z-index: 100;
+}
+
+#welcome-modal-container {
+    
+    width: 100%;
+    max-width:1000px;
+}
+
+.welcome-modal-active {
     display:flex!important;
 }
 

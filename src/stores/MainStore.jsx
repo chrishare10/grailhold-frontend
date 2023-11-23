@@ -61,6 +61,14 @@ export const useAboutStore = create((set, get) => ({
     }
 }))
 
+export const useWelcomeModalStore = create((set, get) => ({
+    welcomeModalState: sessionStorage.getItem("introAnimationComplete"),
+    updateWelcomeModalState: (e) => {
+        const welcomeModalState = get().welcomeModalState
+        if( e === false){set({welcomeModalState: false})}else if(welcomeModalState === false ){set({ welcomeModalState: true })}else{set({welcomeModalState: false})}
+    }
+}))
+
 export const useUserStore = create((set, get) => ({
     userState: false,
     username: false,
