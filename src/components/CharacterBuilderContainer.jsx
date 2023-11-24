@@ -104,7 +104,7 @@ export default function CharacterBuilderContainer({ userId }) {
   const updateProfPage = useProfileStore(state => state.updateProfPage)
   const incrimentReloadState = useUserStore(state => state.incrimentReloadState)
 
-  const [classPicker, setClassPicker ] = useState(362)
+  const [classPicker, setClassPicker ] = useState(1)
   const [subclassDescription, setSubClassDescription ] = useState('')
   const [subclassPickerState, setSubClassPickerState ] = useState(false)
  
@@ -278,6 +278,8 @@ export default function CharacterBuilderContainer({ userId }) {
         }
       }
       setValue("attributes", attributesObject)
+      // console.log("class picked")
+      // console.log(attributesObject)
     }, [classPicker])
    
    
@@ -410,7 +412,7 @@ export default function CharacterBuilderContainer({ userId }) {
             <CharacterName register={register}/>
             <FormerProfessionsContainer register={register} formerProfessionsEntries={formerProfessionsEntries}/>
             <ClassesContainer register={register} watch={watch} subclassDescription={subclassDescription} setSubClassDescription={setSubClassDescription} subclassPickerState={subclassPickerState} setSubClassPickerState={setSubClassPickerState} classEntries={classEntries} subClassEntries={subClassEntries} classPicker={classPicker} setClassPicker={setClassPicker} /> 
-            <AttributesBuilderContainer  limit={limit} register={register} control={control} majorAtt={majorAtt} minorAtt={minorAtt} currentAttributeCount={sum}/> 
+            {classPicker != 1 ? <AttributesBuilderContainer  limit={limit} register={register} control={control} majorAtt={majorAtt} minorAtt={minorAtt} currentAttributeCount={sum}/> : null }
             <input type="submit" className="bg-gColorOne hover:bg-gColorTwo text-white cursor-pointer py-2 w-60 mx-auto" />
         </form>
         

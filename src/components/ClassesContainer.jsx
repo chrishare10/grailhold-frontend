@@ -26,7 +26,7 @@ export default function ClassesContainer({register, watch, classEntries, subClas
         setClassPicker(value)
         setClassPickerState(true)
         setSubClassPickerState(false)
-        // console.log(event.target.value)
+        
     }
 
     const onChangeSub = (event) => {
