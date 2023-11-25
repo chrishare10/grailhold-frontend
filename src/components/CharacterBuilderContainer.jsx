@@ -415,6 +415,5 @@ export default function CharacterBuilderContainer({ userId }) {
             {classPicker != 1 ? <AttributesBuilderContainer  limit={limit} register={register} control={control} majorAtt={majorAtt} minorAtt={minorAtt} currentAttributeCount={sum}/> : null }
             <input type="submit" className="bg-gColorOne hover:bg-gColorTwo text-white cursor-pointer py-2 w-60 mx-auto" />
         </form>
-        
     </div>
 }

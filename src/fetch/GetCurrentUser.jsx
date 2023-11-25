@@ -40,9 +40,5 @@ export default function GetCurrentUser(jwt) {
         enabled: !!jwt
     })
 
-    if (isError) {
-    return console.log(error)
-    }
-
     return data
 }

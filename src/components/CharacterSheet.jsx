@@ -164,7 +164,7 @@ export default function CharacterSheet({character}) {
     let limit = 7    
     let values = character
     
-    
+    console.log(values)
 
     
     const { register, handleSubmit, resetField, watch, control, setValue, reset, formState: { isDirty, dirtyFields } } = useForm({
@@ -288,12 +288,12 @@ export default function CharacterSheet({character}) {
             <AttributesContainer control={control} limit={limit} currentAttributeCount={sum} />
             <StressContainer control={control} setValue={setValue} register={register} mannerisms={values.mannerismPicker}/>
             <HarmContainer register={register}/>
-            <EquipmentContainer control={control} />
+            <EquipmentContainer control={control} setValue={setValue} register={register} />
 
             {isDirty ? <input type="submit" value="Save" className="cursor-pointer bg-gColorOne hover:bg-gColorTwo text-white py-2 w-60 mx-auto sticky bottom-0" /> : null}
         </form>
         <div>
-        <button onClick={deleteCharacter} className="text-gColorOne cursor-pointer underline">Delete Character</button>
+          <button onClick={deleteCharacter} className="text-gColorOne cursor-pointer underline">Delete Character</button>
         </div>
         
         {verifyDeleteActive ? <DeleteEntryVerifyBox verifyDelete={verifyDelete} /> : null}
