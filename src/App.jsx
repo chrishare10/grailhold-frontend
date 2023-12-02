@@ -7,8 +7,9 @@ import { pinchAction, createUseGesture } from '@use-gesture/react'
 import AboutWrapper from "./components/AboutWrapper";
 import Panels from "./components/Panels";
 import FullCanvas from "./components/FullCanvas";
-import FeedbackButton from "./components/FeedbackButton";
 import WelcomeModal from "./components/WelcomeModal";
+import TopLeftOverlayBox from "./components/TopLeftOverlayBox";
+
 
 const useGesture = createUseGesture([pinchAction])
 
@@ -42,16 +43,10 @@ export default function App(){
 
     }, [currentHour])
 
-    
-
-   
-
-    
-
 
     return <div id="wrapper" className={`flex justify-center items-end overflow-hidden w-screen h-screenh relative`} >
         <GoogleReCaptchaProvider reCaptchaKey={import.meta.env.VITE_API_RECAPTCHA_SITE_KEY} >
-            <FeedbackButton />
+            <TopLeftOverlayBox />
             <Nav />
             <FullCanvas />
             <AboutWrapper />

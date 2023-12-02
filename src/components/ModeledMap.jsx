@@ -46,9 +46,7 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData, initA
   let hexLength = Object.entries(nodes).length 
   if(hexData){
     for (const [key, value] of Object.entries(nodes)) {
-    
       if(exploredHexIds.includes(key.slice(5))){
-
         for (let i = 0; i < exploredHexes.length; i++) {
           const element = exploredHexes[i];
           if(element.hexId === key.slice(5)) {

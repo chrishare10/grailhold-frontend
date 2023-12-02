@@ -3,6 +3,7 @@ import RegisterForm from "./RegisterForm"
 import FormNotif from "./FormNotif"
 import UserInfo from "./UserInfo"
 import { useProfileStore, useRegisterStore, useLoginStore, useUserStore } from "../stores/MainStore"
+import ForgotPasswordForm from "./ForgotPasswordForm"
 
 export default function ProfilePanelContent({loginError, loginFetching, registerData}) {
 
@@ -50,8 +51,9 @@ export default function ProfilePanelContent({loginError, loginFetching, register
                     <button id="login-btn" className=" underline text-sm" onClick={handleClick}>Login to account</button>
                     <p ><span className="text-sm">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" className="underline" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" className="underline" target="_blank">Terms of Service</a> apply.</span></p>
                 </div>
-
-                
+                {/* <div>
+                    <ForgotPasswordForm />
+                </div> */}
             </div>
         </div>
     </div>
