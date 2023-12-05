@@ -28,7 +28,8 @@ export default function GetFixture(state) {
             document: GET_FIXTURES,
             requestHeaders: headers,
         }),
-        enabled: !!state
+        enabled: !!state,
+        refetchOnWindowFocus: false
     })
     if (isLoading) {
     return [{title: "No fixtures yet.", id: "loading"}]

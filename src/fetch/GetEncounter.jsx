@@ -4,11 +4,17 @@ import { useQuery } from '@tanstack/react-query'
 
 
 const GET_ENCOUNTERS = gql`
-    query GET_ENCOUNTERS{
-        entries (section: "encounters", limit: 3, orderBy:"RAND()", leaves: true){
-            title
+    query GET_ENCOUNTERS {
+    entries(section: "encounters", limit: 3, orderBy: "RAND()", leaves: true) {
+        title
+        id
+        parent {
             id
         }
+        ... on encounters_default_Entry {
+            rarity
+        }
+    }
     }
 `
 
@@ -28,7 +34,8 @@ export default function GetEncounter(state) {
             document: GET_ENCOUNTERS,
             requestHeaders: headers,
         }),
-        enabled: !!state
+        enabled: !!state,
+        refetchOnWindowFocus: false
     })
     if (isLoading) {
     return [{title: "No encounters yet.", id: "loading"}]

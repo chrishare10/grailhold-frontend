@@ -23,7 +23,11 @@ export default {
       },
       spacing: {
         'screenh': '100svh',
-      } 
+      },
+      animation: {
+        'pulse-once': 'pulse 1s linear',
+      }
+
     },
     
   },

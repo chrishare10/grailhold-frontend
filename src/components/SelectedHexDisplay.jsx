@@ -7,6 +7,6 @@ export default function SelectedHexDisplay() {
     let entryId = hex.entry
 
     return <div className="text-white">
-        <p>Selected Hex: {hexId ? hexId : entryId ? entryId : "none"}</p>
+        <p>Hex #{hexId ? hexId : entryId ? entryId : "none"}</p>
     </div>
 }

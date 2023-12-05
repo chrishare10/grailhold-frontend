@@ -250,7 +250,7 @@ export const useMutateCharacterStore = create((set, get) => ({
 }))
 
 export const useEncounterStore = create((set, get) => ({
-    encounterState: false,
+    encounterState: 0,
     encounterChanceState: false,
     encounterPerc: 20,
     updateEncounterState: () => {

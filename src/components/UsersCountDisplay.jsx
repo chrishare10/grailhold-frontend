@@ -7,7 +7,7 @@ export default function UsersCountDisplay(){
     return <>
         {usersCount ?
             <div className="text-white">
-                <p>Adventurers Count: {usersCount}</p>
+                <p>Player Count: {usersCount}</p>
             </div>
         : null }
     </>
