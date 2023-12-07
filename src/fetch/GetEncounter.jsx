@@ -13,6 +13,7 @@ const GET_ENCOUNTERS = gql`
         }
         ... on encounters_default_Entry {
             rarity
+            textArea01
         }
     }
     }

@@ -8,6 +8,9 @@ const GET_FIXTURES = gql`
         entries (section: "fixtures", limit: 3, orderBy:"RAND()", leaves: true){
             title
             id
+            ... on fixtures_default_Entry {
+            fixtureLevel
+            }
         }
     }
 `

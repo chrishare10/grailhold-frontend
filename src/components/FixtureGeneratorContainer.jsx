@@ -12,7 +12,7 @@ export default function FixtureGeneratorContainer() {
     </div>
     <div className="bg-gray-200 flex flex-col md:flex-row gap-10 p-5 justify-center">
         {fixtureData.map((fixture) => (
-        <GenCard key={fixture.id} element={fixture.title}/>
+        <GenCard key={fixture.id} cardData={fixture}/>
         ))}
     </div>
 </div>
