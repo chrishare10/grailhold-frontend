@@ -53,6 +53,7 @@ export default function App(){
             <WelcomeModal />
             <NavButton/>
             <Panels />    
+            
         </GoogleReCaptchaProvider>
     </div>
 }

@@ -251,7 +251,7 @@ export const useMutateCharacterStore = create((set, get) => ({
 
 export const useEncounterStore = create((set, get) => ({
     encounterState: 0,
-    encounterChanceState: false,
+    encounterChanceState: {"encounter":false , "attempts": 0},
     encounterPerc: 20,
     updateEncounterState: () => {
         set({ encounterState: get().encounterState + 1 })
@@ -266,11 +266,11 @@ export const useEncounterStore = create((set, get) => ({
         let roll = Math.floor(Math.random() * 100) + 1;
 
         if(roll <= newPerc){
-            set({ encounterChanceState: true })
+            set({ encounterChanceState: {"encounter":true , "attempts": get().encounterChanceState.attempts + 1} })
         }else {
-            set({ encounterChanceState: false })
+            set({ encounterChanceState: {"encounter":false , "attempts": get().encounterChanceState.attempts + 1} })
         }
-        console.log(roll + ", " + get().encounterChanceState )
+       
 
     }
 }))

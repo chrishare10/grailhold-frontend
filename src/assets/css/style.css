@@ -366,6 +366,18 @@ scrollbar-width: none;  /* Firefox */
     visibility: hidden !important;
 }
 
+.random-encounter-box {
+animation: rollout 0.4s;
+}
+
+@keyframes rollout {
+    20% { transform: rotate(15deg); } 
+    40% { transform: rotate(-10deg); } 
+    60% { transform: rotate(5deg); } 
+    80% { transform: rotate(-5deg); } 
+    100% { transform: rotate(0deg); } 
+  }
+
 @media (min-width: 768px) {
     #rules-panel h1,
     #profile-panel-wrapper h1,

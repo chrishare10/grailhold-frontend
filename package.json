@@ -30,6 +30,7 @@
     "@tiptap/starter-kit": "^2.0.4",
     "@types/three": "^0.156.0",
     "@use-gesture/react": "^10.2.26",
+    "@vercel/speed-insights": "^1.0.1",
     "graphql": "^16.6.0",
     "graphql-request": "^5.2.0",
     "graphql-tag": "^2.12.6",
