@@ -27,8 +27,9 @@ export default function GetFormerProfessions() {
           requestHeaders: headers,
           variables: {
             section: "formerProfessions"
-          }
-      })
+            }
+        }),
+        refetchOnWindowFocus: false
       })
 
       if (isError) {

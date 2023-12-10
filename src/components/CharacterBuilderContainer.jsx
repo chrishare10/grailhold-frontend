@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form';
 import GetClasses from "../fetch/GetClasses";
 import GetSubClasses from "../fetch/GetSubClasses";
 import GetFormerProfessions from "../fetch/GetFormerProfessions";
+import GetAncestries from "../fetch/GetAncestries";
 import gql from "graphql-tag"
 import request from 'graphql-request'
 import { useMutation } from '@tanstack/react-query'
@@ -12,6 +13,7 @@ import { useEffect, useState } from "react";
 import { useUserStore, useCharacterStore, useProfileStore  } from '../stores/MainStore';
 import FormerProfessionsContainer from './FormerProfessionsContainer';
 import toast from 'react-hot-toast';
+import AncestriesContainer from './AncestriesContainer';
 
 
 const MUTATE_NEW_CHARACTER = gql`
@@ -34,6 +36,7 @@ const MUTATE_NEW_CHARACTER = gql`
     $classPicker: [Int],
     $subclassPicker: [Int],
     $formerProfessionsPicker: [Int],
+    $ancestryPicker: [Int],
     ){
     save_characters_default_Entry(
       title: $title, 
@@ -54,6 +57,7 @@ const MUTATE_NEW_CHARACTER = gql`
       classPicker: $classPicker,
       subclassPicker: $subclassPicker,
       formerProfessionsPicker: $formerProfessionsPicker
+      ancestryPicker: $ancestryPicker
       ) {
       title
       authorId
@@ -84,6 +88,9 @@ const MUTATE_NEW_CHARACTER = gql`
           id
         }
         formerProfessionsPicker {
+          id
+        }
+        ancestryPicker {
           id
         }
       }
@@ -152,7 +159,9 @@ export default function CharacterBuilderContainer({ userId }) {
     let classEntries = []
     let subClassEntries = []
     let formerProfessionsEntries = []
+    let ancestriesEntries = []
 
+    
     let classes = GetClasses()
     if(classes) {
       classEntries = classes.entries     
@@ -168,6 +177,11 @@ export default function CharacterBuilderContainer({ userId }) {
       formerProfessionsEntries = formerProfessions.entries
     }
 
+    let ancestries = GetAncestries()
+    if(ancestries) {
+      ancestriesEntries = ancestries.entries
+    }
+
 
     
     const onSubmit = (data) => {
@@ -175,8 +189,8 @@ export default function CharacterBuilderContainer({ userId }) {
         let newClassPicker = []
         let newSubClassPicker = []
         let newFormerProfessionsPicker = []
-        let newMannerismPicker = []
-        let newGrailsPicker = []
+        let newAncestryPicker = []
+        
 
         if(Array.isArray(data.classPicker)){
           data.classPicker.forEach((el) => {
@@ -206,6 +220,16 @@ export default function CharacterBuilderContainer({ userId }) {
           data.formerProfessionsPicker = newFormerProfessionsPicker
         } else {
           data.formerProfessionsPicker = parseInt(data.formerProfessionsPicker)
+        }
+
+        if(Array.isArray(data.ancestryPicker)){
+          data.ancestryPicker.forEach((el) => {
+            let newEl = parseInt(el.id)
+            newAncestryPicker.push({"id": newEl})
+          })
+          data.ancestryPicker = newAncestryPicker
+        } else {
+          data.ancestryPicker = parseInt(data.ancestryPicker)
         }
 
         data.aiming = data.attributes.aiming
@@ -412,6 +436,7 @@ export default function CharacterBuilderContainer({ userId }) {
             <CharacterName register={register}/>
             <FormerProfessionsContainer register={register} formerProfessionsEntries={formerProfessionsEntries}/>
             <ClassesContainer register={register} watch={watch} subclassDescription={subclassDescription} setSubClassDescription={setSubClassDescription} subclassPickerState={subclassPickerState} setSubClassPickerState={setSubClassPickerState} classEntries={classEntries} subClassEntries={subClassEntries} classPicker={classPicker} setClassPicker={setClassPicker} /> 
+            <AncestriesContainer register={register} ancestriesEntries={ancestriesEntries} />
             {classPicker != 1 ? <AttributesBuilderContainer  limit={limit} register={register} control={control} majorAtt={majorAtt} minorAtt={minorAtt} currentAttributeCount={sum}/> : null }
             <input type="submit" className="bg-gColorOne hover:bg-gColorTwo text-white cursor-pointer py-2 w-60 mx-auto" />
         </form>

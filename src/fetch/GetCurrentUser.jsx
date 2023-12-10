@@ -37,7 +37,8 @@ export default function GetCurrentUser(jwt) {
             document: GET_CURRENT_USER,
             requestHeaders: headers,
         }),
-        enabled: !!jwt
+        enabled: !!jwt,
+        refetchOnWindowFocus: false
     })
 
     return data

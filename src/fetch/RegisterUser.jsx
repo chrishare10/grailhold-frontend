@@ -52,7 +52,8 @@ export default function RegisterUser(loginState) {
       toast.success(`Check for verification email`, {position: 'top-center',})
       updateRegisterState(false)
     },
-    enabled: !!loginState
+    enabled: !!loginState,
+    refetchOnWindowFocus: false
     })
    
     return registerQuery

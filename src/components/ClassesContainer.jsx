@@ -6,7 +6,7 @@ export default function ClassesContainer({register, watch, classEntries, subClas
     const [classPickerState, setClassPickerState ] = useState(false)
     
     let classOptions = []
-    classOptions.push(<option value="" key="emptyClass">Choose One</option>)
+    classOptions.push(<option value="" key="emptyClass">Choose Class</option>)
     for (let i = 0; i < classEntries.length; i++) {
         const element = classEntries[i];
         
@@ -14,7 +14,7 @@ export default function ClassesContainer({register, watch, classEntries, subClas
     }   
 
     let subClassOptions = []
-    subClassOptions.push(<option value="" key="emptySub">Choose One</option>)
+    subClassOptions.push(<option value="" key="emptySub">Choose Sub-Class</option>)
     for (let i = 0; i < subClassEntries.length; i++) {
         const element = subClassEntries[i];
         
@@ -45,11 +45,11 @@ export default function ClassesContainer({register, watch, classEntries, subClas
  
     }
     
-    let classSelect =  <div className=""><div><p>Choose Class</p></div><select className="w-full p-2" {...register("classPicker", { required: true, onChange: onChange })}>{classOptions}</select></div>
-    let subClassSelect =  <div className=""><div><p>Choose Sub-Class</p></div><select className="w-full p-2" {...register("subclassPicker", { required: true, onChange: onChangeSub })}>{subClassOptions}</select></div>
+    let classSelect =  <div className=""><select className="w-full p-2" {...register("classPicker", { required: true, onChange: onChange })}>{classOptions}</select></div>
+    let subClassSelect =  <div className=""><select className="w-full p-2" {...register("subclassPicker", { required: true, onChange: onChangeSub })}>{subClassOptions}</select></div>
 
     return<div>
-        <h2 className="font-bold">Classes</h2>
+        <h2 className="font-bold">Class</h2>
         <div className="p-3 flex flex-col gap-3 bg-gray-200">
         {classSelect}
         {classPickerState ? subClassSelect : null} 

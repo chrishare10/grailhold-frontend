@@ -2,16 +2,11 @@ import gql from "graphql-tag"
 import request from 'graphql-request'
 import { useQuery } from '@tanstack/react-query'
 
-const GET_SUBCLASSES = gql`
-    query($classId: Int) {
-        entries (descendantOf: $classId, section: "classes"){
+const GET_ANCESTRIES = gql`
+    query($section: [String]) {
+        entries (section: $section){
             title
             id
-            ...on classes_feat_Entry{
-                textArea01
-            }
-           
-        
         }
     }
 `
@@ -20,25 +15,25 @@ const endpoint = import.meta.env.VITE_API_ENDPOINT
 const headers = {
     authorization: import.meta.env.VITE_API_AUTH,
 }
-export default function GetSubClasses(classId) {
+export default function GetAncestries() {
+
+ 
     const { isLoading, isError, data } = useQuery({
-      queryKey: ['getSubClasses', classId],
+      queryKey: ['getAncestries'],
       queryFn: async () =>
         request({
           url: endpoint,
-          document: GET_SUBCLASSES,
+          document: GET_ANCESTRIES,
           requestHeaders: headers,
           variables: {
-            "classId": classId
-          },
-          
-      }),
-      refetchOnWindowFocus: false,
-      enabled: !!classId
+            section: "ancestries"
+          }
+        }),
+        refetchOnWindowFocus: false
       })
 
       if (isError) {
-      console.log("could not find subclasses")
+      console.log("could not find ancestries")
       }
       return data
   }

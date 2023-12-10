@@ -61,9 +61,10 @@ export default function GetEntry(entryId) {
           requestHeaders: headers,
           variables: {
             "entryId": entryId
-        },
-      }),
-      enabled: !!entryId
+            },
+        }),
+        enabled: !!entryId,
+        refetchOnWindowFocus: false
       })
       if (isError) {
       console.log("could not find entry")

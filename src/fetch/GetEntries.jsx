@@ -29,9 +29,10 @@ export default function GetEntries(entryIds) {
           requestHeaders: headers,
           variables: {
             "entryIds": entryIds
-        },
-      }),
-      enabled: !!entryIds
+            },
+        }),
+        enabled: !!entryIds,
+        refetchOnWindowFocus: false
       })
       if (isError) {
       console.log("could not find entries")

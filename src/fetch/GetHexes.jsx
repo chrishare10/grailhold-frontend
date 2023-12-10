@@ -30,7 +30,8 @@ export default function GetHexes() {
             url: endpoint,
             document: GET_HEXES,
             requestHeaders: headers,
-        })
+        }),
+        refetchOnWindowFocus: false
     })
     if (isLoading) {
     return null

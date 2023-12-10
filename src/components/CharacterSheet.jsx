@@ -13,6 +13,7 @@ import DeleteEntryVerifyBox from './DeleteEntryVerifyBox';
 import EquipmentContainer from './EquipmentContainer';
 import FormerProfessionContainer from './FormerProfessionContainer';
 import toast from 'react-hot-toast';
+import AncestryContainer from './AncestryContainer';
 
 const MUTATE_CHARACTER = gql`
 
@@ -282,6 +283,7 @@ export default function CharacterSheet({character}) {
 
     
     return <div className="flex flex-col gap-5">
+        {character.ancestryPicker.length ? <AncestryContainer ancestry={character.ancestryPicker} /> : null }
         <FormerProfessionContainer formerProfession={character.formerProfessionsPicker} />
         <ClassContainer currentClass={character.classPicker} subclass={ character.subclassPicker}/>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">

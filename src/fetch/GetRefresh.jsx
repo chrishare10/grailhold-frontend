@@ -35,7 +35,8 @@ export default function GetRefresh({refreshToken, jwtToken}) {
                 "refreshToken": refreshToken
             }
         }),
-        enabled: !!refreshToken
+        enabled: !!refreshToken,
+        refetchOnWindowFocus: false
     })
 
     if (isError) {

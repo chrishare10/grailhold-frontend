@@ -129,7 +129,8 @@ export default function EntryContainer({entry, userId, email, username, characte
               "ownerId": entryId
           },
         }),
-        enabled: !!entryId
+        enabled: !!entryId,
+        refetchOnWindowFocus: false
         })
         if (isError) {
         console.log("could not find comments")

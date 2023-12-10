@@ -41,8 +41,9 @@ export default function GetClasses() {
           requestHeaders: headers,
           variables: {
             section: "classes"
-          }
-      })
+            }
+        }),
+        refetchOnWindowFocus: false
       })
 
       if (isError) {

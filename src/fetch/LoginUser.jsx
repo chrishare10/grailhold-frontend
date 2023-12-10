@@ -45,8 +45,9 @@ export default function LoginUser(loginState) {
         document: GET_USER,
         requestHeaders: headers,
         variables: loginState,
-    }),
-    enabled: !!loginState
+      }),
+      enabled: !!loginState,
+      refetchOnWindowFocus: false
     })
 
     return loginQuery

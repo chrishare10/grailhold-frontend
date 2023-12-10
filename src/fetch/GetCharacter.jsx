@@ -40,6 +40,10 @@ const GET_CHARACTER = gql`
                     id
                     title
                 }
+                ancestryPicker {
+                    id
+                    title
+                }
                 text01
                 text02
                 text03
@@ -85,9 +89,10 @@ export default function GetCharacter(characterId) {
           requestHeaders: headers,
           variables: {
             "characterId": characterId
-        },
-      }),
-      enabled: !!characterId
+            }
+        }),
+        enabled: !!characterId,
+        refetchOnWindowFocus: false
       })
       if (isError) {
       console.log("could not find character")

@@ -27,8 +27,9 @@ export default function GetMannerisms() {
           requestHeaders: headers,
           variables: {
             mannerisms: "mannerisms"
-          }
-      })
+            }
+        }),
+        refetchOnWindowFocus: false
       })
 
       if (isError) {

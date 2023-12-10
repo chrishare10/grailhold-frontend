@@ -26,9 +26,10 @@ export default function GetCharacters(userState) {
           requestHeaders: headers,
           variables: {
             "userState": userState.userId
-        },
-      }),
-      enabled: !!userState
+            },
+        }),
+        enabled: !!userState,
+        refetchOnWindowFocus: false
       })
 
       if (isError) {

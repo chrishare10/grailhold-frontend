@@ -24,7 +24,8 @@ export default function GetUsersCount() {
             url: endpoint,
             document: GET_USERS_COUNT,
             requestHeaders: headers,
-        })
+        }),
+        refetchOnWindowFocus: false
     })
     if (isLoading) {
     return "loading..."

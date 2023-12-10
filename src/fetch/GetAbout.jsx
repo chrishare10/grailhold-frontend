@@ -29,7 +29,8 @@ export default function GetAbout() {
             url: endpoint,
             document: GET_ABOUT,
             requestHeaders: headers,
-        })
+        }),
+        refetchOnWindowFocus: false
     })
     if (isLoading) {
     return "loading about"

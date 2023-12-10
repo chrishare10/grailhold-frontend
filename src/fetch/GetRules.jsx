@@ -28,7 +28,8 @@ export default function GetRules() {
             url: endpoint,
             document: GET_RULES,
             requestHeaders: headers,
-        })
+        }),
+        refetchOnWindowFocus: false
     })
     if (isLoading) {
     return "loading rules"

@@ -89,7 +89,8 @@ export default function GetHex(hex) {
                         },
                         
                     }),
-                enabled: !!hex.entry
+                enabled: !!hex.entry,
+                refetchOnWindowFocus: false
             },
             {
                 queryKey: ['related-fixtures', hex.entry, reloadHexState],
@@ -103,7 +104,8 @@ export default function GetHex(hex) {
                         },
                         
                     }),
-                enabled: !!hex.entry
+                enabled: !!hex.entry,
+                refetchOnWindowFocus: false
             },
             {
                 queryKey: ['related-fabrications', hex.entry, reloadHexState],
@@ -117,7 +119,8 @@ export default function GetHex(hex) {
                         },
                         
                     }),
-                enabled: !!hex.entry
+                enabled: !!hex.entry,
+                refetchOnWindowFocus: false
             },
             {
                 queryKey: ['related-fables', hex.entry, reloadHexState],
@@ -131,7 +134,8 @@ export default function GetHex(hex) {
                         },
                         
                     }),
-                enabled: !!hex.entry
+                enabled: !!hex.entry,
+                refetchOnWindowFocus: false
             }
         ]
         
