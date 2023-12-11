@@ -115,7 +115,7 @@ export default function CharacterBuilderContainer({ userId }) {
   const [subclassDescription, setSubClassDescription ] = useState('')
   const [subclassPickerState, setSubClassPickerState ] = useState(false)
  
-    const { register, handleSubmit, watch, control, setValue, reset } = useForm();
+    const { register, handleSubmit, watch, control, setValue, getValues, reset } = useForm();
 
 
     let mutation = useMutation({
@@ -302,8 +302,7 @@ export default function CharacterBuilderContainer({ userId }) {
         }
       }
       setValue("attributes", attributesObject)
-      // console.log("class picked")
-      // console.log(attributesObject)
+
     }, [classPicker])
    
    
@@ -437,7 +436,7 @@ export default function CharacterBuilderContainer({ userId }) {
             <FormerProfessionsContainer register={register} formerProfessionsEntries={formerProfessionsEntries}/>
             <ClassesContainer register={register} watch={watch} subclassDescription={subclassDescription} setSubClassDescription={setSubClassDescription} subclassPickerState={subclassPickerState} setSubClassPickerState={setSubClassPickerState} classEntries={classEntries} subClassEntries={subClassEntries} classPicker={classPicker} setClassPicker={setClassPicker} /> 
             <AncestriesContainer register={register} ancestriesEntries={ancestriesEntries} />
-            {classPicker != 1 ? <AttributesBuilderContainer  limit={limit} register={register} control={control} majorAtt={majorAtt} minorAtt={minorAtt} currentAttributeCount={sum}/> : null }
+            {classPicker != 1 ? <AttributesBuilderContainer  limit={limit} register={register} control={control} setValue={setValue} getValues={getValues} majorAtt={majorAtt} minorAtt={minorAtt} currentAttributeCount={sum}/> : null }
             <input type="submit" className="bg-gColorOne hover:bg-gColorTwo text-white cursor-pointer py-2 w-60 mx-auto" />
         </form>
     </div>

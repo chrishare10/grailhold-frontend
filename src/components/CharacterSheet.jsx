@@ -8,6 +8,7 @@ import ClassContainer from './ClassContainer';
 import StressContainer from './StressContainer';
 import HarmContainer from './HarmContainer';
 import DeleteEntry from '../fetch/DeleteEntry';
+import GetClasses from "../fetch/GetClasses";
 import { useProfileStore, useUserStore } from "../stores/MainStore"
 import DeleteEntryVerifyBox from './DeleteEntryVerifyBox';
 import EquipmentContainer from './EquipmentContainer';
@@ -39,6 +40,7 @@ const MUTATE_CHARACTER = gql`
         $text03: String,
         $text04: String,
         $text05: String,
+        $rationsValue: Number,
         $armorValue: Number,
         $climbingToolValue: Number,
         $demolitionToolValue: Number,
@@ -79,6 +81,7 @@ const MUTATE_CHARACTER = gql`
             text03: $text03,
             text04: $text04,
             text05: $text05,
+            rationsValue: $rationsValue,
             armorValue: $armorValue,
             climbingToolValue: $climbingToolValue,
             demolitionToolValue: $demolitionToolValue,
@@ -120,6 +123,7 @@ const MUTATE_CHARACTER = gql`
                 text03
                 text04
                 text05
+                rationsValue
                 armorValue
                 climbingToolValue
                 demolitionToolValue
@@ -165,10 +169,10 @@ export default function CharacterSheet({character}) {
     let limit = 7    
     let values = character
     
-    console.log(values)
+    
 
     
-    const { register, handleSubmit, resetField, watch, control, setValue, reset, formState: { isDirty, dirtyFields } } = useForm({
+    const { register, handleSubmit, resetField, watch, control, setValue, getValues, reset, formState: { isDirty, dirtyFields } } = useForm({
       values
     },{ 
       keepDirtyValues: true 
@@ -209,6 +213,7 @@ export default function CharacterSheet({character}) {
        
 
         data.armorValue = parseInt(data.armorValue)
+        data.rationsValue = parseInt(data.rationsValue)
         data.climbingToolValue = parseInt(data.climbingToolValue)
         data.demolitionToolValue = parseInt(data.demolitionToolValue)
         data.disguiseValue = parseInt(data.disguiseValue)
@@ -233,7 +238,6 @@ export default function CharacterSheet({character}) {
         } else {
           data.mannerismPicker = parseInt(data.mannerismPicker)
         }
-
         mutation.mutate(data)
         
     };
@@ -279,15 +283,130 @@ export default function CharacterSheet({character}) {
       sum += attributeValues[i];
     }
 
-  
+    let classEntries = []
+    let classes = GetClasses()
+    if(classes) {
+      classEntries = classes.entries     
+    }
 
+    let minorAtt
+    let majorAtt
+    let parsedClassId = parseInt(character.classPicker[0].id)
     
+
+      for (let i = 0; i < classEntries.length; i++) {
+        const el = classEntries[i];
+  
+        let parsedId = parseInt(el.id)
+
+        if(parsedClassId === parsedId){
+          
+            if(el.aiming !== 0){
+              if(el.aiming === 1){
+                minorAtt = "aiming"
+              }else if(el.aiming === 2){
+                majorAtt = "aiming"
+              } 
+            }
+  
+            if(el.athletics !== 0){
+              if(el.athletics === 1){
+                minorAtt = "athletics"
+              }else if(el.athletics === 2){
+                majorAtt = "athletics"
+              } 
+            }
+  
+            if(el.communication !== 0){
+              if(el.communication === 1){
+                minorAtt = "communication"
+              }else if(el.communication === 2){
+                majorAtt = "communication"
+              }
+            }
+  
+            if(el.healing !== 0){
+              if(el.healing === 1){
+                minorAtt = "healing"
+              }else if(el.healing === 2){
+                majorAtt = "healing"
+              }
+            }
+            
+            if(el.insight !== 0){
+              if(el.insight === 1){
+                minorAtt = "insight"
+              }else if(el.insight === 2){
+                majorAtt = "insight"
+              }
+            }
+  
+            if(el.lore !== 0){
+              if(el.lore === 1){
+                minorAtt = "lore"
+              }else if(el.lore === 2){
+                majorAtt = "lore"
+              }
+            }
+  
+            if(el.nature !== 0){
+              if(el.nature === 1){
+                minorAtt = "nature"
+              }else if(el.nature === 2){
+                majorAtt = "nature"
+              }
+            }
+  
+            if(el.perception !== 0){
+              if(el.perception === 1){
+                minorAtt = "perception"
+              }else if(el.perception === 2){
+                majorAtt = "perception"
+              }
+            }
+  
+            if(el.performance !== 0){
+              if(el.performance === 1){
+                minorAtt = "performance"
+              }else if(el.performance === 2){
+                majorAtt = "performance"
+              }
+            }
+  
+            if(el.stealth !== 0){
+              if(el.stealth === 1){
+                minorAtt = "stealth"
+              }else if(el.stealth === 2){
+                majorAtt = "stealth"
+              }
+            }  
+  
+            if(el.striking !== 0){
+              if(el.striking === 1){
+                minorAtt = "striking"
+              }else if(el.striking === 2){
+                majorAtt = "striking"
+              }
+            }
+  
+            if(el.tinker !== 0){
+              if(el.tinker === 1){
+                minorAtt = "tinker"
+              }else if(el.tinker === 2){
+                majorAtt = "tinker"
+              }
+            }
+        }
+      }
+   
+    
+
     return <div className="flex flex-col gap-5">
         {character.ancestryPicker.length ? <AncestryContainer ancestry={character.ancestryPicker} /> : null }
         <FormerProfessionContainer formerProfession={character.formerProfessionsPicker} />
         <ClassContainer currentClass={character.classPicker} subclass={ character.subclassPicker}/>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
-            <AttributesContainer control={control} limit={limit} currentAttributeCount={sum} />
+            <AttributesContainer control={control} limit={limit} currentAttributeCount={sum} setValue={setValue} getValues={getValues} minorAtt={minorAtt} majorAtt={majorAtt}/>
             <StressContainer control={control} setValue={setValue} register={register} mannerisms={values.mannerismPicker}/>
             <HarmContainer register={register}/>
             <EquipmentContainer control={control} setValue={setValue} register={register} />

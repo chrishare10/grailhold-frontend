@@ -50,6 +50,7 @@ const GET_CHARACTER = gql`
                 text04
                 text05
                 attributesLimit
+                rationsValue
                 armorValue
                 climbingToolValue
                 demolitionToolValue

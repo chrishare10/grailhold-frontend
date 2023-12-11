@@ -6,6 +6,7 @@ export default function EquipmentContainer({control, register, setValue}) {
     const handleReset = (e) => {
         e.preventDefault() 
         setValue( 'loadValue', 'standard', { shouldDirty: true })
+        setValue( 'rationsValue', '0', { shouldDirty: true })
         setValue( 'armorValue', '0', { shouldDirty: true })
         setValue( 'shieldValue', '0', { shouldDirty: true })
         setValue( 'meleeWeaponValue', '0', { shouldDirty: true })
@@ -51,17 +52,41 @@ export default function EquipmentContainer({control, register, setValue}) {
                     /> */}
 
 
-                    <div className="flex flex-wrap gap-3 md:gap-5 justify-between">
-                        <div>
-                        <input type="radio" value="light" {...register("loadValue")}/> Light
+                    <div className="flex flex-wrap gap-3 md:gap-5 justify-between max-w-wickedSmall md:max-w-none">
+                        <div className="flex items-center gap-1">
+                            <input type="radio" value="light" {...register("loadValue")}/> <p>Light (5)</p>
                         </div>
-                        <div>
-                        <input type="radio" value="standard" {...register("loadValue")}/> Standard
+                        <div className="flex items-center gap-1">
+                            <input type="radio" value="standard" {...register("loadValue")}/> <p>Standard (10)</p>
                         </div>
-                        <div>
-                        <input type="radio" value="heavy" {...register("loadValue")} /> Heavy
+                        <div className="flex items-center gap-1">
+                            <input type="radio" value="heavy" {...register("loadValue")} /> <p>Heavy (15)</p>
                         </div>
                     </div>
+                    
+                </div>
+            </div>
+            <div className="flex items-center gap-2" id="rations-row">
+                <div>
+                    <p>Rations</p>
+                </div>
+                <div className="p-1">
+                    <Controller
+                    control={control}
+                    name="rationsValue"
+                    defaultValue={0}
+                    render={({ field: { value,  onChange, name } }) => (
+                    <Rating 
+                    fullSymbol={<svg viewBox="0 0 20 20" className="w-5 h-5"><rect x="2.93" y="2.93" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -4.1421 10)" width="14.14" height="14.14"/></svg>} 
+                    emptySymbol={<svg viewBox="0 0 20 20" className="w-5 h-5"><path d="M10,0L0,10l10,10l10-10L10,0z M4,10l6-6l6,6l-6,6L4,10z"/></svg>} 
+                    initialRating={value} 
+                    start={0} 
+                    stop={7} 
+                    onChange={onChange} 
+                    className="rating-dimonds"
+                    />
+                    )}
+                    />
                     
                 </div>
             </div>

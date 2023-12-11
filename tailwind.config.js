@@ -21,6 +21,9 @@ export default {
       minHeight: {
         'screenh': '100svh',
       },
+      maxWidth: {
+        'wickedSmall': '13rem',
+      },
       spacing: {
         'screenh': '100svh',
       },
