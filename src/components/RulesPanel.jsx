@@ -7,6 +7,7 @@ import GeneratorButtons from "./GeneratorButtons";
 import DiceRollerPanel from "./DiceRollerPanel";
 import CloseBtn from "./CloseBtn";
 import TableOfContents from "./TableOfContents";
+import CharacterAdjustmentStatsContainer from "./CharacterAdjustmentStatsContainer";
 
 export default function RulesPanel(){
     const userGM = useUserStore(state => state.userGM)
@@ -101,6 +102,7 @@ export default function RulesPanel(){
             <div className="px-10 py-20 flex flex-col gap-4"> 
             <GeneratorButtons />
             <GeneratorPanel />
+            <CharacterAdjustmentStatsContainer />
             </div>
         </div> 
         :
