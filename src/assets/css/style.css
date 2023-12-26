@@ -115,6 +115,9 @@ body {
     line-height: 1.1;
 }
 
+#rules-panel a {
+    text-decoration: underline;
+}
 
 #frame {
     transform: scale(1)

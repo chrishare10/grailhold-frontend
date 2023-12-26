@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query'
 
 const GET_FIXTURES = gql`
     query GET_FIXTURES{
-        entries (section: "fixtures", limit: 3, orderBy:"RAND()", leaves: true){
+        entries (section: "fixtures", limit: 2, orderBy:"RAND()", leaves: true, entryPicker01: ":empty:" ){
             title
             id
             ... on fixtures_default_Entry {
