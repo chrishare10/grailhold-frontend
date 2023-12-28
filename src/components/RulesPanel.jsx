@@ -110,7 +110,7 @@ export default function RulesPanel(){
         }
         
 
-        <div className={`${dicePanelState ? "block" : "hidden"} w-full`}>
+        <div className={`${dicePanelState ? "block" : "hidden"} w-full overflow-y-scroll`}>
             <DiceRollerPanel />
         </div>
     </div>

@@ -41,7 +41,7 @@ export default function DiceRollerPanel() {
         diceFormatted.push(diceRender(dice))
     }
 
-    return <div className="py-20 flex flex-col gap-5 w-full px-10 overflow-y-scroll">
+    return <div className="py-20 flex flex-col gap-5 w-full px-10">
     
     <button id="dice-roll-btn" onClick={handleDiceClick} className="hover:bg-gColorThree bg-gColorTwo text-white py-2 px-3">
         Roll Dice
