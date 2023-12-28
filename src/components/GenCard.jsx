@@ -3,10 +3,13 @@ import parse from "html-react-parser"
 export default function GenCard({ cardData }) {
     let title = cardData.title
 
+    console.log(cardData)
+
     //  encounter data
     let rarity = cardData.rarity
     let rarityParsed = null
     let description = cardData.textArea01
+    let hitPoints = cardData.hitPoints
 
     // fixture data
     let fixtureLevel = cardData.fixtureLevel
@@ -28,6 +31,10 @@ export default function GenCard({ cardData }) {
         { rarityParsed ? <p className="text-sm">Rarity: {rarityParsed}</p> : null }
         { fixtureLevel ? <p className="text-sm">Level: {fixtureLevel}</p> : null }
         { title ? <h5 className="font-bold">{title}</h5> : null }
+        <div>
+        { hitPoints ? <p className="text-sm">HP: {hitPoints}</p> : null }
         { description ? parse(description) : null}
+        </div>
+        
     </div>
 }
