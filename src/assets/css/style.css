@@ -218,6 +218,11 @@ body {
     min-height: 200px;
 }
 
+.gen-card ul {
+    list-style-type: disc;
+    margin-left: 1rem;
+}
+
 #about-wrapper {
     display:none;
     z-index: 100;

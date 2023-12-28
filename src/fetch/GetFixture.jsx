@@ -10,6 +10,11 @@ const GET_FIXTURES = gql`
             id
             ... on fixtures_default_Entry {
             fixtureLevel
+            textArea02
+            textArea03
+            textArea04
+            textArea05
+            textArea06
             }
         }
     }

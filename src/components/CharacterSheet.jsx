@@ -162,7 +162,7 @@ const headers = {
 export default function CharacterSheet({character}) {
 
     const [verifyDeleteActive, setVerifyDeleteActive] = useState(false)
-    
+
     const updateProfPage = useProfileStore(state => state.updateProfPage)
     const incrimentReloadState = useUserStore(state => state.incrimentReloadState)
     
@@ -194,14 +194,11 @@ export default function CharacterSheet({character}) {
       },
       onSuccess: () => {
         toast.success(`Character updated`, {position: 'top-center',})
-
-        
-
-        
+       
       }
     })
+
     
-  
     
     const onSubmit = (data) => {
 
