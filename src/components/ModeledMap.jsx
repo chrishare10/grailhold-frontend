@@ -18,7 +18,9 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData, initA
   const [{ objects, cycle }, set] = useState({ objects: [], cycle: 0 })
   const exploredHexRefs = useRef(new Array()) 
 
+
   const [hexHover, setHexHover] = useState(false)
+ 
 
   //  console.log(hex)
 
@@ -26,6 +28,7 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData, initA
   let correctHex
   let meshes = []
   
+ 
   useCursor(hexHover)
   
   function handleClick(e){
@@ -43,6 +46,7 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData, initA
   }
 
   let entryId
+  let containsStartingPointBoolean
   let hexLength = Object.entries(nodes).length 
   if(hexData){
     for (const [key, value] of Object.entries(nodes)) {
@@ -51,11 +55,13 @@ export function ModeledMap({exploredHexes, exploredHexIds, nodes, hexData, initA
           const element = exploredHexes[i];
           if(element.hexId === key.slice(5)) {
             entryId = element.entry
+            containsStartingPointBoolean = element.containsStartingPointBoolean
           }
+          
         }
         meshes.push(
           <A11y key={key} role="button" focusCall={()=> console.log(`Hex ${key.slice(5)} in focus`)}>
-            <MapMeshExplored key={key} exploredHexRefs={exploredHexRefs} entryId={entryId} value={value} handleClick={handleClick} setHexHover={setHexHover} hex={hex} hexHover={hexHover} />
+            <MapMeshExplored key={key} exploredHexRefs={exploredHexRefs} containsStartingPointBoolean={containsStartingPointBoolean} entryId={entryId} value={value} handleClick={handleClick} setHexHover={setHexHover} hex={hex} hexHover={hexHover} />
           </A11y>
           )
       } else {

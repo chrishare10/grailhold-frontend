@@ -10,6 +10,7 @@ const GET_HEXES = gql`
             id
             ...on hexes_default_Entry {
                 hexId
+                containsStartingPointBoolean
             }
         }
     }

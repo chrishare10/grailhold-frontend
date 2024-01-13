@@ -1,6 +1,6 @@
 
 
-export default function MapMeshExplored({ exploredHexRefs, entryId, value, handleClick, setHexHover, hex, hexHover, hexName}) {
+export default function MapMeshExplored({ exploredHexRefs, entryId, value, handleClick, setHexHover, hex, hexHover, hexName, containsStartingPointBoolean}) {
     
     return(
         <mesh
@@ -17,7 +17,7 @@ export default function MapMeshExplored({ exploredHexRefs, entryId, value, handl
             onPointerOver={(e) => (e.stopPropagation(), setHexHover(value.name.slice(5)))}
             onPointerOut={(e) => setHexHover(false)}
             >
-            <meshStandardMaterial roughness={1} color={hex.id == value.name.slice(5) ? '#08da84' : hexHover == value.name.slice(5) ? '#8C4A62' : '#F0433A'} />
+            <meshStandardMaterial roughness={1} color={containsStartingPointBoolean && hexHover == value.name.slice(5) ? '#437EF3' : containsStartingPointBoolean ? '#43AFF3' : hex.id == value.name.slice(5) ? '#08da84' : hexHover == value.name.slice(5) ? '#8C4A62' : '#F0433A'} />
         </mesh>
     )
 }

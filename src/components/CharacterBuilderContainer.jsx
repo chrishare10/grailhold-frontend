@@ -437,7 +437,7 @@ export default function CharacterBuilderContainer({ userId }) {
             <ClassesContainer register={register} watch={watch} subclassDescription={subclassDescription} setSubClassDescription={setSubClassDescription} subclassPickerState={subclassPickerState} setSubClassPickerState={setSubClassPickerState} classEntries={classEntries} subClassEntries={subClassEntries} classPicker={classPicker} setClassPicker={setClassPicker} /> 
             <AncestriesContainer register={register} ancestriesEntries={ancestriesEntries} />
             {classPicker != 1 ? <AttributesBuilderContainer  limit={limit} register={register} control={control} setValue={setValue} getValues={getValues} majorAtt={majorAtt} minorAtt={minorAtt} currentAttributeCount={sum}/> : null }
-            <input type="submit" className="bg-gColorOne hover:bg-gColorTwo text-white cursor-pointer py-2 w-60 mx-auto" />
+            <input type="submit" disabled={sum === 7 ? false : true} className={`${sum !== 7 ? 'opacity-30' : 'opacity-100'} bg-gColorOne hover:bg-gColorTwo text-white cursor-pointer py-2 w-60 mx-auto`} />
         </form>
     </div>
 }

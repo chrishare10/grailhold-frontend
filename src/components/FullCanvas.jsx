@@ -32,6 +32,8 @@ function Scene() {
   const cameraControlsRef = useRef()
   const { nodes, materials } = useGLTF("/assets/static/Grailhold-map-hexcutout-04.glb");
   const { camera } = useThree()
+
+ 
   
   const hexData = GetHexes()
   let fullHexes = []
@@ -56,7 +58,7 @@ function Scene() {
     for (let i = 0; i < hexData.length; i++) {
       const el = hexData[i];
       exploredHexIds.push(String(el.hexId))
-      exploredHexes.push({entry: el.id, hexId: String(el.hexId)})
+      exploredHexes.push({entry: el.id, hexId: String(el.hexId), containsStartingPointBoolean: el.containsStartingPointBoolean})
       
     }
     let exploredCount = 0
@@ -69,6 +71,14 @@ function Scene() {
 	);
 
   cameraControlsRef.current?.setBoundary(bb)
+
+  // Get current cameraControl rotation when movement stops.
+  // if(cameraControlsRef.current){
+  //   cameraControlsRef.current.addEventListener( 'sleep', () => {
+  //     console.log(cameraControlsRef.current.camera.rotation.x)
+  //   })
+  // }
+  
     
   return <>
     {/* <Perf position="top-left" /> */}
@@ -86,7 +96,8 @@ function Scene() {
       {/* <directionalLight intensity={2} castShadow shadow-mapSize-height={1024} shadow-mapSize-width={1024} /> */}
         {/* <ambientLight intensity={0.4} /> */}
       <Bg />
-      <CameraControls ref={cameraControlsRef} minDistance={5} maxDistance={30} maxPolarAngle={1.3}/>
+      <CameraControls ref={cameraControlsRef} minDistance={5} maxDistance={30} maxPolarAngle={1.3} />
+      
     </Suspense>
   </>
 }
