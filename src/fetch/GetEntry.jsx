@@ -32,6 +32,10 @@ const GET_ENTRY = gql`
                     url @transform (width: 750)
                     alt
                 }
+                levelsExplored
+                levelsDiscovered
+                fixtureLevel
+
             }
             ...on fabrications_default_Entry {
                 textArea01

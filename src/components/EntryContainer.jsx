@@ -72,11 +72,13 @@ export default function EntryContainer({entry, userId, email, username, characte
         }
 
     }
+
+    
     
 
     if(entry[0].charactersPicker){
         
-        crew = entry[0].charactersPicker.map((el, index) => <span key={el.id}>{el.title}{index === entry[0].charactersPicker.length - 2 ?  ", and " : index < entry[0].charactersPicker.length - 1 ? ", " : null  }</span>)
+        crew = entry[0].charactersPicker.map((el, index) => <span key={el.id} className="font-bold">{el.title}{index === entry[0].charactersPicker.length - 2 ?  ", and " : index < entry[0].charactersPicker.length - 1 ? ", " : null  }</span>)
     }
     if(entry[0].characterPicker){
         character = entry[0].characterPicker[0].title
@@ -94,7 +96,7 @@ export default function EntryContainer({entry, userId, email, username, characte
    
     if(sectionId === 1) {
         if(crew.length){
-            characterSection = <div className="text-sm"><p>discovered by {crew}</p></div>
+            characterSection = <div className="text-sm"><p>Discovered by {crew}</p></div>
         }else {
             characterSection = null
         }
@@ -114,6 +116,11 @@ export default function EntryContainer({entry, userId, email, username, characte
         }
 
     }
+
+    // Levels
+    let fixtureLevel = entry[0].fixtureLevel
+    let levelsDiscovered = entry[0].levelsDiscovered
+    let levelsExplored = entry[0].levelsExplored
 
 
     let comments = []
@@ -177,7 +184,12 @@ export default function EntryContainer({entry, userId, email, username, characte
             <button id="back-to-overview" onClick={handleClick} className="underline">Back</button>
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center gap-10">
+
             <div className="flex flex-col gap-3">
+                { fixtureLevel === levelsExplored ? <p className="text-sm">Fully explored</p> : <div>
+                    {levelsDiscovered ? <p className="text-sm">Levels Discovered: {levelsDiscovered}</p> : null}
+                    {levelsExplored ? <p className="text-sm">Levels Explored: {levelsExplored}</p> : levelsExplored == 0 ? <p>Levels Explored: 0</p> : null}
+                </div>}
                 <h1 className="font-base text-4xl">{entryTitle}</h1>
                 {characterSection}
                 {entryDetails}
