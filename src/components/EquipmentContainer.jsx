@@ -54,13 +54,13 @@ export default function EquipmentContainer({control, register, setValue}) {
 
                     <div className="flex flex-wrap gap-3 md:gap-5 justify-between max-w-wickedSmall md:max-w-none">
                         <div className="flex items-center gap-1">
-                            <input type="radio" value="light" {...register("loadValue")}/> <p>Light (5)</p>
+                            <input type="radio" value="light" {...register("loadValue")}/> <p>Light (3)</p>
                         </div>
                         <div className="flex items-center gap-1">
-                            <input type="radio" value="standard" {...register("loadValue")}/> <p>Standard (10)</p>
+                            <input type="radio" value="standard" {...register("loadValue")}/> <p>Standard (6)</p>
                         </div>
                         <div className="flex items-center gap-1">
-                            <input type="radio" value="heavy" {...register("loadValue")} /> <p>Heavy (15)</p>
+                            <input type="radio" value="heavy" {...register("loadValue")} /> <p>Heavy (9)</p>
                         </div>
                     </div>
                     
@@ -164,7 +164,7 @@ export default function EquipmentContainer({control, register, setValue}) {
             </div>
             <div className="flex items-center gap-2" id="armor-row">
                 <div>
-                    <p>Ranged Weaopn</p>
+                    <p>Ranged Weapon</p>
                 </div>
                 <div className="p-1">
                     <Controller

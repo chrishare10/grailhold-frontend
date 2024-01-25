@@ -82,7 +82,7 @@ export default function StressContainer({register, control, setValue, mannerisms
                     emptySymbol={<svg viewBox="0 0 20 20" className="w-5 h-5"><path d="M10,0L0,10l10,10l10-10L10,0z M4,10l6-6l6,6l-6,6L4,10z"/></svg>} 
                     initialRating={value} 
                     start={0} 
-                    stop={12} 
+                    stop={8} 
                     onChange={onChange} 
                     className="rating-dimonds"
                     />
