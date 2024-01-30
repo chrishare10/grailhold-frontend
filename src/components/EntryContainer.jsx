@@ -186,7 +186,7 @@ export default function EntryContainer({entry, userId, email, username, characte
         <div className="flex flex-col md:flex-row justify-between items-center gap-10">
 
             <div className="flex flex-col gap-3">
-                { fixtureLevel === levelsExplored ? <p className="text-sm">Fully explored</p> : <div>
+                { fixtureLevel && fixtureLevel === levelsExplored ? <p className="text-sm">Fully explored</p> : <div>
                     {levelsDiscovered ? <p className="text-sm">Levels Discovered: {levelsDiscovered}</p> : null}
                     {levelsExplored ? <p className="text-sm">Levels Explored: {levelsExplored}</p> : levelsExplored == 0 ? <p>Levels Explored: 0</p> : null}
                 </div>}
